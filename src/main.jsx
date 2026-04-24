@@ -44,16 +44,16 @@ function App() {
             </defs>
 
 {/* Study → Consultation */}
-<path d="M360 140 A200 200 0 0 1 460 240" markerEnd="url(#arrow)" />
+<path d="M350 135 A210 210 0 0 1 475 250" markerEnd="url(#arrow)" />
 
 {/* Consultation → Action */}
-<path d="M460 360 A200 200 0 0 1 360 460" markerEnd="url(#arrow)" />
+<path d="M475 350 A210 210 0 0 1 350 475" markerEnd="url(#arrow)" />
 
 {/* Action → Reflection */}
-<path d="M240 460 A200 200 0 0 1 140 360" markerEnd="url(#arrow)" />
+<path d="M250 475 A210 210 0 0 1 125 350" markerEnd="url(#arrow)" />
 
 {/* Reflection → Study */}
-<path d="M140 240 A200 200 0 0 1 240 140" markerEnd="url(#arrow)" />
+<path d="M125 250 A210 210 0 0 1 250 135" markerEnd="url(#arrow)" />
           </svg>
 
           <CycleStep className="top" icon={<BookOpen />} title="Study">
