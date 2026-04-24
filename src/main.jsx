@@ -23,13 +23,12 @@ function TheStageBeyond() {
       <section className="mainGrid">
         <div className="intro panel">
           <h2>Something is already shifting.</h2>
-          <p>Not fully clear.<br />But no longer what it was.</p>
-          <p>Your life is opening beyond performance—<br />and asking something more of you.</p>
+          <p>Your life is moving beyond performance—<br />and asking something more of you.</p>
         </div>
 
         <div className="definition panel">
-          <p>A small, ongoing group of dancers working through transition—together.</p>
-          <p>A shared practice, shaped by the people participating in it.</p>
+          <p>We work with small cohorts of dancers navigating transition—together.</p>
+          <p>Through this, we develop a shared practice, shaped by each cohort.</p>
         </div>
 
         <div className="rhythm panel">
@@ -39,13 +38,13 @@ function TheStageBeyond() {
               We study content that expands how we understand ourselves and the world.
             </Step>
             <Step icon={<MessageCircle />} title="Consultation">
-              Together, we read our own reality and explore how it applies.
+              We read our own reality and explore how the study content applies.
             </Step>
             <Step icon={<ArrowUpRight />} title="Action">
-              Translating consultative decisions into practice.
+              We translate consultative decisions into practice.
             </Step>
             <Step icon={<RefreshCw />} title="Reflection">
-              Reflecting on what is learned through action to deepen understanding and refine consultation.
+              We reflect on what we learned through action to deepen our understanding and refine our practice.
             </Step>
           </div>
           <p className="cycle">A cycle of disciplined learning.</p>
@@ -56,13 +55,13 @@ function TheStageBeyond() {
         <p className="purposeLabel">The twofold purpose</p>
         <div className="purposeGrid">
           <Purpose icon={<User />} title="Individual">
-            Understanding yourself more fully—what you care about, what you’re capable of, and what you want to build.
+            Building capacity to contribute meaningfully to the world beyond dance.
           </Purpose>
 
           <div className="plus">+</div>
 
-          <Purpose icon={<Users />} title="Collective">
-            Developing the capacity to contribute, collaborate, and take part in shaping the world around us.
+          <Purpose icon={<Users />} title="Society">
+            Channeling increased capacity towards meaningful contribution.
           </Purpose>
 
           <a href="mailto:hello@thestagebeyond.coach" className="learnMore">Learn more</a>
