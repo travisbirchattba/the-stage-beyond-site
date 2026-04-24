@@ -85,53 +85,69 @@ body {
   margin: 0 auto 56px;
 }
 
-.steps {
+.cycleDiagram {
   position: relative;
-  width: min(760px, 100%);
-  min-height: 620px;
+  width: min(640px, 100%);
+  height: 520px;
   margin: 0 auto;
 }
 
-.steps::before {
-  content: "";
+.cycleSvg {
   position: absolute;
-  inset: 90px;
-  border: 2px solid rgba(185, 139, 63, 0.35);
-  border-radius: 50%;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.cycleSvg path {
+  fill: none;
+  stroke: #b98b3f;
+  stroke-width: 2;
+  stroke-linecap: round;
+  marker-end: url(#arrowhead);
+  opacity: 0.35;
+}
+
+.cycleSvg marker path {
+  fill: #b98b3f;
 }
 
 .step {
   position: absolute;
   width: 240px;
   text-align: center;
+  z-index: 1;
 }
 
-.step:nth-child(1) {
-  top: 0;
+.step:nth-of-type(1) {
+  top: 20px;
   left: 50%;
   transform: translateX(-50%);
 }
 
-.step:nth-child(2) {
-  top: 190px;
-  right: 0;
+.step:nth-of-type(2) {
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
 }
 
-.step:nth-child(3) {
-  bottom: 0;
+.step:nth-of-type(3) {
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
 }
 
-.step:nth-child(4) {
-  top: 190px;
-  left: 0;
+.step:nth-of-type(4) {
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
 }
 
 .icon,
 .purposeIcon {
-  width: 86px;
-  height: 86px;
+  width: 72px;
+  height: 72px;
   border-radius: 50%;
   background: #efe6d8;
   color: #b98b3f;
@@ -202,18 +218,18 @@ body {
 }
 
 @media (max-width: 760px) {
-  .steps {
-    min-height: auto;
+  .cycleDiagram {
+    height: auto;
     display: grid;
     gap: 42px;
   }
 
-  .steps::before {
+  .cycleSvg {
     display: none;
   }
 
   .step,
-  .step:nth-child(n) {
+  .step:nth-of-type(n) {
     position: static;
     width: auto;
     transform: none;
