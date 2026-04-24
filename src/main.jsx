@@ -60,7 +60,7 @@ function TheStageBeyond() {
 
           <div className="plus">+</div>
 
-          <Purpose icon={<Users />} title="Collective">
+          <Purpose icon={<Users />} title="Society">
             Channeling increased capacity towards meaningful contribution.
           </Purpose>
 
