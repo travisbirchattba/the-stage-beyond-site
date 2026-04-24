@@ -157,3 +157,6 @@ body {
     grid-template-columns: 1fr;
   }
 }
+body {
+  border: 10px solid red;
+}
