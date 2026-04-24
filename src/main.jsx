@@ -36,19 +36,25 @@ function App() {
         <p className="rhythmLead">We move in a rhythm...</p>
 
         <div className="cycleWrapper">
-          <svg viewBox="0 0 600 600" className="cycleSvg" aria-hidden="true">
-            <defs>
-              <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
-                <path d="M0,0 L10,5 L0,10 Z" fill="#b98b3f" />
-              </marker>
-            </defs>
+        <svg viewBox="0 0 600 600" className="cycleSvg" aria-hidden="true">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#b98b3f" />
+    </marker>
+  </defs>
 
-            <path d="M300 100 A200 200 0 0 1 500 300" markerEnd="url(#arrow)" />
-            <path d="M500 300 A200 200 0 0 1 300 500" markerEnd="url(#arrow)" />
-            <path d="M300 500 A200 200 0 0 1 100 300" markerEnd="url(#arrow)" />
-            <path d="M100 300 A200 200 0 0 1 300 100" markerEnd="url(#arrow)" />
-          </svg>
+  {/* Study → Consultation */}
+  <path d="M300 120 Q430 120 480 260" markerEnd="url(#arrow)" />
 
+  {/* Consultation → Action */}
+  <path d="M480 300 Q480 430 340 480" markerEnd="url(#arrow)" />
+
+  {/* Action → Reflection */}
+  <path d="M300 480 Q170 480 120 340" markerEnd="url(#arrow)" />
+
+  {/* Reflection → Study */}
+  <path d="M120 300 Q120 170 260 120" markerEnd="url(#arrow)" />
+</svg>
           <div className="circleStep top">
             <Step icon={<BookOpen />} title="Study">
               We study content that expands how we understand ourselves and the world.
