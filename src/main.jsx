@@ -28,7 +28,20 @@ function App() {
       <section className="panel rhythm">
         <p className="rhythmLead">We move in a rhythm...</p>
 
-        <div className="steps">
+        <div className="cycleDiagram">
+          <svg className="cycleSvg" viewBox="0 0 600 600" aria-hidden="true">
+            <defs>
+              <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+                <path d="M0,0 L10,5 L0,10 Z" />
+              </marker>
+            </defs>
+
+            <path d="M300 95 A205 205 0 0 1 505 300" />
+            <path d="M505 300 A205 205 0 0 1 300 505" />
+            <path d="M300 505 A205 205 0 0 1 95 300" />
+            <path d="M95 300 A205 205 0 0 1 300 95" />
+          </svg>
+
           <Step icon={<BookOpen />} title="Study">
             We study content that expands how we understand ourselves and the world.
           </Step>
