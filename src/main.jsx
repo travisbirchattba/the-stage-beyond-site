@@ -47,7 +47,7 @@ function TheStageBeyond() {
               We reflect on what we learned through action to deepen our understanding and refine our practice.
             </Step>
           </div>
-          <p className="cycle">A cycle of disciplined learning about who we are becoming and what we need to do about it.</p>
+          <p className="cycle">A cycle of disciplined learning.</p>
         </div>
       </section>
 
@@ -55,13 +55,13 @@ function TheStageBeyond() {
         <p className="purposeLabel">The twofold purpose</p>
         <div className="purposeGrid">
           <Purpose icon={<User />} title="Individual">
-            Understanding yourself more fully—what you care about, what you’re capable of, and what you want to build.
+            Building capacity to contribute meaningfully to the world beyond dance.
           </Purpose>
 
           <div className="plus">+</div>
 
           <Purpose icon={<Users />} title="Collective">
-            Developing the capacity to contribute, collaborate, and take part in shaping the world around us.
+            Channeling increased capacity towards meaningful contribution.
           </Purpose>
 
           <a href="mailto:hello@thestagebeyond.coach" className="learnMore">Learn more</a>
