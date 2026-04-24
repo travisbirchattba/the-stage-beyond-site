@@ -18,7 +18,7 @@ body {
 }
 
 .hero {
-  min-height: 80vh;
+  min-height: 60vh;
   display: flex;
   align-items: center;
 }
@@ -69,14 +69,14 @@ body {
 }
 
 .rhythmLead {
-  margin: 0 auto 56px;
+  margin: 0 auto 72px;
 }
 
 .steps {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 48px;
-  max-width: 1180px;
+  max-width: 1000px;
   margin: 0 auto;
   align-items: start;
 }
@@ -112,8 +112,8 @@ body {
 }
 
 .step p {
-  font-size: 1rem;
-  line-height: 1.55;
+  font-size: 0.95rem;
+  line-height: 1.5;
   color: #4f4840;
 }
 
