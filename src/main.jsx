@@ -36,48 +36,34 @@ function App() {
         <p className="rhythmLead">We move in a rhythm...</p>
 
         <div className="cycleWrapper">
-        <svg viewBox="0 0 600 600" className="cycleSvg" aria-hidden="true">
-  <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
-      <path d="M0,0 L10,5 L0,10 Z" fill="#b98b3f" />
-    </marker>
-  </defs>
+          <svg viewBox="0 0 600 600" className="cycleSvg" aria-hidden="true">
+            <defs>
+              <marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+                <path d="M0,0 L9,4.5 L0,9 Z" fill="#b98b3f" />
+              </marker>
+            </defs>
 
- {/* Study → Consultation */}
-<path d="M410 80 Q570 160 550 310" markerEnd="url(#arrow)" />
+            <path d="M210 145 Q155 170 135 230" markerEnd="url(#arrow)" />
+            <path d="M405 145 Q460 170 480 230" markerEnd="url(#arrow)" />
+            <path d="M480 370 Q455 430 395 455" markerEnd="url(#arrow)" />
+            <path d="M205 455 Q145 430 120 370" markerEnd="url(#arrow)" />
+          </svg>
 
-{/* Consultation → Action */}
-<path d="M550 390 Q510 560 350 555" markerEnd="url(#arrow)" />
+          <CycleStep className="top" icon={<BookOpen />} title="Study">
+            We study content that expands how we understand ourselves and the world.
+          </CycleStep>
 
-{/* Action → Reflection */}
-<path d="M250 555 Q90 560 50 390" markerEnd="url(#arrow)" />
+          <CycleStep className="right" icon={<MessageCircle />} title="Consultation">
+            We read our own reality and explore how the study content applies.
+          </CycleStep>
 
-{/* Reflection → Study */}
-<path d="M50 310 Q30 160 190 80" markerEnd="url(#arrow)" />
-</svg>
-          <div className="circleStep top">
-            <Step icon={<BookOpen />} title="Study">
-              We study content that expands how we understand ourselves and the world.
-            </Step>
-          </div>
+          <CycleStep className="bottom" icon={<ArrowUpRight />} title="Action">
+            We translate consultative decisions into practice.
+          </CycleStep>
 
-          <div className="circleStep right">
-            <Step icon={<MessageCircle />} title="Consultation">
-              We read our own reality and explore how the study content applies.
-            </Step>
-          </div>
-
-          <div className="circleStep bottom">
-            <Step icon={<ArrowUpRight />} title="Action">
-              We translate consultative decisions into practice.
-            </Step>
-          </div>
-
-          <div className="circleStep left">
-            <Step icon={<RefreshCw />} title="Reflection">
-              We reflect on what we learned through action to deepen our understanding and refine our practice.
-            </Step>
-          </div>
+          <CycleStep className="left" icon={<RefreshCw />} title="Reflection">
+            We reflect on what we learned through action to deepen our understanding and refine our practice.
+          </CycleStep>
         </div>
 
         <p className="cycle">...a cycle of disciplined learning.</p>
@@ -106,9 +92,9 @@ function App() {
   );
 }
 
-function Step({ icon, title, children }) {
+function CycleStep({ icon, title, children, className }) {
   return (
-    <div className="step">
+    <div className={`circleStep ${className}`}>
       <div className="icon">{icon}</div>
       <h3>{title}</h3>
       <p>{children}</p>
