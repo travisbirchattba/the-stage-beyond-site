@@ -23,8 +23,7 @@ function TheStageBeyond() {
       <section className="mainGrid">
         <div className="intro panel">
           <h2>Something is already shifting.</h2>
-          <p>Not fully clear.<br />But no longer what it was.</p>
-          <p>Your life is opening beyond performance—<br />and asking something more of you.</p>
+          <p>Your life is moving beyond performance—<br />and asking something more of you.</p>
         </div>
 
         <div className="definition panel">
@@ -39,16 +38,16 @@ function TheStageBeyond() {
               We study content that expands how we understand ourselves and the world.
             </Step>
             <Step icon={<MessageCircle />} title="Consultation">
-              Together, we read our own reality and explore how it applies.
+              We read our own reality and explore how the study content applies.
             </Step>
             <Step icon={<ArrowUpRight />} title="Action">
-              Translating consultative decisions into practice.
+              We translate consultative decisions into practice.
             </Step>
             <Step icon={<RefreshCw />} title="Reflection">
-              Reflecting on what is learned through action to deepen understanding and refine consultation.
+              We reflect on what we learned through action to deepen our understanding and refine our practice.
             </Step>
           </div>
-          <p className="cycle">A cycle of disciplined learning.</p>
+          <p className="cycle">A cycle of disciplined learning about who we are becoming and what we need to do about it.</p>
         </div>
       </section>
 
