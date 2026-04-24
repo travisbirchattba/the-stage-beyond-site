@@ -38,10 +38,10 @@ function TheStageBeyond() {
         </marker>
       </defs>
 
-      <path d="M300 100 A200 200 0 0 1 500 300" marker-end="url(#arrow)" />
-      <path d="M500 300 A200 200 0 0 1 300 500" marker-end="url(#arrow)" />
-      <path d="M300 500 A200 200 0 0 1 100 300" marker-end="url(#arrow)" />
-      <path d="M100 300 A200 200 0 0 1 300 100" marker-end="url(#arrow)" />
+      <path d="M300 100 A200 200 0 0 1 500 300" markerEnd="url(#arrow)" />
+      <path d="M500 300 A200 200 0 0 1 300 500" markerEnd="url(#arrow)" />
+      <path d="M300 500 A200 200 0 0 1 100 300" markerEnd="url(#arrow)" />
+      <path d="M100 300 A200 200 0 0 1 300 100" markerEnd="url(#arrow)" />
     </svg>
 
     <div className="circleStep top">
@@ -67,6 +67,11 @@ function TheStageBeyond() {
         We reflect on what we learned through action to deepen our understanding and refine our practice.
       </Step>
     </div>
+
+  </div>
+
+  <p className="cycle">...a cycle of disciplined learning.</p>
+</section>
 
   </div>
 
