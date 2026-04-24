@@ -315,11 +315,11 @@ h1 {
   margin: 0 auto;
 }
 
-.cycleSvg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
+.cycleSvg path {
+  fill: none;
+  stroke: #b98b3f;
+  stroke-width: 2;
+  opacity: 0.65;
 }
 
 .cycleSvg path {
