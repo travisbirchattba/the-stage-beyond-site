@@ -1,6 +1,13 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import { BookOpen, MessageCircle, ArrowUpRight, RefreshCw, User, Users } from 'lucide-react';
+import {
+  BookOpen,
+  MessageCircle,
+  ArrowUpRight,
+  RefreshCw,
+  User,
+  Users
+} from 'lucide-react';
 import './styles.css';
 
 function App() {
@@ -9,7 +16,11 @@ function App() {
       <section className="hero">
         <div className="heroContent">
           <p className="eyebrow">The Stage Beyond</p>
-          <h1>The Stage<br />Beyond</h1>
+          <h1>
+            The Stage
+            <br />
+            Beyond
+          </h1>
           <p>A working community for dancers in transition</p>
           <div className="goldLine" />
         </div>
@@ -17,12 +28,19 @@ function App() {
 
       <section className="panel intro">
         <h2>Something is already shifting.</h2>
-        <p>Your life is moving beyond performance—and asking something more of you.</p>
+        <p>
+          Your life is moving beyond performance—and asking something more of
+          you.
+        </p>
       </section>
 
       <section className="panel definition">
-        <p>We work with small cohorts of dancers navigating transition—together.</p>
-        <p>Through this, we develop a shared practice, shaped by each cohort.</p>
+        <p>
+          We work with small cohorts of dancers navigating transition—together.
+        </p>
+        <p>
+          Through this, we develop a shared practice, shaped by each cohort.
+        </p>
       </section>
 
       <section className="panel rhythm">
@@ -30,7 +48,8 @@ function App() {
 
         <div className="steps">
           <Step icon={<BookOpen />} title="Study">
-            We study content that expands how we understand ourselves and the world.
+            We study content that expands how we understand ourselves and the
+            world.
           </Step>
 
           <Step icon={<MessageCircle />} title="Consultation">
@@ -42,7 +61,8 @@ function App() {
           </Step>
 
           <Step icon={<RefreshCw />} title="Reflection">
-            We reflect on what we learned through action to deepen our understanding and refine our practice.
+            We reflect on what we learned through action to deepen our
+            understanding and refine our practice.
           </Step>
         </div>
 
@@ -54,7 +74,8 @@ function App() {
 
         <div className="purposeGrid">
           <Purpose icon={<User />} title="Individual">
-            Building capacity to contribute meaningfully to the world beyond dance.
+            Building capacity to contribute meaningfully to the world beyond
+            dance.
           </Purpose>
 
           <div className="plus">+</div>
@@ -64,7 +85,10 @@ function App() {
           </Purpose>
         </div>
 
-        <a href="mailto:hello@thestagebeyond.coach" className="learnMore">
+        <a
+          href="mailto:hello@thestagebeyond.coach"
+          className="learnMore"
+        >
           Start the first conversation
         </a>
       </section>
