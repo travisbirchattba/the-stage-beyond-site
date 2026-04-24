@@ -43,10 +43,10 @@ function App() {
               </marker>
             </defs>
 
-<path d="M300 130 Q420 170 480 260" markerEnd="url(#arrow)" />
-<path d="M480 340 Q420 430 300 470" markerEnd="url(#arrow)" />
-<path d="M300 470 Q180 430 120 340" markerEnd="url(#arrow)" />
-<path d="M120 260 Q180 170 300 130" markerEnd="url(#arrow)" />
+<path d="M300 165 Q400 200 450 285" markerEnd="url(#arrow)" />
+<path d="M450 315 Q400 400 300 435" markerEnd="url(#arrow)" />
+<path d="M300 435 Q200 400 150 315" markerEnd="url(#arrow)" />
+<path d="M150 285 Q200 200 300 165" markerEnd="url(#arrow)" />
           </svg>
 
           <CycleStep className="top" icon={<BookOpen />} title="Study">
