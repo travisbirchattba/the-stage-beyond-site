@@ -95,8 +95,7 @@ body {
   fill: none;
   stroke: #b98b3f;
   stroke-width: 2;
-  stroke-linecap: round;
-  opacity: 0.85;
+  opacity: 0.6;
 }
 
 .circleStep {
