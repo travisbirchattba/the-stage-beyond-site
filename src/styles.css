@@ -309,9 +309,9 @@ h1 {
   }
 }
 .cycleWrapper {
-  position: relative;
-  width: min(700px, 100%);
-  height: 600px;
+ position: relative;
+  width: min(900px, 100%);
+  height: 720px;
   margin: 0 auto;
 }
 
@@ -330,8 +330,8 @@ h1 {
 }
 
 .circleStep {
-  position: absolute;
-  width: 220px;
+    position: absolute;
+  width: 210px;
   text-align: center;
 }
 
