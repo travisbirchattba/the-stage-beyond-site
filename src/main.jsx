@@ -26,30 +26,52 @@ function TheStageBeyond() {
           <p>Your life is moving beyond performance—<br />and asking something more of you.</p>
         </div>
 
-        <div className="definition panel">
-          <p>We work with small cohorts of dancers navigating transition—together.</p>
-          <p>Through this, we develop a shared practice, shaped by each cohort.</p>
-        </div>
+<section className="panel rhythm">
+  <p className="rhythmLead">We move in a rhythm...</p>
 
-        <div className="rhythm panel">
-          <p className="rhythmLead">We move in a rhythm:</p>
-<div className="steps circleSteps">
-            <Step icon={<BookOpen />} title="Study">
-              We study content that expands how we understand ourselves and the world.
-            </Step>
-            <Step icon={<MessageCircle />} title="Consultation">
-              We read our own reality and explore how the study content applies.
-            </Step>
-            <Step icon={<ArrowUpRight />} title="Action">
-              We translate consultative decisions into practice.
-            </Step>
-            <Step icon={<RefreshCw />} title="Reflection">
-              We reflect on what we learned through action to deepen our understanding and refine our practice.
-            </Step>
-          </div>
-          <p className="cycle">A cycle of disciplined learning.</p>
-        </div>
-      </section>
+  <div className="cycleWrapper">
+
+    <svg viewBox="0 0 600 600" className="cycleSvg" aria-hidden="true">
+      <defs>
+        <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+          <path d="M0,0 L10,5 L0,10 Z" fill="#b98b3f" />
+        </marker>
+      </defs>
+
+      <path d="M300 100 A200 200 0 0 1 500 300" marker-end="url(#arrow)" />
+      <path d="M500 300 A200 200 0 0 1 300 500" marker-end="url(#arrow)" />
+      <path d="M300 500 A200 200 0 0 1 100 300" marker-end="url(#arrow)" />
+      <path d="M100 300 A200 200 0 0 1 300 100" marker-end="url(#arrow)" />
+    </svg>
+
+    <div className="circleStep top">
+      <Step icon={<BookOpen />} title="Study">
+        We study content that expands how we understand ourselves and the world.
+      </Step>
+    </div>
+
+    <div className="circleStep right">
+      <Step icon={<MessageCircle />} title="Consultation">
+        We read our own reality and explore how the study content applies.
+      </Step>
+    </div>
+
+    <div className="circleStep bottom">
+      <Step icon={<ArrowUpRight />} title="Action">
+        We translate consultative decisions into practice.
+      </Step>
+    </div>
+
+    <div className="circleStep left">
+      <Step icon={<RefreshCw />} title="Reflection">
+        We reflect on what we learned through action to deepen our understanding and refine our practice.
+      </Step>
+    </div>
+
+  </div>
+
+  <p className="cycle">...a cycle of disciplined learning.</p>
+</section>
 
       <section className="purpose">
         <p className="purposeLabel">The twofold purpose</p>
