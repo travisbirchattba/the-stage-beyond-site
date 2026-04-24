@@ -47,6 +47,7 @@ function App() {
 <path d="M390 330 A120 120 0 0 1 300 420" markerEnd="url(#arrow)" />
 <path d="M300 420 A120 120 0 0 1 210 330" markerEnd="url(#arrow)" />
 <path d="M210 270 A120 120 0 0 1 300 180" markerEnd="url(#arrow)" />
+            <circle cx="300" cy="300" r="40" fill="red" />
           </svg>
 
           <CycleStep className="top" icon={<BookOpen />} title="Study">
