@@ -27,8 +27,8 @@ function TheStageBeyond() {
         </div>
 
         <div className="definition panel">
-          <p>A small, ongoing group of dancers working through transition—together.</p>
-          <p>A shared practice, shaped by the people participating in it.</p>
+          <p>We work with small cohorts of dancers navigating transition—together.</p>
+          <p>Through this, we develop a shared practice, shaped by each cohort.</p>
         </div>
 
         <div className="rhythm panel">
