@@ -3,8 +3,59 @@ import { createRoot } from 'react-dom/client';
 import { BookOpen, MessageCircle, ArrowUpRight, RefreshCw, User, Users } from 'lucide-react';
 import './styles.css';
 
-function App() {
-  return <TheStageBeyond />;
+function TheStageBeyond() {
+  return (
+    <div className="page">
+
+      <section className="hero">
+        <p className="eyebrow">The Stage Beyond</p>
+
+        <h1>
+          A peer-based development path for artists and creative leaders ready to grow beyond the stage.
+        </h1>
+
+        <p className="subtitle">
+          A guided learning group where people build capacity, deepen their practice,
+          and grow alongside others on a similar path.
+        </p>
+
+        <a href="#apply" className="button">Start the first conversation</a>
+      </section>
+
+      <section className="section">
+        <h2>What this is</h2>
+        <p>
+          There are similarities with coaching, but this is different.
+          The focus is active learning with peers, guided by someone more experienced
+          who supports the development of each participant.
+        </p>
+      </section>
+
+      <section className="section alt">
+        <h2>How it works</h2>
+        <p>
+          Small groups meet regularly, work on real challenges,
+          practice new ways of thinking and acting, and gradually
+          build the capacity to support others.
+        </p>
+      </section>
+
+      <section className="section">
+        <h2>Who it’s for</h2>
+        <p>
+          People open to active learning with peers — willing to bring real questions,
+          try things, reflect honestly, and grow in community.
+        </p>
+      </section>
+
+      <section id="apply" className="section cta">
+        <h2>Start with a conversation</h2>
+        <p>The first step is a simple conversation to see if it’s a fit.</p>
+        <a href="mailto:your-email@example.com" className="button">Contact me</a>
+      </section>
+
+    </div>
+  )
 }
 
 function TheStageBeyond() {
