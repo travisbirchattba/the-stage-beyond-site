@@ -87,13 +87,23 @@ function App() {
 
 function Step({ icon, title, children }) {
   return (
-    <div className="step">
-      <div className="icon">{icon}</div>
-      <h3>{title}</h3>
-      <p>{children}</p>
-    </div>
-  );
-}
+ <div className="steps">
+  <Step icon={<BookOpen />} title="Study">
+    We study content that expands how we understand ourselves and the world.
+  </Step>
+
+  <Step icon={<MessageCircle />} title="Consultation">
+    We read our own reality and explore how the study content applies.
+  </Step>
+
+  <Step icon={<ArrowUpRight />} title="Action">
+    We translate consultative decisions into practice.
+  </Step>
+
+  <Step icon={<RefreshCw />} title="Reflection">
+    We reflect on what we learned through action to deepen our understanding and refine our practice.
+  </Step>
+</div>
 
 function Purpose({ icon, title, children }) {
   return (
