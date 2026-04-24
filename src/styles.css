@@ -74,10 +74,11 @@ body {
 
 .steps {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 32px;
-  max-width: 1120px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 48px;
+  max-width: 1180px;
   margin: 0 auto;
+  align-items: start;
 }
 
 .step {
@@ -156,7 +157,4 @@ body {
   .purposeGrid {
     grid-template-columns: 1fr;
   }
-}
-body {
-  border: 10px solid red;
 }
