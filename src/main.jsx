@@ -33,7 +33,7 @@ function TheStageBeyond() {
 
         <div className="rhythm panel">
           <p className="rhythmLead">We move in a rhythm:</p>
-          <div className="steps">
+<div className="steps circleSteps">
             <Step icon={<BookOpen />} title="Study">
               We study content that expands how we understand ourselves and the world.
             </Step>
