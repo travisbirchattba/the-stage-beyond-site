@@ -308,3 +308,71 @@ h1 {
     transform: none;
   }
 }
+.cycleWrapper {
+  position: relative;
+  width: min(700px, 100%);
+  height: 600px;
+  margin: 0 auto;
+}
+
+.cycleSvg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.cycleSvg path {
+  fill: none;
+  stroke: #b98b3f;
+  stroke-width: 2;
+  opacity: 0.6;
+}
+
+.circleStep {
+  position: absolute;
+  width: 220px;
+  text-align: center;
+}
+
+.circleStep.top {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.circleStep.right {
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.circleStep.bottom {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.circleStep.left {
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+@media (max-width: 760px) {
+  .cycleWrapper {
+    height: auto;
+    display: grid;
+    gap: 40px;
+  }
+
+  .cycleSvg {
+    display: none;
+  }
+
+  .circleStep {
+    position: static;
+    transform: none;
+    width: auto;
+  }
+}
