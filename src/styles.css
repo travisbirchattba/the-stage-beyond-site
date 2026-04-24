@@ -1,4 +1,6 @@
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
@@ -14,13 +16,22 @@ body {
 .hero,
 .panel,
 .purpose {
-  padding: 96px 8vw;
+  padding: 72px 8vw;
 }
 
 .hero {
-  min-height: 60vh;
+  min-height: 65vh;
   display: flex;
   align-items: center;
+}
+
+.heroContent,
+.intro,
+.definition,
+.rhythm,
+.purpose {
+  max-width: 1120px;
+  margin: 0 auto;
 }
 
 .eyebrow,
@@ -33,15 +44,15 @@ body {
 }
 
 .hero h1 {
-  font-size: clamp(4rem, 12vw, 9rem);
-  line-height: 0.88;
+  font-size: clamp(4rem, 10vw, 8rem);
+  line-height: 0.9;
   margin: 18px 0 28px;
 }
 
 .hero p,
 .panel p,
 .purpose p {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   line-height: 1.65;
   max-width: 760px;
 }
@@ -55,13 +66,19 @@ body {
 
 .intro h2,
 .rhythmLead {
-  font-size: clamp(2.5rem, 6vw, 5rem);
-  line-height: 1.02;
+  font-size: clamp(2.4rem, 5vw, 4.5rem);
+  line-height: 1.05;
   margin: 0 0 24px;
 }
 
 .definition {
   background: #efe6d8;
+  max-width: none;
+}
+
+.definition p {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .rhythm {
@@ -69,26 +86,26 @@ body {
 }
 
 .rhythmLead {
-  margin: 0 auto 72px;
+  margin: 0 auto 56px;
 }
 
 .steps {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 48px;
-  max-width: 1000px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 36px;
+  max-width: 820px;
   margin: 0 auto;
-  align-items: start;
 }
 
 .step {
   text-align: center;
+  padding: 28px 24px;
 }
 
 .icon,
 .purposeIcon {
-  width: 72px;
-  height: 72px;
+  width: 68px;
+  height: 68px;
   border-radius: 50%;
   background: #efe6d8;
   color: #b98b3f;
@@ -99,8 +116,8 @@ body {
 
 .icon svg,
 .purposeIcon svg {
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
   stroke-width: 1.6;
 }
 
@@ -108,23 +125,27 @@ body {
 .purposeBlock h3 {
   text-transform: uppercase;
   letter-spacing: 0.14em;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+  margin-bottom: 12px;
 }
 
 .step p {
-  font-size: 0.95rem;
-  line-height: 1.5;
+  font-size: 0.98rem;
+  line-height: 1.55;
   color: #4f4840;
+  margin: 0 auto;
 }
 
 .cycle {
-  margin: 48px auto 0;
+  margin: 52px auto 0;
+  color: #4f4840;
 }
 
 .purpose {
   background: #1f1f1f;
   color: #f7f2ea;
   text-align: center;
+  max-width: none;
 }
 
 .purposeGrid {
@@ -132,8 +153,12 @@ body {
   grid-template-columns: 1fr auto 1fr;
   gap: 36px;
   align-items: center;
-  max-width: 960px;
+  max-width: 920px;
   margin: 42px auto;
+}
+
+.purposeBlock {
+  padding: 24px;
 }
 
 .plus {
@@ -152,9 +177,19 @@ body {
   font-weight: bold;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 760px) {
+  .hero,
+  .panel,
+  .purpose {
+    padding: 56px 6vw;
+  }
+
   .steps,
   .purposeGrid {
     grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: clamp(3.5rem, 18vw, 5rem);
   }
 }
