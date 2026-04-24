@@ -36,18 +36,25 @@ function App() {
         <p className="rhythmLead">We move in a rhythm...</p>
 
         <div className="cycleWrapper">
-          <svg viewBox="0 0 600 600" className="cycleSvg" aria-hidden="true">
-            <defs>
-              <marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
-                <path d="M0,0 L9,4.5 L0,9 Z" fill="#b98b3f" />
-              </marker>
-            </defs>
+         <svg className="cycleSvg" viewBox="0 0 600 600">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8" fill="none" stroke="#b98b3f" strokeWidth="1.5"/>
+    </marker>
+  </defs>
 
-<path d="M320 190 Q400 210 460 270" markerEnd="url(#arrow)" />
-<path d="M460 330 Q400 390 320 410" markerEnd="url(#arrow)" />
-<path d="M280 410 Q200 390 140 330" markerEnd="url(#arrow)" />
-<path d="M140 270 Q200 210 280 190" markerEnd="url(#arrow)" />
-          </svg>
+  {/* Top → Right */}
+  <path d="M300 140 Q420 180 460 300" markerEnd="url(#arrow)" />
+
+  {/* Right → Bottom */}
+  <path d="M460 300 Q420 420 300 460" markerEnd="url(#arrow)" />
+
+  {/* Bottom → Left */}
+  <path d="M300 460 Q180 420 140 300" markerEnd="url(#arrow)" />
+
+  {/* Left → Top */}
+  <path d="M140 300 Q180 180 300 140" markerEnd="url(#arrow)" />
+</svg>
 
           <CycleStep className="top" icon={<BookOpen />} title="Study">
             We study content that expands how we understand ourselves and the world.
