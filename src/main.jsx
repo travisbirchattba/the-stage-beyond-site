@@ -36,17 +36,66 @@ function App() {
         <p className="rhythmLead">We move in a rhythm...</p>
 
         <div className="cycleWrapper">
-         <svg className="cycleSvg" viewBox="0 0 600 600">
-  <defs>
-    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
-      <path d="M0,0 L8,4 L0,8" fill="none" stroke="#b98b3f" strokeWidth="1.5"/>
-    </marker>
-  </defs>
+        <svg width="500" height="500" viewBox="0 0 500 500">
+  {/* Top-right curved arrow (from top to right) - counter-clockwise */}
+  <path
+    d="M 250 80 A 170 170 0 0 1 380 180"
+    fill="none"
+    stroke="#c9a96e"
+    strokeWidth="1.5"
+  />
+  <path
+    d="M 380 180 L 373 175 M 380 180 L 375 187"
+    fill="none"
+    stroke="#c9a96e"
+    strokeWidth="1.5"
+    strokeLinecap="round"
+  />
 
-<path d="M300 245 Q355 260 375 300" markerEnd="url(#arrow)" />
-<path d="M375 300 Q355 340 300 355" markerEnd="url(#arrow)" />
-<path d="M300 355 Q245 340 225 300" markerEnd="url(#arrow)" />
-<path d="M225 300 Q245 260 300 245" markerEnd="url(#arrow)" />
+  {/* Right-bottom curved arrow (from right to bottom) - counter-clockwise */}
+  <path
+    d="M 420 250 A 170 170 0 0 1 320 420"
+    fill="none"
+    stroke="#c9a96e"
+    strokeWidth="1.5"
+  />
+  <path
+    d="M 320 420 L 325 413 M 320 420 L 313 415"
+    fill="none"
+    stroke="#c9a96e"
+    strokeWidth="1.5"
+    strokeLinecap="round"
+  />
+
+  {/* Bottom-left curved arrow (from bottom to left) - counter-clockwise */}
+  <path
+    d="M 250 420 A 170 170 0 0 1 120 320"
+    fill="none"
+    stroke="#c9a96e"
+    strokeWidth="1.5"
+  />
+  <path
+    d="M 120 320 L 127 325 M 120 320 L 125 313"
+    fill="none"
+    stroke="#c9a96e"
+    strokeWidth="1.5"
+    strokeLinecap="round"
+  />
+
+  {/* Left-top curved arrow (from left to top) - counter-clockwise */}
+  <path
+    d="M 80 250 A 170 170 0 0 1 180 120"
+    fill="none"
+    stroke="#c9a96e"
+    strokeWidth="1.5"
+  />
+  <path
+    d="M 180 120 L 175 127 M 180 120 L 187 125"
+    fill="none"
+    stroke="#c9a96e"
+    strokeWidth="1.5"
+    strokeLinecap="round"
+  />
 </svg>
 
           <CycleStep className="top" icon={<BookOpen />} title="Study">
