@@ -14,89 +14,58 @@ function App() {
   return (
     <main className="site">
       <section className="hero">
-        <div className="heroContent">
-          <p className="eyebrow">The Stage Beyond</p>
-          <h1>The Stage<br />Beyond</h1>
-          <p>A working community for dancers in transition</p>
-          <div className="goldLine" />
+        <div className="heroInner">
+          <div className="heroText">
+            <p className="eyebrow">The Stage Beyond</p>
+            <h1>The Stage<br />Beyond</h1>
+            <p className="heroSubhead">
+              A working community for dancers in transition.
+            </p>
+          </div>
+
+          <div className="heroImage" aria-label="A small group of dancers in conversation" />
         </div>
       </section>
 
-      <section className="panel intro">
-        <h2>Something is already shifting.</h2>
-        <p>Your life is moving beyond performance—and asking something more of you.</p>
+      <section className="introSection">
+        <div className="introStatement">
+          <h2>Something is already shifting.</h2>
+          <p>
+            Your life is moving beyond performance—and asking something more of you.
+          </p>
+        </div>
+
+        <div className="definitionBlock">
+          <p>We work with small cohorts of dancers navigating transition—together.</p>
+          <p>Through this, we develop a shared practice, shaped by each cohort.</p>
+        </div>
       </section>
 
-      <section className="panel definition">
-        <p>We work with small cohorts of dancers navigating transition—together.</p>
-        <p>Through this, we develop a shared practice, shaped by each cohort.</p>
-      </section>
+      <section className="rhythmSection">
+        <p className="eyebrow">How we work</p>
+        <h2>We move in a rhythm.</h2>
 
-      <section className="panel rhythm">
-        <p className="rhythmLead">We move in a rhythm...</p>
+        <div className="cycleGraphic">
+          <svg className="cycleArrows" viewBox="0 0 560 560" aria-hidden="true">
+            <defs>
+              <marker
+                id="arrow"
+                markerWidth="9"
+                markerHeight="9"
+                refX="7"
+                refY="4.5"
+                orient="auto"
+                markerUnits="strokeWidth"
+              >
+                <path d="M0,0 L9,4.5 L0,9" fill="none" stroke="#b98b3f" strokeWidth="1.4" />
+              </marker>
+            </defs>
 
-        <div className="cycleWrapper">
-        <svg width="500" height="500" viewBox="0 0 500 500">
-  {/* Top-right curved arrow (from top to right) - counter-clockwise */}
-  <path
-    d="M 250 80 A 170 170 0 0 1 380 180"
-    fill="none"
-    stroke="#c9a96e"
-    strokeWidth="1.5"
-  />
-  <path
-    d="M 380 180 L 373 175 M 380 180 L 375 187"
-    fill="none"
-    stroke="#c9a96e"
-    strokeWidth="1.5"
-    strokeLinecap="round"
-  />
-
-  {/* Right-bottom curved arrow (from right to bottom) - counter-clockwise */}
-  <path
-    d="M 420 250 A 170 170 0 0 1 320 420"
-    fill="none"
-    stroke="#c9a96e"
-    strokeWidth="1.5"
-  />
-  <path
-    d="M 320 420 L 325 413 M 320 420 L 313 415"
-    fill="none"
-    stroke="#c9a96e"
-    strokeWidth="1.5"
-    strokeLinecap="round"
-  />
-
-  {/* Bottom-left curved arrow (from bottom to left) - counter-clockwise */}
-  <path
-    d="M 250 420 A 170 170 0 0 1 120 320"
-    fill="none"
-    stroke="#c9a96e"
-    strokeWidth="1.5"
-  />
-  <path
-    d="M 120 320 L 127 325 M 120 320 L 125 313"
-    fill="none"
-    stroke="#c9a96e"
-    strokeWidth="1.5"
-    strokeLinecap="round"
-  />
-
-  {/* Left-top curved arrow (from left to top) - counter-clockwise */}
-  <path
-    d="M 80 250 A 170 170 0 0 1 180 120"
-    fill="none"
-    stroke="#c9a96e"
-    strokeWidth="1.5"
-  />
-  <path
-    d="M 180 120 L 175 127 M 180 120 L 187 125"
-    fill="none"
-    stroke="#c9a96e"
-    strokeWidth="1.5"
-    strokeLinecap="round"
-  />
-</svg>
+            <path d="M285 70 A210 210 0 0 1 490 275" />
+            <path d="M490 285 A210 210 0 0 1 285 490" />
+            <path d="M275 490 A210 210 0 0 1 70 285" />
+            <path d="M70 275 A210 210 0 0 1 275 70" />
+          </svg>
 
           <CycleStep className="top" icon={<BookOpen />} title="Study">
             We study content that expands how we understand ourselves and the world.
@@ -113,9 +82,11 @@ function App() {
           <CycleStep className="left" icon={<RefreshCw />} title="Reflection">
             We reflect on what we learned through action to deepen our understanding and refine our practice.
           </CycleStep>
-        </div>
 
-        <p className="cycle">...a cycle of disciplined learning.</p>
+          <div className="cycleCenter">
+            A cycle of<br />disciplined learning.
+          </div>
+        </div>
       </section>
 
       <section className="purpose">
@@ -128,8 +99,8 @@ function App() {
 
           <div className="plus">+</div>
 
-          <Purpose icon={<Users />} title="Society">
-            Channeling increased capacity towards meaningful contribution.
+          <Purpose icon={<Users />} title="Collective">
+            Channeling increased capacity toward meaningful contribution.
           </Purpose>
         </div>
 
