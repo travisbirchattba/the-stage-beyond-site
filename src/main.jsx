@@ -1,16 +1,45 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { createRoot } from 'react-dom/client';
 import './styles.css';
 
 const calendarLink = 'https://calendar.app.google/X6KBMhZVmxGofHyF7';
 
+function Nav() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  return (
+    <nav className={`siteNav ${scrolled ? 'navScrolled' : ''}`}>
+      <div className="navInner">
+        <div className="navLinks">
+          <a href="/" className="navLink">Home</a>
+          <a href="/approach" className="navLink">Approach</a>
+          <a href="/apply" className="navLink">Is this for me?</a>
+        </div>
+        <a href={calendarLink} className="navCta" target="_blank" rel="noopener noreferrer">
+          Schedule a conversation
+        </a>
+      </div>
+    </nav>
+  );
+}
+
 function App() {
   const path = window.location.pathname;
 
-  if (path === '/approach') return <ApproachPage />;
-  if (path === '/apply') return <ApplyPage />;
-
-  return <HomePage />;
+  return (
+    <>
+      <Nav />
+      {path === '/approach' ? <ApproachPage /> :
+       path === '/apply' ? <ApplyPage /> :
+       <HomePage />}
+    </>
+  );
 }
 
 function HomePage() {
@@ -118,7 +147,7 @@ function HomePage() {
           </p>
 
           <p className="fitLine">
-            For dancers who don’t want to figure it out alone.
+            For dancers who don't want to figure it out alone.
           </p>
         </div>
 
@@ -245,7 +274,7 @@ function ApplyPage() {
         </ul>
 
         <p className="closingLine">
-          The first step is a conversation. We’ll explore whether the timing,
+          The first step is a conversation. We'll explore whether the timing,
           structure, and spirit of the work are right.
         </p>
 
