@@ -60,6 +60,26 @@ function Nav() {
   );
 }
 
+function Footer() {
+  return (
+    <footer className="siteFooter">
+      <div className="footerInner">
+        <a href="/" className="footerWordmark">The Stage Beyond</a>
+        <nav className="footerLinks">
+          <a href="/" className="footerLink">Home</a>
+          <a href="/approach" className="footerLink">Approach</a>
+          <a href="/projects" className="footerLink">Projects</a>
+          <a href="/apply" className="footerLink">Is this for me?</a>
+        </nav>
+        <a href={calendarLink} className="footerCta" target="_blank" rel="noopener noreferrer">
+          Schedule a conversation
+        </a>
+        <p className="footerCopy">© {new Date().getFullYear()} The Stage Beyond</p>
+      </div>
+    </footer>
+  );
+}
+
 function App() {
   const path = window.location.pathname;
 
@@ -70,6 +90,7 @@ function App() {
        path === '/apply' ? <ApplyPage /> :
        path === '/projects' ? <ProjectsPage /> :
        <HomePage />}
+      <Footer />
     </>
   );
 }
