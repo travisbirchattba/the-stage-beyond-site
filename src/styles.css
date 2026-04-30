@@ -43,12 +43,6 @@ body {
   gap: 36px;
 }
 
-.navLinks {
-  display: flex;
-  gap: 36px;
-  justify-content: center;
-}
-
 .navLink {
   text-decoration: none;
   color: #1f1f1f;
@@ -78,28 +72,7 @@ body {
 }
 
 .navCta {
-  display: inline-block;
-  color: #1f1f1f;
-  text-decoration: none;
-  border-bottom: 1px solid #b98b3f;
-  padding-bottom: 5px;
-  font-size: 0.95rem;
-  transition: color 0.2s;
-  .navCta {
-  display: inline-block;
-  color: #1f1f1f;
-  text-decoration: none;
-  border-bottom: 1px solid #b98b3f;
-  padding-bottom: 5px;
-  font-size: 0.95rem;
-  transition: color 0.2s;
-  margin-left: auto;
-}
-
-.navCta:hover {
-  color: #b98b3f;
-}
-
+  display: in
 /* ── Hero ── */
 
 .hero {
