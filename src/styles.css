@@ -13,8 +13,67 @@ body {
   min-height: 100vh;
 }
 
+/* ── Nav ── */
+
+.siteNav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 22px 6vw;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navScrolled {
+  background: #f7f2ea;
+  box-shadow: 0 1px 0 rgba(31,31,31,0.1);
+}
+
+.navInner {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navLinks {
+  display: flex;
+  gap: 36px;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #1f1f1f;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+  opacity: 0.75;
+  transition: opacity 0.2s;
+}
+
+.navLink:hover {
+  opacity: 1;
+}
+
+.navCta {
+  display: inline-block;
+  color: #1f1f1f;
+  text-decoration: none;
+  border-bottom: 1px solid #b98b3f;
+  padding-bottom: 5px;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.navCta:hover {
+  color: #b98b3f;
+}
+
+/* ── Hero ── */
+
 .hero {
-  padding: 80px 6vw 72px;
+  padding: 148px 6vw 72px;
 }
 
 .heroInner {
@@ -56,6 +115,14 @@ body {
   margin-bottom: 34px;
 }
 
+.heroHint {
+  font-size: 0.95rem;
+  color: #7a736a;
+  letter-spacing: 0.02em;
+  margin-top: -10px;
+  margin-bottom: 28px;
+}
+
 .primaryCta,
 .learnMore {
   display: inline-block;
@@ -74,16 +141,15 @@ body {
 .heroImage {
   min-height: 500px;
   border-radius: 26px;
-
   background:
     linear-gradient(180deg, rgba(0,0,0,0.03), rgba(0,0,0,0.18)),
-    url("/hero.jpg");
-
+    url("https://images.unsplash.com/photo-1518834107812-67b0b7c58434?w=1200&auto=format&fit=crop");
   background-size: cover;
   background-position: center;
-
-  box-shadow: 0 20px 54px rgba(31, 31, 31, 0.13);
+  box-shadow: 0 20px 54px rgba(31,31,31,0.13);
 }
+
+/* ── Split Section ── */
 
 .splitSection {
   max-width: 1240px;
@@ -111,6 +177,23 @@ body {
   margin: 0 0 22px;
 }
 
+.quietLine {
+  font-size: 0.95rem;
+  color: #7a736a;
+  letter-spacing: 0.02em;
+}
+
+.secondaryLink {
+  display: inline-block;
+  margin-top: 8px;
+  color: #1f1f1f;
+  text-decoration: none;
+  border-bottom: 1px solid #b98b3f;
+  padding-bottom: 6px;
+}
+
+/* ── Rhythm Section ── */
+
 .rhythmSection {
   padding: 96px 6vw 106px;
   text-align: center;
@@ -132,7 +215,7 @@ body {
 
 .cycleStep {
   padding: 28px 22px;
-  border-top: 1px solid rgba(185, 139, 63, 0.55);
+  border-top: 1px solid rgba(185,139,63,0.55);
 }
 
 .cycleStep h3,
@@ -149,6 +232,8 @@ body {
   color: #4f4840;
   margin: 0;
 }
+
+/* ── Purpose Section ── */
 
 .purpose {
   background: #1f1f1f;
@@ -183,62 +268,6 @@ body {
   font-size: 3rem;
 }
 
-.purpose .learnMore {
-  color: #f7f2ea;
-}
-
-.purpose .learnMore:hover {
-  color: #d7b16f;
-}
-
-@media (max-width: 900px) {
-  .heroInner,
-  .splitSection,
-  .cycleGrid,
-  .purposeGrid {
-    grid-template-columns: 1fr;
-  }
-
-  .hero {
-    padding-top: 54px;
-  }
-
-  .heroImage {
-    min-height: 380px;
-  }
-
-  .splitSection,
-  .rhythmSection,
-  .purpose {
-    padding-top: 72px;
-    padding-bottom: 78px;
-  }
-
-  .plus {
-    display: none;
-  }
-}
-.heroHint,
-.quietLine {
-  font-size: 0.95rem;
-  color: #7a736a;
-  letter-spacing: 0.02em;
-}
-
-.heroHint {
-  margin-top: -10px;
-  margin-bottom: 28px;
-}
-
-.secondaryLink {
-  display: inline-block;
-  margin-top: 8px;
-  color: #1f1f1f;
-  text-decoration: none;
-  border-bottom: 1px solid #b98b3f;
-  padding-bottom: 6px;
-}
-
 .fitBlock {
   margin: 20px auto 30px;
   max-width: 600px;
@@ -251,6 +280,16 @@ body {
   margin: 0 0 12px;
 }
 
+.purpose .learnMore {
+  color: #f7f2ea;
+}
+
+.purpose .learnMore:hover {
+  color: #d7b16f;
+}
+
+/* ── Inner Pages ── */
+
 .simplePage {
   background: #f7f2ea;
 }
@@ -258,7 +297,7 @@ body {
 .pageHero {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 96px 6vw 72px;
+  padding: 168px 6vw 72px;
 }
 
 .pageHero h1 {
@@ -324,12 +363,48 @@ body {
   margin-top: 56px !important;
 }
 
+/* ── Responsive ── */
+
 @media (max-width: 900px) {
-  .approachList {
+  .heroInner,
+  .splitSection,
+  .cycleGrid,
+  .purposeGrid {
     grid-template-columns: 1fr;
   }
 
+  .hero {
+    padding-top: 120px;
+  }
+
   .pageHero {
+    padding-top: 130px;
+  }
+
+  .heroImage {
+    min-height: 380px;
+  }
+
+  .splitSection,
+  .rhythmSection,
+  .purpose {
     padding-top: 72px;
+    padding-bottom: 78px;
+  }
+
+  .plus {
+    display: none;
+  }
+
+  .navLinks {
+    gap: 20px;
+  }
+
+  .navCta {
+    display: none;
+  }
+
+  .approachList {
+    grid-template-columns: 1fr;
   }
 }
