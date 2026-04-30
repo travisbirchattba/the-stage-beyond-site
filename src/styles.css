@@ -33,9 +33,14 @@ body {
 .navInner {
   max-width: 1240px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  display: flex;
   align-items: center;
+  gap: 48px;
+}
+
+.navLinks {
+  display: flex;
+  gap: 36px;
 }
 
 .navLinks {
@@ -80,7 +85,15 @@ body {
   padding-bottom: 5px;
   font-size: 0.95rem;
   transition: color 0.2s;
-  justify-self: end;
+  .navCta {
+  display: inline-block;
+  color: #1f1f1f;
+  text-decoration: none;
+  border-bottom: 1px solid #b98b3f;
+  padding-bottom: 5px;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+  margin-left: auto;
 }
 
 .navCta:hover {
