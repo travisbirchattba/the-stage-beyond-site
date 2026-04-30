@@ -1,13 +1,5 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import {
-  BookOpen,
-  MessageCircle,
-  ArrowUpRight,
-  RefreshCw,
-  User,
-  Users
-} from 'lucide-react';
 import './styles.css';
 
 function App() {
@@ -17,80 +9,57 @@ function App() {
         <div className="heroInner">
           <div className="heroText">
             <p className="eyebrow">The Stage Beyond</p>
-            <h1>The Stage<br />Beyond</h1>
+            <h1>Your artistry was the beginning.<br />Your contribution is what comes next.</h1>
             <p className="heroSubhead">
-              A working community for dancers in transition.
+              A creative incubator where dancers consult, decide, and act together
+              for the betterment of society.
             </p>
+            <a href="mailto:hello@thestagebeyond.coach" className="learnMore">
+              Apply for the next consultative cycle
+            </a>
           </div>
-
           <div className="heroImage" />
         </div>
       </section>
 
       <section className="introSection">
         <div className="introStatement">
-          <h2>Something is already shifting.</h2>
+          <h2>The stage ends. The discipline remains.</h2>
           <p>
-            Your life is moving beyond performance—and asking something more of you.
+            You have spent years developing precision, awareness, and the ability to
+            work as part of a unified whole.
           </p>
         </div>
 
         <div className="definitionBlock">
-          <p>We work with small cohorts of dancers navigating transition—together.</p>
-          <p>Through this, we develop a shared practice, shaped by each cohort.</p>
+          <p>
+            The Stage Beyond creates a new context where that discipline can be
+            applied to real questions, real communities, and meaningful contribution.
+          </p>
         </div>
       </section>
 
       <section className="rhythmSection">
         <p className="eyebrow">How we work</p>
-        <h2>We move in a rhythm.</h2>
+        <h2>A cycle of disciplined learning.</h2>
 
-        <div className="cycleGraphic">
-          <svg className="cycleArrows" viewBox="0 0 560 560" aria-hidden="true">
-            <defs>
-              <marker
-                id="arrow"
-                markerWidth="9"
-                markerHeight="9"
-                refX="7"
-                refY="4.5"
-                orient="auto"
-                markerUnits="strokeWidth"
-              >
-                <path
-                  d="M0,0 L9,4.5 L0,9"
-                  fill="none"
-                  stroke="#b98b3f"
-                  strokeWidth="1.4"
-                />
-              </marker>
-            </defs>
+        <div className="simpleCycle">
+          <div><h3>Study</h3><p>Expanding how we understand ourselves, society, and the world.</p></div>
+          <div><h3>Consultation</h3><p>Reading reality together and identifying where our work is needed.</p></div>
+          <div><h3>Action</h3><p>Executing a collective, in-person act of service in the community.</p></div>
+          <div><h3>Reflection</h3><p>Learning from what unfolds to refine future action.</p></div>
+        </div>
+      </section>
 
-            <path d="M285 78 A202 202 0 0 1 482 275" />
-            <path d="M482 285 A202 202 0 0 1 285 482" />
-            <path d="M275 482 A202 202 0 0 1 78 285" />
-            <path d="M78 275 A202 202 0 0 1 275 78" />
-          </svg>
+      <section className="principles">
+        <p className="eyebrow">The art of consultation</p>
+        <h2>How we arrive at shared action.</h2>
 
-          <CycleStep className="top" icon={<BookOpen />} title="Study">
-            We study content that expands how we understand ourselves and the world.
-          </CycleStep>
-
-          <CycleStep className="right" icon={<MessageCircle />} title="Consultation">
-            We read our own reality and explore how the study content applies.
-          </CycleStep>
-
-          <CycleStep className="bottom" icon={<ArrowUpRight />} title="Action">
-            We translate consultative decisions into practice.
-          </CycleStep>
-
-          <CycleStep className="left" icon={<RefreshCw />} title="Reflection">
-            We reflect on what we learned through action to deepen our understanding and refine our practice.
-          </CycleStep>
-
-          <div className="cycleCenter">
-            A cycle of<br />disciplined learning.
-          </div>
+        <div className="principlesGrid">
+          <div><h3>Detachment</h3><p>Ideas are offered to the group, not held as personal positions.</p></div>
+          <div><h3>Search for truth</h3><p>We focus on what is real and needed, not what is preferred.</p></div>
+          <div><h3>Unity of aim</h3><p>The group moves toward a single, shared direction.</p></div>
+          <div><h3>Betterment of society</h3><p>All decisions are grounded in contribution to the common good.</p></div>
         </div>
       </section>
 
@@ -98,42 +67,24 @@ function App() {
         <p className="purposeLabel">The twofold purpose</p>
 
         <div className="purposeGrid">
-          <Purpose icon={<User />} title="Individual">
-            Building capacity to contribute meaningfully to the world beyond dance.
-          </Purpose>
+          <div className="purposeBlock">
+            <h3>Individual</h3>
+            <p>Refining the inner discipline and clarity required to lead beyond performance.</p>
+          </div>
 
           <div className="plus">+</div>
 
-          <Purpose icon={<Users />} title="Collective">
-            Channeling increased capacity toward meaningful contribution.
-          </Purpose>
+          <div className="purposeBlock">
+            <h3>Collective</h3>
+            <p>Acting as a unified working community contributing to the betterment of society.</p>
+          </div>
         </div>
 
         <a href="mailto:hello@thestagebeyond.coach" className="learnMore">
-          Start the first conversation
+          Apply for the next consultative cycle
         </a>
       </section>
     </main>
-  );
-}
-
-function CycleStep({ icon, title, children, className }) {
-  return (
-    <div className={`circleStep ${className}`}>
-      <div className="icon">{icon}</div>
-      <h3>{title}</h3>
-      <p>{children}</p>
-    </div>
-  );
-}
-
-function Purpose({ icon, title, children }) {
-  return (
-    <div className="purposeBlock">
-      <div className="purposeIcon">{icon}</div>
-      <h3>{title}</h3>
-      <p>{children}</p>
-    </div>
   );
 }
 
