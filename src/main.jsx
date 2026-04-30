@@ -19,6 +19,7 @@ function Nav() {
         <div className="navLinks">
           <a href="/" className="navLink">Home</a>
           <a href="/approach" className="navLink">Approach</a>
+          <a href="/projects" className="navLink">Projects</a>
           <a href="/apply" className="navLink">Is this for me?</a>
         </div>
         <a href={calendarLink} className="navCta" target="_blank" rel="noopener noreferrer">
@@ -37,6 +38,7 @@ function App() {
       <Nav />
       {path === '/approach' ? <ApproachPage /> :
        path === '/apply' ? <ApplyPage /> :
+       path === '/projects' ? <ProjectsPage /> :
        <HomePage />}
     </>
   );
@@ -236,6 +238,75 @@ function ApproachPage() {
 
         <a href="/apply" className="primaryCta">
           Is this for me?
+        </a>
+      </section>
+    </main>
+  );
+}
+
+function ProjectsPage() {
+  const projects = [
+    {
+      title: "Dance Programs for Children & Youth in Underserved Communities",
+      description:
+        "Cohort members design and deliver movement-based programs for children and youth in communities with limited access to the arts. This is not performance outreach—it is sustained, relational work that requires listening, adapting, and showing up consistently over time.",
+    },
+    {
+      title: "Tutoring & Mentoring Support",
+      description:
+        "Drawing on the discipline and focus developed through years of training, cohort members offer academic tutoring or personal mentoring to young people who benefit from patient, skilled adult presence. The work builds relationships as much as it builds skills.",
+    },
+    {
+      title: "Collaborative Outreach Within the Dance Community",
+      description:
+        "Projects that strengthen connection across the dance community—between studios, generations, disciplines, or institutions. This might take the form of shared workshops, open rehearsals, skill exchanges, or initiatives that address gaps the community itself has identified.",
+    },
+    {
+      title: "Contributing to Wider Society",
+      description:
+        "Cohorts may undertake projects that bring their collective capacity to bear on needs outside the dance world entirely—partnering with local organizations, responding to community-identified needs, or initiating something that reflects what the group has learned to do together.",
+    },
+  ];
+
+  return (
+    <main className="site simplePage">
+      <section className="pageHero">
+        <p className="eyebrow">Service projects</p>
+        <h1>Action in the world.</h1>
+        <p className="pageLead">
+          The work of each cohort moves beyond personal development.
+          These are examples of the kinds of projects a group might take on together.
+        </p>
+      </section>
+
+      <section className="contentSection">
+        <p>
+          Action is not an add-on to the process—it is central to it. Each cohort consults
+          together to decide what they will do, then carries it out, reflects on what happened,
+          and refines their next step.
+        </p>
+
+        <p>
+          The projects below are examples, not a fixed menu. What a cohort undertakes will
+          emerge from its own consultation and the reality it finds itself in.
+        </p>
+
+        <div className="projectsGrid">
+          {projects.map((project) => (
+            <div className="projectCard" key={project.title}>
+              <h3>{project.title}</h3>
+              <p>{project.description}</p>
+            </div>
+          ))}
+        </div>
+
+        <p className="closingLine">
+          The point is not to complete a project. It is to develop the capacity
+          to act together—and to discover what that makes possible.
+        </p>
+
+        <a href={calendarLink} className="primaryCta" target="_blank" rel="noopener noreferrer">
+          Schedule a conversation
         </a>
       </section>
     </main>
