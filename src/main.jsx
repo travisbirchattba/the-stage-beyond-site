@@ -10,15 +10,11 @@ function App() {
           <div className="heroText">
             <p className="eyebrow">The Stage Beyond</p>
 
-            <h1>
-              Transition is not just about what comes next.<br />
-              It’s about how you move forward—together.
-            </h1>
+            <h1>Transition, worked through together.</h1>
 
             <p className="heroSubhead">
-              A working community for dancers navigating transition through
-              a structured process of consultation, action, and reflection—
-              where personal development and meaningful contribution unfold together.
+              A structured peer process for dancers exploring life, practice,
+              and contribution beyond performance.
             </p>
 
             <a href="mailto:hello@thestagebeyond.coach" className="primaryCta">
@@ -30,150 +26,62 @@ function App() {
         </div>
       </section>
 
-      <section className="statementSection">
-        <p className="largeStatement">
-          Transition becomes clearer when it is worked on together,
-          in service of something beyond the self.
-        </p>
-      </section>
-
       <section className="splitSection">
         <div>
           <p className="eyebrow">What this is</p>
-          <h2>Transition, reworked.</h2>
+          <h2>A place to work with transition.</h2>
         </div>
 
         <div className="textStack">
           <p>
-            Transition is often approached as an individual question:
-            What do I want? What will I do next?
+            Transition is often treated as an individual question: What do I want?
+            What will I do next?
           </p>
 
           <p>
-            This work begins from a different premise—that development of the
-            individual and contribution to the world are not separate.
+            The Stage Beyond takes a different approach. We work through transition
+            in a small peer group, where personal development and contribution to
+            others are held together.
           </p>
 
           <p>
-            When transition is approached collectively, and grounded in meaningful
-            action, it becomes more coherent, more stable, and more connected to reality.
-          </p>
-        </div>
-      </section>
-
-      <section className="realitySection">
-        <p className="eyebrow">What actually happens here</p>
-        <h2>Each cohort works as a single group.</h2>
-
-        <div className="realityGrid">
-          <div>
-            <span>01</span>
-            <p>
-              Through study and consultation, the group reads its own reality
-              and identifies where its work is needed.
-            </p>
-          </div>
-
-          <div>
-            <span>02</span>
-            <p>
-              The cohort makes a shared decision about how it will act together.
-            </p>
-          </div>
-
-          <div>
-            <span>03</span>
-            <p>
-              That decision becomes a real, in-person act carried out together.
-            </p>
-          </div>
-
-          <div>
-            <span>04</span>
-            <p>
-              The group returns to reflect, learn, and refine what comes next.
-            </p>
-          </div>
-        </div>
-
-        <p className="smallStatement">
-          No two cohorts are the same.
-        </p>
-      </section>
-
-      <section className="twofoldSection">
-        <p className="eyebrow">The twofold purpose</p>
-        <h2>The work is inward and outward at the same time.</h2>
-
-        <div className="textStack centered">
-          <p>
-            As the group acts together in service, each individual develops
-            greater clarity, direction, and capacity.
-          </p>
-
-          <p>
-            And as individuals grow, the quality of collective action deepens.
+            This is not coaching, therapy, or a course. It is a structured process
+            of study, consultation, action, and reflection.
           </p>
         </div>
       </section>
 
       <section className="rhythmSection">
         <p className="eyebrow">How we work</p>
-        <h2>A cycle of disciplined learning.</h2>
+        <h2>Study. Consultation. Action. Reflection.</h2>
 
         <div className="cycleGrid">
           <CycleStep title="Study">
-            We study material that expands how we understand ourselves, society,
-            and the world.
+            We engage material that opens new ways of seeing ourselves and the world.
           </CycleStep>
 
           <CycleStep title="Consultation">
-            We read our own reality together and decide where our work is needed.
+            We read our reality together and decide what the group will act on.
           </CycleStep>
 
           <CycleStep title="Action">
-            The cohort carries out a shared decision as a real, in-person act.
+            The cohort carries out a shared decision in practice.
           </CycleStep>
 
           <CycleStep title="Reflection">
-            We learn from what unfolds and refine future consultation and action.
+            We return to what happened, learn from it, and refine the next step.
           </CycleStep>
-        </div>
-      </section>
-
-      <section className="principlesSection">
-        <div className="principlesIntro">
-          <p className="eyebrow">The art of consultation</p>
-          <h2>How the group arrives at shared action.</h2>
-        </div>
-
-        <div className="principlesGrid">
-          <Principle title="Detachment">
-            Ideas are offered to the group, not held as personal positions.
-          </Principle>
-
-          <Principle title="Search for truth">
-            The focus is on what is real and needed.
-          </Principle>
-
-          <Principle title="Unity of aim">
-            The group moves toward a single shared direction.
-          </Principle>
-
-          <Principle title="Service">
-            The work is carried out for the benefit of others.
-          </Principle>
         </div>
       </section>
 
       <section className="purpose">
-        <p className="purposeLabel">The invitation</p>
+        <p className="purposeLabel">The twofold purpose</p>
 
         <div className="purposeGrid">
           <div className="purposeBlock">
             <h3>Individual</h3>
             <p>
-              Developing clarity and capacity through a structured process with peers.
+              Developing clarity, capacity, and direction beyond performance.
             </p>
           </div>
 
@@ -182,7 +90,7 @@ function App() {
           <div className="purposeBlock">
             <h3>Collective</h3>
             <p>
-              Acting together in ways that contribute meaningfully beyond the individual.
+              Acting together in ways that contribute beyond the self.
             </p>
           </div>
         </div>
@@ -198,15 +106,6 @@ function App() {
 function CycleStep({ title, children }) {
   return (
     <div className="cycleStep">
-      <h3>{title}</h3>
-      <p>{children}</p>
-    </div>
-  );
-}
-
-function Principle({ title, children }) {
-  return (
-    <div className="principle">
       <h3>{title}</h3>
       <p>{children}</p>
     </div>
