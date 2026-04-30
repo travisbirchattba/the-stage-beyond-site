@@ -1,4 +1,6 @@
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
@@ -25,6 +27,8 @@ body {
   grid-template-columns: 0.95fr 1.15fr;
   gap: clamp(36px, 6vw, 88px);
   align-items: center;
+  padding-bottom: 56px;
+  border-bottom: 1px solid rgba(31, 31, 31, 0.12);
 }
 
 .heroText {
@@ -56,14 +60,14 @@ body {
 }
 
 .heroImage {
-  min-height: 560px;
-  border-radius: 28px;
+  min-height: 520px;
+  border-radius: 24px;
   background:
-    linear-gradient(180deg, rgba(0,0,0,0.02), rgba(0,0,0,0.14)),
-    url("/hero.jpg");
+    linear-gradient(180deg, rgba(0,0,0,0.04), rgba(0,0,0,0.18)),
+    url("https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1400&q=80");
   background-size: cover;
   background-position: center;
-  box-shadow: 0 28px 80px rgba(31, 31, 31, 0.16);
+  box-shadow: 0 18px 50px rgba(31, 31, 31, 0.12);
 }
 
 /* INTRO */
@@ -75,7 +79,6 @@ body {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
   gap: clamp(40px, 7vw, 110px);
-  border-top: 1px solid rgba(31,31,31,0.12);
 }
 
 .introStatement h2 {
@@ -101,7 +104,7 @@ body {
   margin: 0 0 22px;
 }
 
-/* RHYTHM */
+/* RHYTHM / CYCLE */
 
 .rhythmSection {
   padding: 92px 6vw 110px;
@@ -112,23 +115,23 @@ body {
 .rhythmSection > h2 {
   font-size: clamp(2.7rem, 5.6vw, 5.2rem);
   line-height: 1;
-  margin: 14px auto 64px;
+  margin: 14px auto 56px;
   font-weight: 500;
   letter-spacing: -0.045em;
 }
 
 .cycleGraphic {
   position: relative;
-  width: min(920px, 100%);
-  height: 760px;
+  width: min(760px, 100%);
+  height: 620px;
   margin: 0 auto;
 }
 
 .cycleArrows {
   position: absolute;
-  inset: 70px;
-  width: calc(100% - 140px);
-  height: calc(100% - 140px);
+  inset: 88px;
+  width: calc(100% - 176px);
+  height: calc(100% - 176px);
   pointer-events: none;
 }
 
@@ -143,7 +146,7 @@ body {
 
 .circleStep {
   position: absolute;
-  width: 255px;
+  width: 220px;
   text-align: center;
   z-index: 2;
 }
@@ -200,8 +203,8 @@ body {
 }
 
 .circleStep p {
-  font-size: 0.98rem;
-  line-height: 1.55;
+  font-size: 0.96rem;
+  line-height: 1.52;
   color: #4f4840;
   margin: 0 auto;
 }
@@ -210,8 +213,8 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 230px;
-  height: 230px;
+  width: 180px;
+  height: 180px;
   transform: translate(-50%, -50%);
   border-radius: 50%;
   border: 1px solid rgba(185, 139, 63, 0.48);
@@ -219,7 +222,7 @@ body {
   place-items: center;
   text-align: center;
   color: #3f3933;
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.45;
   font-style: italic;
   background: rgba(247, 242, 234, 0.42);
