@@ -9,8 +9,10 @@ function App() {
         <div className="heroInner">
           <div className="heroText">
             <p className="eyebrow">The Stage Beyond</p>
-            <h1>Your artistry was the beginning.<br />Your contribution is what comes next.</h1>
-            <p className="heroSubhead">
+<h1>
+  Your artistry was the beginning.<br />
+  Your contribution is taking new forms.
+</h1>       <p className="heroSubhead">
               A creative incubator where dancers consult, decide, and act together
               for the betterment of society.
             </p>
