@@ -1,26 +1,28 @@
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import './styles.css';
+
 function App() {
   return (
     <main className="site">
-
-      {/* HERO */}
       <section className="hero">
         <div className="heroInner">
           <div className="heroText">
             <p className="eyebrow">The Stage Beyond</p>
 
             <h1>
-              Your artistry was the beginning.<br />
-              Your contribution is taking new forms.
+              Transition is not just about what comes next.<br />
+              It’s about how you move forward—together.
             </h1>
 
             <p className="heroSubhead">
-              A working community for dancers who are ready to explore how their
-              artistry, discipline, and experience can contribute in new ways—
-              through a structured process with peers.
+              A working community for dancers navigating transition through
+              a structured process of consultation, action, and reflection—
+              where personal development and meaningful contribution unfold together.
             </p>
 
             <a href="mailto:hello@thestagebeyond.coach" className="primaryCta">
-              Apply for the next consultative cycle
+              Start the first conversation
             </a>
           </div>
 
@@ -28,39 +30,37 @@ function App() {
         </div>
       </section>
 
-      {/* STATEMENT */}
       <section className="statementSection">
         <p className="largeStatement">
-          The group decides what to do. Then it does it.
+          Transition becomes clearer when it is worked on together,
+          in service of something beyond the self.
         </p>
       </section>
 
-      {/* WHAT THIS IS */}
       <section className="splitSection">
         <div>
           <p className="eyebrow">What this is</p>
-          <h2>There is more to your practice than performance.</h2>
+          <h2>Transition, reworked.</h2>
         </div>
 
         <div className="textStack">
           <p>
-            You have already developed precision, awareness, and the ability to
-            work as part of a unified whole.
+            Transition is often approached as an individual question:
+            What do I want? What will I do next?
           </p>
 
           <p>
-            This is not about starting over. It is about working more deliberately
-            with something that is already present.
+            This work begins from a different premise—that development of the
+            individual and contribution to the world are not separate.
           </p>
 
           <p>
-            The Stage Beyond creates a structured environment where that capacity
-            can be explored, tested, and applied in new contexts.
+            When transition is approached collectively, and grounded in meaningful
+            action, it becomes more coherent, more stable, and more connected to reality.
           </p>
         </div>
       </section>
 
-      {/* REALITY */}
       <section className="realitySection">
         <p className="eyebrow">What actually happens here</p>
         <h2>Each cohort works as a single group.</h2>
@@ -77,7 +77,7 @@ function App() {
           <div>
             <span>02</span>
             <p>
-              The cohort makes a shared decision about what to do.
+              The cohort makes a shared decision about how it will act together.
             </p>
           </div>
 
@@ -101,15 +101,30 @@ function App() {
         </p>
       </section>
 
-      {/* RHYTHM */}
+      <section className="twofoldSection">
+        <p className="eyebrow">The twofold purpose</p>
+        <h2>The work is inward and outward at the same time.</h2>
+
+        <div className="textStack centered">
+          <p>
+            As the group acts together in service, each individual develops
+            greater clarity, direction, and capacity.
+          </p>
+
+          <p>
+            And as individuals grow, the quality of collective action deepens.
+          </p>
+        </div>
+      </section>
+
       <section className="rhythmSection">
         <p className="eyebrow">How we work</p>
         <h2>A cycle of disciplined learning.</h2>
 
         <div className="cycleGrid">
           <CycleStep title="Study">
-            We study material that expands how we understand ourselves,
-            society, and the world.
+            We study material that expands how we understand ourselves, society,
+            and the world.
           </CycleStep>
 
           <CycleStep title="Consultation">
@@ -126,7 +141,6 @@ function App() {
         </div>
       </section>
 
-      {/* PRINCIPLES */}
       <section className="principlesSection">
         <div className="principlesIntro">
           <p className="eyebrow">The art of consultation</p>
@@ -152,15 +166,14 @@ function App() {
         </div>
       </section>
 
-      {/* PURPOSE */}
       <section className="purpose">
-        <p className="purposeLabel">The twofold purpose</p>
+        <p className="purposeLabel">The invitation</p>
 
         <div className="purposeGrid">
           <div className="purposeBlock">
             <h3>Individual</h3>
             <p>
-              Refining the inner discipline required to act with clarity and intention.
+              Developing clarity and capacity through a structured process with peers.
             </p>
           </div>
 
@@ -169,7 +182,7 @@ function App() {
           <div className="purposeBlock">
             <h3>Collective</h3>
             <p>
-              Acting as a unified group in service of something beyond the self.
+              Acting together in ways that contribute meaningfully beyond the individual.
             </p>
           </div>
         </div>
@@ -178,7 +191,26 @@ function App() {
           Start the first conversation
         </a>
       </section>
-
     </main>
   );
 }
+
+function CycleStep({ title, children }) {
+  return (
+    <div className="cycleStep">
+      <h3>{title}</h3>
+      <p>{children}</p>
+    </div>
+  );
+}
+
+function Principle({ title, children }) {
+  return (
+    <div className="principle">
+      <h3>{title}</h3>
+      <p>{children}</p>
+    </div>
+  );
+}
+
+createRoot(document.getElementById('root')).render(<App />);
