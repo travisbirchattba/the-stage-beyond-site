@@ -332,3 +332,43 @@ body {
     display: none;
   }
 }
+.simpleCycle,
+.principlesGrid {
+  max-width: 1100px;
+  margin: 56px auto 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+.simpleCycle div,
+.principlesGrid div {
+  padding: 24px;
+  border-top: 1px solid rgba(185, 139, 63, 0.45);
+}
+
+.simpleCycle h3,
+.principlesGrid h3 {
+  font-size: 1.45rem;
+  margin: 0 0 12px;
+  font-weight: 500;
+}
+
+.simpleCycle p,
+.principlesGrid p {
+  font-size: 1rem;
+  line-height: 1.55;
+  color: #4f4840;
+}
+
+.principles {
+  padding: 92px 6vw 110px;
+  text-align: center;
+}
+
+@media (max-width: 880px) {
+  .simpleCycle,
+  .principlesGrid {
+    grid-template-columns: 1fr;
+  }
+}
