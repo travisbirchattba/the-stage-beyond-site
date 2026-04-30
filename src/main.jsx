@@ -6,6 +6,8 @@ const calendarLink = 'https://calendar.app.google/X6KBMhZVmxGofHyF7';
 
 function Nav() {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const path = window.location.pathname;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -13,20 +15,48 @@ function Nav() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? 'hidden' : '';
+    return () => { document.body.style.overflow = ''; };
+  }, [menuOpen]);
+
   return (
-    <nav className={`siteNav ${scrolled ? 'navScrolled' : ''}`}>
-      <div className="navInner">
-        <a href="/" className="navWordmark">The Stage Beyond</a>
-        <div className="navLinks">
-          <a href="/approach" className="navLink">Approach</a>
-          <a href="/projects" className="navLink">Projects</a>
-          <a href="/apply" className="navLink">Is this for me?</a>
+    <>
+      <nav className={`siteNav ${scrolled || menuOpen ? 'navScrolled' : ''}`}>
+        <div className="navInner">
+          <a href="/" className="navWordmark">The Stage Beyond</a>
+          <div className="navLinks">
+            <a href="/approach" className={`navLink ${path === '/approach' ? 'navLinkActive' : ''}`}>Approach</a>
+            <a href="/projects" className={`navLink ${path === '/projects' ? 'navLinkActive' : ''}`}>Projects</a>
+            <a href="/apply" className={`navLink ${path === '/apply' ? 'navLinkActive' : ''}`}>Is this for me?</a>
+          </div>
+          <a href={calendarLink} className="navCta" target="_blank" rel="noopener noreferrer">
+            Schedule a conversation
+          </a>
+          <button
+            className={`hamburger ${menuOpen ? 'hamburgerOpen' : ''}`}
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle menu"
+          >
+            <span />
+            <span />
+            <span />
+          </button>
         </div>
-        <a href={calendarLink} className="navCta" target="_blank" rel="noopener noreferrer">
-          Schedule a conversation
-        </a>
+      </nav>
+
+      <div className={`mobileMenu ${menuOpen ? 'mobileMenuOpen' : ''}`}>
+        <div className="mobileMenuInner">
+          <a href="/" className="mobileNavLink" onClick={() => setMenuOpen(false)}>Home</a>
+          <a href="/approach" className={`mobileNavLink ${path === '/approach' ? 'mobileNavLinkActive' : ''}`} onClick={() => setMenuOpen(false)}>Approach</a>
+          <a href="/projects" className={`mobileNavLink ${path === '/projects' ? 'mobileNavLinkActive' : ''}`} onClick={() => setMenuOpen(false)}>Projects</a>
+          <a href="/apply" className={`mobileNavLink ${path === '/apply' ? 'mobileNavLinkActive' : ''}`} onClick={() => setMenuOpen(false)}>Is this for me?</a>
+          <a href={calendarLink} className="mobileNavCta" target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)}>
+            Schedule a conversation
+          </a>
+        </div>
       </div>
-    </nav>
+    </>
   );
 }
 
