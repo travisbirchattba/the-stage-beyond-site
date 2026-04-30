@@ -74,9 +74,14 @@ body {
 .heroImage {
   min-height: 500px;
   border-radius: 26px;
+
   background:
     linear-gradient(180deg, rgba(0,0,0,0.03), rgba(0,0,0,0.18)),
-url("/hero.jpg")  background-position: center;
+    url("/hero.jpg");
+
+  background-size: cover;
+  background-position: center;
+
   box-shadow: 0 20px 54px rgba(31, 31, 31, 0.13);
 }
 
