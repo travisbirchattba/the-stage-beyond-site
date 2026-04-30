@@ -66,12 +66,18 @@ body {
   font-size: 1.08rem;
 }
 
+.primaryCta:hover,
+.learnMore:hover {
+  color: #b98b3f;
+}
+
 .heroImage {
   min-height: 500px;
   border-radius: 26px;
   background:
-    linear-gradient(180deg, rgba(0,0,0,0.03), rgba(0,0,0,0.16)),
-url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80");  background-size: cover;
+    linear-gradient(180deg, rgba(0,0,0,0.03), rgba(0,0,0,0.18)),
+    url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
   background-position: center;
   box-shadow: 0 20px 54px rgba(31, 31, 31, 0.13);
 }
@@ -176,6 +182,10 @@ url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fi
 
 .purpose .learnMore {
   color: #f7f2ea;
+}
+
+.purpose .learnMore:hover {
+  color: #d7b16f;
 }
 
 @media (max-width: 900px) {
