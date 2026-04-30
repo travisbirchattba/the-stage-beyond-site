@@ -658,4 +658,5 @@ body {
   height: 200px;
   width: auto;
   display: block;
+  transform: translateY(-14px);
 }
