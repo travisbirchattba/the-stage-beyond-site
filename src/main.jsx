@@ -23,7 +23,7 @@ function App() {
             </p>
           </div>
 
-          <div className="heroImage" aria-label="A small group of dancers in conversation" />
+          <div className="heroImage" />
         </div>
       </section>
 
@@ -57,14 +57,19 @@ function App() {
                 orient="auto"
                 markerUnits="strokeWidth"
               >
-                <path d="M0,0 L9,4.5 L0,9" fill="none" stroke="#b98b3f" strokeWidth="1.4" />
+                <path
+                  d="M0,0 L9,4.5 L0,9"
+                  fill="none"
+                  stroke="#b98b3f"
+                  strokeWidth="1.4"
+                />
               </marker>
             </defs>
 
-            <path d="M285 70 A210 210 0 0 1 490 275" />
-            <path d="M490 285 A210 210 0 0 1 285 490" />
-            <path d="M275 490 A210 210 0 0 1 70 285" />
-            <path d="M70 275 A210 210 0 0 1 275 70" />
+            <path d="M285 78 A202 202 0 0 1 482 275" />
+            <path d="M482 285 A202 202 0 0 1 285 482" />
+            <path d="M275 482 A202 202 0 0 1 78 285" />
+            <path d="M78 275 A202 202 0 0 1 275 78" />
           </svg>
 
           <CycleStep className="top" icon={<BookOpen />} title="Study">
