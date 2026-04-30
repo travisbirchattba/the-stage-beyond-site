@@ -13,22 +13,17 @@ body {
   min-height: 100vh;
 }
 
-/* HERO */
-
 .hero {
-  padding: 72px 6vw 56px;
-  background: #f7f2ea;
+  padding: 80px 6vw 72px;
 }
 
 .heroInner {
-  max-width: 1320px;
+  max-width: 1240px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 0.95fr 1.15fr;
-  gap: clamp(36px, 6vw, 88px);
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: clamp(40px, 7vw, 92px);
   align-items: center;
-  padding-bottom: 56px;
-  border-bottom: 1px solid rgba(31, 31, 31, 0.12);
 }
 
 .heroText {
@@ -42,198 +37,115 @@ body {
   color: #b98b3f;
   font-size: 0.78rem;
   font-weight: bold;
+  margin: 0 0 18px;
 }
 
 .hero h1 {
-  font-size: clamp(4.2rem, 10vw, 8.8rem);
-  line-height: 0.88;
-  margin: 18px 0 28px;
+  font-size: clamp(3.8rem, 8vw, 7.8rem);
+  line-height: 0.93;
+  margin: 0 0 30px;
   font-weight: 500;
   letter-spacing: -0.055em;
 }
 
 .heroSubhead {
-  font-size: clamp(1.2rem, 2vw, 1.55rem);
-  line-height: 1.55;
-  max-width: 420px;
+  font-size: clamp(1.18rem, 1.7vw, 1.45rem);
+  line-height: 1.6;
+  max-width: 560px;
   color: #3f3933;
+  margin-bottom: 34px;
+}
+
+.primaryCta,
+.learnMore {
+  display: inline-block;
+  color: #1f1f1f;
+  text-decoration: none;
+  border-bottom: 1px solid #b98b3f;
+  padding-bottom: 7px;
+  font-size: 1.08rem;
 }
 
 .heroImage {
-  min-height: 520px;
-  border-radius: 24px;
+  min-height: 500px;
+  border-radius: 26px;
   background:
-    linear-gradient(180deg, rgba(0,0,0,0.04), rgba(0,0,0,0.18)),
-    url("https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1400&q=80");
+    linear-gradient(180deg, rgba(0,0,0,0.03), rgba(0,0,0,0.16)),
+    url("https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1600&q=80");
   background-size: cover;
   background-position: center;
-  box-shadow: 0 18px 50px rgba(31, 31, 31, 0.12);
+  box-shadow: 0 20px 54px rgba(31, 31, 31, 0.13);
 }
 
-/* INTRO */
-
-.introSection {
-  max-width: 1320px;
+.splitSection {
+  max-width: 1240px;
   margin: 0 auto;
-  padding: 82px 6vw 92px;
+  padding: 92px 6vw;
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: clamp(40px, 7vw, 110px);
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: clamp(40px, 7vw, 100px);
+  border-top: 1px solid rgba(31,31,31,0.12);
 }
 
-.introStatement h2 {
-  font-size: clamp(2.8rem, 6vw, 5.8rem);
-  line-height: 0.98;
-  margin: 0 0 30px;
+.splitSection h2,
+.rhythmSection h2 {
+  font-size: clamp(2.4rem, 5vw, 4.9rem);
+  line-height: 1;
+  margin: 0;
   font-weight: 500;
   letter-spacing: -0.045em;
 }
 
-.introStatement p,
-.definitionBlock p {
-  font-size: clamp(1.15rem, 1.5vw, 1.35rem);
-  line-height: 1.65;
-  color: #3f3933;
-}
-
-.definitionBlock {
-  align-self: end;
-}
-
-.definitionBlock p {
+.textStack p {
+  font-size: 1.16rem;
+  line-height: 1.68;
+  color: #4f4840;
   margin: 0 0 22px;
 }
 
-/* RHYTHM / CYCLE */
-
 .rhythmSection {
-  padding: 92px 6vw 110px;
+  padding: 96px 6vw 106px;
+  text-align: center;
   background: #efe6d8;
-  text-align: center;
 }
 
-.rhythmSection > h2 {
-  font-size: clamp(2.7rem, 5.6vw, 5.2rem);
-  line-height: 1;
-  margin: 14px auto 56px;
-  font-weight: 500;
-  letter-spacing: -0.045em;
+.rhythmSection h2 {
+  max-width: 880px;
+  margin: 0 auto 56px;
 }
 
-.cycleGraphic {
-  position: relative;
-  width: min(760px, 100%);
-  height: 620px;
+.cycleGrid {
+  max-width: 1080px;
   margin: 0 auto;
-}
-
-.cycleArrows {
-  position: absolute;
-  inset: 88px;
-  width: calc(100% - 176px);
-  height: calc(100% - 176px);
-  pointer-events: none;
-}
-
-.cycleArrows path {
-  fill: none;
-  stroke: #b98b3f;
-  stroke-width: 1.55;
-  stroke-linecap: round;
-  marker-end: url(#arrow);
-  opacity: 0.72;
-}
-
-.circleStep {
-  position: absolute;
-  width: 220px;
-  text-align: center;
-  z-index: 2;
-}
-
-.circleStep.top {
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.circleStep.right {
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-}
-
-.circleStep.bottom {
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.circleStep.left {
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-}
-
-.icon,
-.purposeIcon {
-  width: 76px;
-  height: 76px;
-  border-radius: 50%;
-  background: #f7f2ea;
-  color: #b98b3f;
   display: grid;
-  place-items: center;
-  margin: 0 auto 18px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
 }
 
-.icon svg,
-.purposeIcon svg {
-  width: 31px;
-  height: 31px;
-  stroke-width: 1.55;
+.cycleStep {
+  padding: 28px 22px;
+  border-top: 1px solid rgba(185, 139, 63, 0.55);
 }
 
-.circleStep h3,
+.cycleStep h3,
 .purposeBlock h3 {
-  font-size: 1.75rem;
+  font-size: 1.55rem;
   line-height: 1.1;
   margin: 0 0 14px;
   font-weight: 500;
 }
 
-.circleStep p {
-  font-size: 0.96rem;
-  line-height: 1.52;
+.cycleStep p {
+  font-size: 0.98rem;
+  line-height: 1.55;
   color: #4f4840;
-  margin: 0 auto;
+  margin: 0;
 }
-
-.cycleCenter {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 180px;
-  height: 180px;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  border: 1px solid rgba(185, 139, 63, 0.48);
-  display: grid;
-  place-items: center;
-  text-align: center;
-  color: #3f3933;
-  font-size: 1rem;
-  line-height: 1.45;
-  font-style: italic;
-  background: rgba(247, 242, 234, 0.42);
-}
-
-/* PURPOSE */
 
 .purpose {
   background: #1f1f1f;
   color: #f7f2ea;
-  padding: 90px 6vw 96px;
+  padding: 96px 6vw;
   text-align: center;
 }
 
@@ -242,7 +154,7 @@ body {
   grid-template-columns: 1fr auto 1fr;
   gap: 44px;
   align-items: center;
-  max-width: 1040px;
+  max-width: 960px;
   margin: 46px auto 52px;
 }
 
@@ -251,10 +163,10 @@ body {
 }
 
 .purposeBlock p {
-  font-size: 1.15rem;
+  font-size: 1.12rem;
   line-height: 1.6;
-  color: #d9d0c4;
-  max-width: 380px;
+  color: #d8d0c4;
+  max-width: 360px;
   margin: 0 auto;
 }
 
@@ -263,131 +175,34 @@ body {
   font-size: 3rem;
 }
 
-.learnMore {
-  display: inline-block;
+.purpose .learnMore {
   color: #f7f2ea;
-  text-decoration: none;
-  border-bottom: 1px solid #b98b3f;
-  padding-bottom: 7px;
-  font-size: 1.2rem;
 }
 
-.learnMore:hover {
-  color: #d7b16f;
-}
-
-/* MOBILE */
-
-@media (max-width: 880px) {
-  .hero {
-    padding-top: 52px;
+@media (max-width: 900px) {
+  .heroInner,
+  .splitSection,
+  .cycleGrid,
+  .purposeGrid {
+    grid-template-columns: 1fr;
   }
 
-  .heroInner,
-  .introSection {
-    grid-template-columns: 1fr;
+  .hero {
+    padding-top: 54px;
   }
 
   .heroImage {
-    min-height: 420px;
+    min-height: 380px;
   }
 
-  .introSection {
-    padding-top: 64px;
-    padding-bottom: 70px;
-  }
-
-  .definitionBlock {
-    align-self: auto;
-  }
-
-  .cycleGraphic {
-    height: auto;
-    display: grid;
-    gap: 46px;
-  }
-
-  .cycleArrows,
-  .cycleCenter {
-    display: none;
-  }
-
-  .circleStep,
-  .circleStep.top,
-  .circleStep.right,
-  .circleStep.bottom,
-  .circleStep.left {
-    position: static;
-    width: min(360px, 100%);
-    margin: 0 auto;
-    transform: none;
-  }
-
-  .purposeGrid {
-    grid-template-columns: 1fr;
-    gap: 28px;
+  .splitSection,
+  .rhythmSection,
+  .purpose {
+    padding-top: 72px;
+    padding-bottom: 78px;
   }
 
   .plus {
     display: none;
   }
-}
-.simpleCycle,
-.principlesGrid {
-  max-width: 1100px;
-  margin: 56px auto 0;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 28px;
-}
-
-.simpleCycle div,
-.principlesGrid div {
-  padding: 24px;
-  border-top: 1px solid rgba(185, 139, 63, 0.45);
-}
-
-.simpleCycle h3,
-.principlesGrid h3 {
-  font-size: 1.45rem;
-  margin: 0 0 12px;
-  font-weight: 500;
-}
-
-.simpleCycle p,
-.principlesGrid p {
-  font-size: 1rem;
-  line-height: 1.55;
-  color: #4f4840;
-}
-
-.principles {
-  padding: 92px 6vw 110px;
-  text-align: center;
-}
-
-@media (max-width: 880px) {
-  .simpleCycle,
-  .principlesGrid {
-    grid-template-columns: 1fr;
-  }
-}
-.twofoldSection {
-  padding: 96px 6vw;
-  text-align: center;
-  background: #f7f2ea;
-}
-
-.twofoldSection h2 {
-  font-size: clamp(2.5rem, 5vw, 5.2rem);
-  line-height: 1;
-  margin: 0 auto 34px;
-  font-weight: 500;
-  letter-spacing: -0.045em;
-  max-width: 900px;
-}
-
-.textStack.centered {
-  max-width: 760px;
-  margin: 0 auto;
 }
