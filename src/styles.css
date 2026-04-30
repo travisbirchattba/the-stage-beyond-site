@@ -372,3 +372,22 @@ body {
     grid-template-columns: 1fr;
   }
 }
+.twofoldSection {
+  padding: 96px 6vw;
+  text-align: center;
+  background: #f7f2ea;
+}
+
+.twofoldSection h2 {
+  font-size: clamp(2.5rem, 5vw, 5.2rem);
+  line-height: 1;
+  margin: 0 auto 34px;
+  font-weight: 500;
+  letter-spacing: -0.045em;
+  max-width: 900px;
+}
+
+.textStack.centered {
+  max-width: 760px;
+  margin: 0 auto;
+}
