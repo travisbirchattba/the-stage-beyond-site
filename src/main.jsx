@@ -149,7 +149,7 @@ function HomePage() {
           </p>
 
           <p className="fitLine">
-            For dancers who don't want to figure it out alone.
+            For dancers who want to build their capacity to contribute to the betterment of society.
           </p>
         </div>
 
