@@ -2,6 +2,8 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import './styles.css';
 
+const calendarLink = 'https://calendar.app.google/X6KBMhZVmxGofHyF7';
+
 function App() {
   return (
     <main className="site">
@@ -17,8 +19,13 @@ function App() {
               and contribution beyond performance.
             </p>
 
-            <a href="mailto:hello@thestagebeyond.coach" className="primaryCta">
-              Start the first conversation
+            <a
+              href={calendarLink}
+              className="primaryCta"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Schedule a call to learn more
             </a>
           </div>
 
@@ -95,8 +102,13 @@ function App() {
           </div>
         </div>
 
-        <a href="mailto:hello@thestagebeyond.coach" className="learnMore">
-          Start the first conversation
+        <a
+          href={calendarLink}
+          className="learnMore"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Schedule a call to learn more
         </a>
       </section>
     </main>
