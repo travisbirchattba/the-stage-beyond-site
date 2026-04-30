@@ -654,3 +654,8 @@ body {
     gap: 20px;
   }
 }
+.navLogo {
+  height: 36px;
+  width: auto;
+  display: block;
+}
