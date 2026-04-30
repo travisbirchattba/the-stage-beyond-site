@@ -16,6 +16,23 @@ function Nav() {
   return (
     <nav className={`siteNav ${scrolled ? 'navScrolled' : ''}`}>
       <div className="navInner">
+        <a href="/" className="navWordmark">The Stage Beyond</a>
+        <div className="navLinks">
+          <a href="/approach" className="navLink">Approach</a>
+          <a href="/projects" className="navLink">Projects</a>
+          <a href="/apply" className="navLink">Is this for me?</a>
+        </div>
+        <a href={calendarLink} className="navCta" target="_blank" rel="noopener noreferrer">
+          Schedule a conversation
+        </a>
+      </div>
+    </nav>
+  );
+}
+
+  return (
+    <nav className={`siteNav ${scrolled ? 'navScrolled' : ''}`}>
+      <div className="navInner">
         <div className="navLinks">
           <a href="/" className="navLink">Home</a>
           <a href="/approach" className="navLink">Approach</a>
