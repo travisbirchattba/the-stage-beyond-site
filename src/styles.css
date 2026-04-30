@@ -437,4 +437,220 @@ body {
   font-size: 1.05rem;
   font-family: Georgia, "Times New Roman", serif;
   font-weight: 500;
-  color: #f7f2ea
+  color: #f7f2ea;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footerWordmark:hover {
+  color: #b98b3f;
+}
+
+.footerLinks {
+  display: flex;
+  gap: 32px;
+}
+
+.footerLink {
+  text-decoration: none;
+  color: #f7f2ea;
+  font-size: 0.9rem;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.footerLink:hover {
+  opacity: 1;
+}
+
+.footerCta {
+  display: inline-block;
+  color: #f7f2ea;
+  text-decoration: none;
+  border-bottom: 1px solid #b98b3f;
+  padding-bottom: 5px;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+
+.footerCta:hover {
+  color: #b98b3f;
+}
+
+.footerCopy {
+  font-size: 0.8rem;
+  color: rgba(247,242,234,0.35);
+  margin: 0;
+  grid-column: 1 / -1;
+}
+
+/* ── Inner Pages ── */
+
+.simplePage {
+  background: #f7f2ea;
+}
+
+.pageHero {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 168px 6vw 72px;
+}
+
+.pageHero h1 {
+  font-size: clamp(3.2rem, 7vw, 7rem);
+  line-height: 0.95;
+  margin: 0 0 30px;
+  font-weight: 500;
+  letter-spacing: -0.055em;
+}
+
+.pageLead {
+  max-width: 720px;
+  font-size: 1.35rem;
+  line-height: 1.6;
+  color: #3f3933;
+}
+
+.contentSection {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 72px 6vw 110px;
+  border-top: 1px solid rgba(31,31,31,0.12);
+}
+
+.contentSection p {
+  font-size: 1.16rem;
+  line-height: 1.7;
+  color: #4f4840;
+  margin: 0 0 24px;
+}
+
+.contentSection h2 {
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  line-height: 1.05;
+  margin: 64px 0 24px;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+}
+
+.approachList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  margin: 34px 0 60px;
+}
+
+.structureList {
+  padding-left: 1.2rem;
+  margin: 0 0 48px;
+}
+
+.structureList li {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #4f4840;
+  margin-bottom: 8px;
+}
+
+.closingLine {
+  font-size: 1.35rem !important;
+  line-height: 1.55 !important;
+  color: #1f1f1f !important;
+  margin-top: 56px !important;
+}
+
+/* ── Projects ── */
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin: 48px 0 64px;
+}
+
+.projectCard {
+  padding: 36px 32px;
+  background: #efe6d8;
+  border-radius: 16px;
+  border-top: 2px solid rgba(185,139,63,0.5);
+}
+
+.projectCard h3 {
+  font-size: 1.35rem;
+  line-height: 1.2;
+  margin: 0 0 16px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: #1f1f1f;
+}
+
+.projectCard p {
+  font-size: 1.05rem !important;
+  line-height: 1.65 !important;
+  color: #4f4840 !important;
+  margin: 0 !important;
+}
+
+/* ── Responsive ── */
+
+@media (max-width: 900px) {
+  .heroInner,
+  .splitSection,
+  .cycleGrid,
+  .purposeGrid,
+  .projectsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding-top: 120px;
+  }
+
+  .pageHero {
+    padding-top: 130px;
+  }
+
+  .heroImage {
+    min-height: 380px;
+  }
+
+  .splitSection,
+  .rhythmSection,
+  .purpose {
+    padding-top: 72px;
+    padding-bottom: 78px;
+  }
+
+  .plus {
+    display: none;
+  }
+
+  .navLinks {
+    display: none;
+  }
+
+  .navCta {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .approachList {
+    grid-template-columns: 1fr;
+  }
+
+  .footerInner {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    text-align: center;
+  }
+
+  .footerLinks {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+}
