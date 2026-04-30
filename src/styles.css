@@ -654,9 +654,3 @@ body {
     gap: 20px;
   }
 }
-.navLogo {
-  height: 200px;
-  width: auto;
-  display: block;
-  transform: translateY(-60px);
-}
