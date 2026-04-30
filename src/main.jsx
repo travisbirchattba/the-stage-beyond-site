@@ -24,9 +24,8 @@ function Nav() {
     <>
       <nav className={`siteNav ${scrolled || menuOpen ? 'navScrolled' : ''}`}>
         <div className="navInner">
-<a href="/" className="navWordmark">
-  <img src="/logo.svg" alt="The Stage Beyond" className="navLogo" />
-</a>          <div className="navLinks">
+      <a href="/" className="navWordmark">The Stage Beyond</a>        
+          <div className="navLinks">
             <a href="/approach" className={`navLink ${path === '/approach' ? 'navLinkActive' : ''}`}>Approach</a>
             <a href="/projects" className={`navLink ${path === '/projects' ? 'navLinkActive' : ''}`}>Projects</a>
             <a href="/apply" className={`navLink ${path === '/apply' ? 'navLinkActive' : ''}`}>Is this for me?</a>
