@@ -76,8 +76,7 @@ body {
   border-radius: 26px;
   background:
     linear-gradient(180deg, rgba(0,0,0,0.03), rgba(0,0,0,0.18)),
-url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80");  background-size: cover;
-  background-position: center;
+url("/hero.jpg")  background-position: center;
   box-shadow: 0 20px 54px rgba(31, 31, 31, 0.13);
 }
 
