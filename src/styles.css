@@ -677,19 +677,6 @@ body {
   letter-spacing: -0.03em;
 }
 
-@media (max-width: 900px) {
-  .facilitatorPhoto {
-    float: none;
-    width: 100%;
-    max-width: 280px;
-    margin: 0 0 32px 0;
-  }
-}
-
-  .facilitatorPhoto img {
-    max-width: 280px;
-  }
-
 .clearfix {
   clear: both;
 }
@@ -729,9 +716,17 @@ body {
 }
 
 @media (max-width: 900px) {
+  .facilitatorPhoto {
+    float: none;
+    width: 100%;
+    max-width: 280px;
+    margin: 0 0 32px 0;
+  }
+
   .cohortGrid {
     grid-template-columns: 1fr 1fr;
   }
+}
 
 @media (max-width: 560px) {
   .cohortGrid {
