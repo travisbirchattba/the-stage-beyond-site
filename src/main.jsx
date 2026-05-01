@@ -256,8 +256,8 @@ function ApproachPage() {
       <section className="contentSection fadeIn">
 <div className="pagePhoto">
   <img
-    src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&auto=format&fit=crop"
-    alt="People working together"
+    src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&auto=format&fit=crop"
+    alt="Group in conversation"
   />
 </div>
         <p>
