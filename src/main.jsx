@@ -332,10 +332,10 @@ function CohortPage() {
       </section>
 
       <section className="contentSection fadeIn">
-       <div className="pagePhoto">
+      <div className="pagePhoto">
   <img
-    src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&auto=format&fit=crop"
-    alt="Group of dancers"
+    src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&auto=format&fit=crop"
+    alt="Group of people together"
   />
 </div>
 
