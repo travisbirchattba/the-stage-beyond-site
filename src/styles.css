@@ -656,11 +656,10 @@ body {
 }
 /* ── Facilitator ── */
 
-.facilitatorLayout {
-  display: grid;
-  grid-template-columns: 340px 1fr;
-  gap: 64px;
-  align-items: start;
+.facilitatorPhoto {
+  float: left;
+  width: 300px;
+  margin: 0 48px 24px 0;
 }
 
 .facilitatorPhoto img {
@@ -679,10 +678,13 @@ body {
 }
 
 @media (max-width: 900px) {
-  .facilitatorLayout {
-    grid-template-columns: 1fr;
-    gap: 40px;
+  .facilitatorPhoto {
+    float: none;
+    width: 100%;
+    max-width: 280px;
+    margin: 0 0 32px 0;
   }
+}
 
   .facilitatorPhoto img {
     max-width: 280px;
