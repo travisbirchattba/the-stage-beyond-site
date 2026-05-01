@@ -471,5 +471,66 @@ function ProjectsPage() {
             </div>
           ))}
         </div>
+      <p className="closingLine">
+          The point is not to complete a project. It is to develop the capacity
+          to act together—and to discover what that makes possible.
+        </p>
+        <a href={calendarLink} className="primaryCta" target="_blank" rel="noopener noreferrer">
+          Schedule a conversation
+        </a>
+      </section>
+    </main>
+  );
+}
+
+function ApplyPage() {
+  return (
+    <main className="site simplePage">
+      <section className="pageHero">
+        <p className="eyebrow">Is this for me?</p>
+        <h1>A good fit begins with readiness.</h1>
+        <p className="pageLead">
+          The Stage Beyond is for dancers who are ready to engage actively with peers,
+          not simply receive advice.
+        </p>
+      </section>
+      <section className="contentSection">
+        <h2>This may be a fit if you are ready to:</h2>
+        <ul className="structureList">
+          <li>work with transition in a structured way</li>
+          <li>engage seriously with peers</li>
+          <li>participate in consultation, action, and reflection</li>
+          <li>contribute to something beyond your own individual next step</li>
+        </ul>
+        <h2>This may not be a fit if you are looking for:</h2>
+        <ul className="structureList">
+          <li>career coaching</li>
+          <li>therapy or emotional processing as the primary focus</li>
+          <li>a course with fixed answers</li>
+          <li>a purely individual process</li>
+        </ul>
         <p className="closingLine">
-          The point is not to complete a proj
+          The first step is a conversation. We'll explore whether the timing,
+          structure, and spirit of the work are right.
+        </p>
+        <a href={calendarLink} className="primaryCta" target="_blank" rel="noopener noreferrer">
+          Schedule a call to learn more
+        </a>
+        <p>
+          <a href="/" className="secondaryLink">Return to main page</a>
+        </p>
+      </section>
+    </main>
+  );
+}
+
+function CycleStep({ title, children }) {
+  return (
+    <div className="cycleStep">
+      <h3>{title}</h3>
+      <p>{children}</p>
+    </div>
+  );
+}
+
+createRoot(document.getElementById('root')).render(<App />);
