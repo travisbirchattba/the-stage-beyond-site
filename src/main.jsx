@@ -23,6 +23,15 @@ function useFadeIn() {
   }, []);
 }
 
+function usePageTransition() {
+  const [visible, setVisible] = useState(false);
+  useEffect(() => {
+    const timer = setTimeout(() => setVisible(true), 10);
+    return () => clearTimeout(timer);
+  }, []);
+  return visible;
+}
+
 function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -123,9 +132,10 @@ function App() {
 
 function HomePage() {
   useFadeIn();
+  const visible = usePageTransition();
 
   return (
-    <main className="site">
+    <main className={`site pageTransition ${visible ? 'pageVisible' : ''}`}>
       <section className="hero fadeIn">
         <div className="heroInner">
           <div className="heroText">
@@ -222,9 +232,10 @@ function HomePage() {
 
 function ApproachPage() {
   useFadeIn();
+  const visible = usePageTransition();
 
   return (
-    <main className="site simplePage">
+    <main className={`site simplePage pageTransition ${visible ? 'pageVisible' : ''}`}>
       <section className="pageHero fadeIn">
         <p className="eyebrow">The approach</p>
         <h1>The work, in practice.</h1>
@@ -291,9 +302,10 @@ function ApproachPage() {
 
 function CohortPage() {
   useFadeIn();
+  const visible = usePageTransition();
 
   return (
-    <main className="site simplePage">
+    <main className={`site simplePage pageTransition ${visible ? 'pageVisible' : ''}`}>
       <section className="pageHero fadeIn">
         <p className="eyebrow">Cohorts</p>
         <h1>The next cohort.</h1>
@@ -343,8 +355,8 @@ function CohortPage() {
 
         <h2>Investment</h2>
         <p>
-          The market value of participation is $5,000 CAD per participant. Cost varies depending
-          on context. Reach out to discuss what is possible.
+          The market value of participation is $5,000 CAD per participant. Cost varies
+          depending on context. Reach out to discuss what is possible.
         </p>
 
         <p className="closingLine">
@@ -362,9 +374,10 @@ function CohortPage() {
 
 function FacilitatorPage() {
   useFadeIn();
+  const visible = usePageTransition();
 
   return (
-    <main className="site simplePage">
+    <main className={`site simplePage pageTransition ${visible ? 'pageVisible' : ''}`}>
       <section className="pageHero fadeIn">
         <p className="eyebrow">The facilitator</p>
         <h1>Travis Birch</h1>
@@ -447,6 +460,7 @@ function FacilitatorPage() {
 
 function ProjectsPage() {
   useFadeIn();
+  const visible = usePageTransition();
 
   const projects = [
     {
@@ -472,7 +486,7 @@ function ProjectsPage() {
   ];
 
   return (
-    <main className="site simplePage">
+    <main className={`site simplePage pageTransition ${visible ? 'pageVisible' : ''}`}>
       <section className="pageHero fadeIn">
         <p className="eyebrow">Service projects</p>
         <h1>Action in the world.</h1>
@@ -513,9 +527,10 @@ function ProjectsPage() {
 
 function ApplyPage() {
   useFadeIn();
+  const visible = usePageTransition();
 
   return (
-    <main className="site simplePage">
+    <main className={`site simplePage pageTransition ${visible ? 'pageVisible' : ''}`}>
       <section className="pageHero fadeIn">
         <p className="eyebrow">Is this for me?</p>
         <h1>A good fit begins with readiness.</h1>
