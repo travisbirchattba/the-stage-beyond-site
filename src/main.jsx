@@ -288,6 +288,8 @@ function FacilitatorPage() {
           practice—returning these learnings to the context of dancer transition.
         </p>
 
+                <div className="clearfix" />
+
         <h2>Artistic background</h2>
         <p>
           Travis trained at the National Ballet School Professional Program
