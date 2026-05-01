@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { createRoot } from 'react-dom/client';
+import { BrowserRouter, Routes, Route, Link, NavLink, useNavigate, useLocation } from 'react-router-dom';
 import './styles.css';
 
 const calendarLink = 'https://calendar.app.google/X6KBMhZVmxGofHyF7';
 
 function useFadeIn() {
+  const location = useLocation();
   useEffect(() => {
     const els = document.querySelectorAll('.fadeIn');
+    els.forEach(el => el.classList.remove('visible'));
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -20,28 +23,34 @@ function useFadeIn() {
     );
     els.forEach((el) => observer.observe(el));
     return () => observer.disconnect();
-  }, []);
+  }, [location]);
 }
 
 function usePageTransition() {
   const [visible, setVisible] = useState(false);
+  const location = useLocation();
   useEffect(() => {
+    setVisible(false);
     const timer = setTimeout(() => setVisible(true), 10);
     return () => clearTimeout(timer);
-  }, []);
+  }, [location]);
   return visible;
 }
 
 function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const path = window.location.pathname;
+  const location = useLocation();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
+
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [location]);
 
   useEffect(() => {
     document.body.style.overflow = menuOpen ? 'hidden' : '';
@@ -52,12 +61,12 @@ function Nav() {
     <>
       <nav className={`siteNav ${scrolled || menuOpen ? 'navScrolled' : ''}`}>
         <div className="navInner">
-          <a href="/" className="navWordmark">The Stage Beyond</a>
+          <Link to="/" className="navWordmark">The Stage Beyond</Link>
           <div className="navLinks">
-            <a href="/approach" className={`navLink ${path === '/approach' ? 'navLinkActive' : ''}`}>Approach</a>
-            <a href="/cohort" className={`navLink ${path === '/cohort' ? 'navLinkActive' : ''}`}>Cohorts</a>
-            <a href="/projects" className={`navLink ${path === '/projects' ? 'navLinkActive' : ''}`}>Projects</a>
-            <a href="/facilitator" className={`navLink ${path === '/facilitator' ? 'navLinkActive' : ''}`}>Facilitator</a>
+            <NavLink to="/approach" className={({ isActive }) => `navLink ${isActive ? 'navLinkActive' : ''}`}>Approach</NavLink>
+            <NavLink to="/cohort" className={({ isActive }) => `navLink ${isActive ? 'navLinkActive' : ''}`}>Cohorts</NavLink>
+            <NavLink to="/projects" className={({ isActive }) => `navLink ${isActive ? 'navLinkActive' : ''}`}>Projects</NavLink>
+            <NavLink to="/facilitator" className={({ isActive }) => `navLink ${isActive ? 'navLinkActive' : ''}`}>Facilitator</NavLink>
           </div>
           <a href={calendarLink} className="navCta" target="_blank" rel="noopener noreferrer">
             Schedule a conversation
@@ -76,13 +85,13 @@ function Nav() {
 
       <div className={`mobileMenu ${menuOpen ? 'mobileMenuOpen' : ''}`}>
         <div className="mobileMenuInner">
-          <a href="/" className="mobileNavLink" onClick={() => setMenuOpen(false)}>Home</a>
-          <a href="/approach" className={`mobileNavLink ${path === '/approach' ? 'mobileNavLinkActive' : ''}`} onClick={() => setMenuOpen(false)}>Approach</a>
-          <a href="/cohort" className={`mobileNavLink ${path === '/cohort' ? 'mobileNavLinkActive' : ''}`} onClick={() => setMenuOpen(false)}>Cohorts</a>
-          <a href="/projects" className={`mobileNavLink ${path === '/projects' ? 'mobileNavLinkActive' : ''}`} onClick={() => setMenuOpen(false)}>Projects</a>
-          <a href="/facilitator" className={`mobileNavLink ${path === '/facilitator' ? 'mobileNavLinkActive' : ''}`} onClick={() => setMenuOpen(false)}>Facilitator</a>
-          <a href="/apply" className={`mobileNavLink ${path === '/apply' ? 'mobileNavLinkActive' : ''}`} onClick={() => setMenuOpen(false)}>Is this for me?</a>
-          <a href={calendarLink} className="mobileNavCta" target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)}>
+          <Link to="/" className="mobileNavLink">Home</Link>
+          <NavLink to="/approach" className={({ isActive }) => `mobileNavLink ${isActive ? 'mobileNavLinkActive' : ''}`}>Approach</NavLink>
+          <NavLink to="/cohort" className={({ isActive }) => `mobileNavLink ${isActive ? 'mobileNavLinkActive' : ''}`}>Cohorts</NavLink>
+          <NavLink to="/projects" className={({ isActive }) => `mobileNavLink ${isActive ? 'mobileNavLinkActive' : ''}`}>Projects</NavLink>
+          <NavLink to="/facilitator" className={({ isActive }) => `mobileNavLink ${isActive ? 'mobileNavLinkActive' : ''}`}>Facilitator</NavLink>
+          <NavLink to="/apply" className={({ isActive }) => `mobileNavLink ${isActive ? 'mobileNavLinkActive' : ''}`}>Is this for me?</NavLink>
+          <a href={calendarLink} className="mobileNavCta" target="_blank" rel="noopener noreferrer">
             Schedule a conversation
           </a>
         </div>
@@ -95,14 +104,14 @@ function Footer() {
   return (
     <footer className="siteFooter">
       <div className="footerInner">
-        <a href="/" className="footerWordmark">The Stage Beyond</a>
+        <Link to="/" className="footerWordmark">The Stage Beyond</Link>
         <nav className="footerLinks">
-          <a href="/" className="footerLink">Home</a>
-          <a href="/approach" className="footerLink">Approach</a>
-          <a href="/cohort" className="footerLink">Cohorts</a>
-          <a href="/projects" className="footerLink">Projects</a>
-          <a href="/facilitator" className="footerLink">Facilitator</a>
-          <a href="/apply" className="footerLink">Is this for me?</a>
+          <Link to="/" className="footerLink">Home</Link>
+          <Link to="/approach" className="footerLink">Approach</Link>
+          <Link to="/cohort" className="footerLink">Cohorts</Link>
+          <Link to="/projects" className="footerLink">Projects</Link>
+          <Link to="/facilitator" className="footerLink">Facilitator</Link>
+          <Link to="/apply" className="footerLink">Is this for me?</Link>
         </nav>
         <a href={calendarLink} className="footerCta" target="_blank" rel="noopener noreferrer">
           Schedule a conversation
@@ -114,19 +123,19 @@ function Footer() {
 }
 
 function App() {
-  const path = window.location.pathname;
-
   return (
-    <>
+    <BrowserRouter>
       <Nav />
-      {path === '/approach' ? <ApproachPage /> :
-       path === '/apply' ? <ApplyPage /> :
-       path === '/projects' ? <ProjectsPage /> :
-       path === '/facilitator' ? <FacilitatorPage /> :
-       path === '/cohort' ? <CohortPage /> :
-       <HomePage />}
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/approach" element={<ApproachPage />} />
+        <Route path="/apply" element={<ApplyPage />} />
+        <Route path="/projects" element={<ProjectsPage />} />
+        <Route path="/facilitator" element={<FacilitatorPage />} />
+        <Route path="/cohort" element={<CohortPage />} />
+      </Routes>
       <Footer />
-    </>
+    </BrowserRouter>
   );
 }
 
@@ -176,9 +185,9 @@ function HomePage() {
           <p className="quietLine">
             Small cohorts. Defined rhythm. Shared responsibility.
           </p>
-          <a href="/approach" className="secondaryLink">
+          <Link to="/approach" className="secondaryLink">
             Learn how the work is structured
-          </a>
+          </Link>
         </div>
       </section>
 
@@ -222,9 +231,9 @@ function HomePage() {
             For dancers who want to build their capacity to contribute to the betterment of society.
           </p>
         </div>
-        <a href="/apply" className="learnMore">
+        <Link to="/apply" className="learnMore">
           Is this for me?
-        </a>
+        </Link>
       </section>
     </main>
   );
@@ -292,9 +301,9 @@ function ApproachPage() {
           This is not a place to arrive at answers. It is a place to develop the capacity
           to work with real questions.
         </p>
-        <a href="/apply" className="primaryCta">
+        <Link to="/apply" className="primaryCta">
           Is this for me?
-        </a>
+        </Link>
       </section>
     </main>
   );
@@ -562,7 +571,7 @@ function ApplyPage() {
           Schedule a call to learn more
         </a>
         <p>
-          <a href="/" className="secondaryLink">Return to main page</a>
+          <Link to="/" className="secondaryLink">Return to main page</Link>
         </p>
       </section>
     </main>
