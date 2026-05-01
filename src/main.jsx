@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { createRoot } from 'react-dom/client';
-import { BrowserRouter, Routes, Route, Link, NavLink, useNavigate, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link, NavLink, useLocation } from 'react-router-dom';
 import './styles.css';
 
 const calendarLink = 'https://calendar.app.google/X6KBMhZVmxGofHyF7';
@@ -254,6 +254,13 @@ function ApproachPage() {
         </p>
       </section>
       <section className="contentSection fadeIn">
+        <div className="pagePhoto">
+          <img
+            src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=600&auto=format&fit=crop"
+            alt="Dancer in rehearsal"
+          />
+        </div>
+
         <p>
           Transition is often approached as a personal problem to solve. Here, it is worked on collectively.
         </p>
@@ -261,6 +268,7 @@ function ApproachPage() {
           The group becomes a working unit—reading its own reality, making decisions together,
           and carrying them out in practice.
         </p>
+        <div className="clearfix" />
         <h2>A consistent rhythm</h2>
         <div className="approachList">
           <CycleStep title="Study">
@@ -325,11 +333,19 @@ function CohortPage() {
       </section>
 
       <section className="contentSection fadeIn">
+        <div className="pagePhoto">
+          <img
+            src="https://images.unsplash.com/photo-1547153760-18fc86324498?w=600&auto=format&fit=crop"
+            alt="Dancers working together"
+          />
+        </div>
+
         <p>
           Each cohort is a small, committed group of dancers working together
           over a defined period. The structure is consistent; the work that
           emerges is shaped by the group itself.
         </p>
+        <div className="clearfix" />
 
         <div className="cohortGrid">
           <div className="cohortDetail">
@@ -505,6 +521,13 @@ function ProjectsPage() {
         </p>
       </section>
       <section className="contentSection fadeIn">
+        <div className="pagePhoto">
+          <img
+            src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&auto=format&fit=crop"
+            alt="Community work"
+          />
+        </div>
+
         <p>
           Action is not an add-on to the process—it is central to it. Each cohort consults
           together to decide what they will do, then carries it out, reflects on what happened,
@@ -514,6 +537,7 @@ function ProjectsPage() {
           The projects below are examples, not a fixed menu. What a cohort undertakes will
           emerge from its own consultation and the reality it finds itself in.
         </p>
+        <div className="clearfix" />
         <div className="projectsGrid">
           {projects.map((project) => (
             <div className="projectCard" key={project.title}>
@@ -549,6 +573,13 @@ function ApplyPage() {
         </p>
       </section>
       <section className="contentSection fadeIn">
+        <div className="pagePhoto">
+          <img
+            src="https://images.unsplash.com/photo-1516307365426-bea591f05011?w=600&auto=format&fit=crop"
+            alt="Dancer in reflection"
+          />
+        </div>
+
         <h2>This may be a fit if you are ready to:</h2>
         <ul className="structureList">
           <li>work with transition in a structured way</li>
