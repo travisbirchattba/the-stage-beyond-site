@@ -30,7 +30,6 @@ function Nav() {
             <a href="/cohort" className={`navLink ${path === '/cohort' ? 'navLinkActive' : ''}`}>Cohorts</a>
             <a href="/projects" className={`navLink ${path === '/projects' ? 'navLinkActive' : ''}`}>Projects</a>
             <a href="/facilitator" className={`navLink ${path === '/facilitator' ? 'navLinkActive' : ''}`}>Facilitator</a>
-            <a href="/apply" className={`navLink ${path === '/apply' ? 'navLinkActive' : ''}`}>Is this for me?</a>
           </div>
           <a href={calendarLink} className="navCta" target="_blank" rel="noopener noreferrer">
             Schedule a conversation
