@@ -332,12 +332,12 @@ function CohortPage() {
       </section>
 
       <section className="contentSection fadeIn">
-        <div className="pagePhoto">
-          <img
-            src="https://images.unsplash.com/photo-1547153760-18fc86324498?w=600&auto=format&fit=crop"
-            alt="Dancers working together"
-          />
-        </div>
+       <div className="pagePhoto">
+  <img
+    src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&auto=format&fit=crop"
+    alt="Group of dancers"
+  />
+</div>
 
         <p>
           Each cohort is a small, committed group of dancers working together
