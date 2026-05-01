@@ -755,3 +755,26 @@ body {
 .pageVisible {
   opacity: 1;
 }
+/* ── Page Photos ── */
+
+.pagePhoto {
+  float: right;
+  width: 280px;
+  margin: 0 0 32px 48px;
+}
+
+.pagePhoto img {
+  width: 100%;
+  border-radius: 16px;
+  display: block;
+  filter: grayscale(100%);
+}
+
+@media (max-width: 1024px) {
+  .pagePhoto {
+    float: none;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 0 40px 0;
+  }
+}
