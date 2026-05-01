@@ -689,3 +689,7 @@ body {
   .facilitatorPhoto img {
     max-width: 280px;
   }
+
+.clearfix {
+  clear: both;
+}
