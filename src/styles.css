@@ -654,3 +654,37 @@ body {
     gap: 20px;
   }
 }
+/* ── Facilitator ── */
+
+.facilitatorLayout {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.facilitatorPhoto img {
+  width: 100%;
+  border-radius: 16px;
+  display: block;
+  filter: grayscale(100%);
+}
+
+.facilitatorBio h2 {
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  line-height: 1.05;
+  margin: 48px 0 18px;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+}
+
+@media (max-width: 900px) {
+  .facilitatorLayout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .facilitatorPhoto img {
+    max-width: 280px;
+  }
+}
