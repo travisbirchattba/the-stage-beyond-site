@@ -27,6 +27,7 @@ function Nav() {
           <a href="/" className="navWordmark">The Stage Beyond</a>
           <div className="navLinks">
             <a href="/approach" className={`navLink ${path === '/approach' ? 'navLinkActive' : ''}`}>Approach</a>
+            <a href="/cohort" className={`navLink ${path === '/cohort' ? 'navLinkActive' : ''}`}>Cohorts</a>
             <a href="/projects" className={`navLink ${path === '/projects' ? 'navLinkActive' : ''}`}>Projects</a>
             <a href="/facilitator" className={`navLink ${path === '/facilitator' ? 'navLinkActive' : ''}`}>Facilitator</a>
             <a href="/apply" className={`navLink ${path === '/apply' ? 'navLinkActive' : ''}`}>Is this for me?</a>
@@ -50,6 +51,7 @@ function Nav() {
         <div className="mobileMenuInner">
           <a href="/" className="mobileNavLink" onClick={() => setMenuOpen(false)}>Home</a>
           <a href="/approach" className={`mobileNavLink ${path === '/approach' ? 'mobileNavLinkActive' : ''}`} onClick={() => setMenuOpen(false)}>Approach</a>
+          <a href="/cohort" className={`mobileNavLink ${path === '/cohort' ? 'mobileNavLinkActive' : ''}`} onClick={() => setMenuOpen(false)}>Cohorts</a>
           <a href="/projects" className={`mobileNavLink ${path === '/projects' ? 'mobileNavLinkActive' : ''}`} onClick={() => setMenuOpen(false)}>Projects</a>
           <a href="/facilitator" className={`mobileNavLink ${path === '/facilitator' ? 'mobileNavLinkActive' : ''}`} onClick={() => setMenuOpen(false)}>Facilitator</a>
           <a href="/apply" className={`mobileNavLink ${path === '/apply' ? 'mobileNavLinkActive' : ''}`} onClick={() => setMenuOpen(false)}>Is this for me?</a>
@@ -70,6 +72,7 @@ function Footer() {
         <nav className="footerLinks">
           <a href="/" className="footerLink">Home</a>
           <a href="/approach" className="footerLink">Approach</a>
+          <a href="/cohort" className="footerLink">Cohorts</a>
           <a href="/projects" className="footerLink">Projects</a>
           <a href="/facilitator" className="footerLink">Facilitator</a>
           <a href="/apply" className="footerLink">Is this for me?</a>
@@ -93,6 +96,7 @@ function App() {
        path === '/apply' ? <ApplyPage /> :
        path === '/projects' ? <ProjectsPage /> :
        path === '/facilitator' ? <FacilitatorPage /> :
+       path === '/cohort' ? <CohortPage /> :
        <HomePage />}
       <Footer />
     </>
@@ -263,6 +267,75 @@ function ApproachPage() {
   );
 }
 
+function CohortPage() {
+  return (
+    <main className="site simplePage">
+      <section className="pageHero">
+        <p className="eyebrow">Cohorts</p>
+        <h1>The next cohort.</h1>
+        <p className="pageLead">
+          The first cohort is scheduled to begin in October 2026.
+          Spaces are limited. The process begins with a conversation.
+        </p>
+      </section>
+
+      <section className="contentSection">
+        <p>
+          Each cohort is a small, committed group of dancers working together
+          over a defined period. The structure is consistent; the work that
+          emerges is shaped by the group itself.
+        </p>
+
+        <div className="cohortGrid">
+          <div className="cohortDetail">
+            <p className="cohortLabel">Start date</p>
+            <p className="cohortValue">October 2026</p>
+          </div>
+          <div className="cohortDetail">
+            <p className="cohortLabel">Duration</p>
+            <p className="cohortValue">3 months</p>
+          </div>
+          <div className="cohortDetail">
+            <p className="cohortLabel">Cohort size</p>
+            <p className="cohortValue">5–12 participants</p>
+          </div>
+          <div className="cohortDetail">
+            <p className="cohortLabel">Format</p>
+            <p className="cohortValue">In-person preferred</p>
+          </div>
+        </div>
+
+        <h2>How sessions work</h2>
+        <p>
+          Sessions meet approximately weekly for three to four hours, with one
+          full-day session per month. Each cohort builds its own schedule and
+          plan — some groups may elect to carry out certain activities on
+          weekends or in other formats that suit the work.
+        </p>
+        <p>
+          In-person sessions are the ideal. Some online sessions may be needed
+          depending on context and participant location.
+        </p>
+
+        <h2>Investment</h2>
+        <p>
+          The market value of participation is $5,000 CAD per participant. Cost varies depending
+          on context. Reach out to discuss what is possible.
+        </p>
+
+        <p className="closingLine">
+          The first step is a conversation to explore whether the timing,
+          structure, and spirit of the work are right for you.
+        </p>
+
+        <a href={calendarLink} className="primaryCta" target="_blank" rel="noopener noreferrer">
+          Schedule a conversation
+        </a>
+      </section>
+    </main>
+  );
+}
+
 function FacilitatorPage() {
   return (
     <main className="site simplePage">
@@ -282,13 +355,13 @@ function FacilitatorPage() {
         </div>
 
         <p>
-          Travis leads group-based processes focused on how people engage challenging
+          Travis leads group-based processes focused on how people engage real
           questions, act, and learn together. The Stage Beyond brings together
           a background in the performing arts with over a decade of facilitation
           practice—returning these learnings to the context of dancer transition.
         </p>
 
-                <div className="clearfix" />
+        <div className="clearfix" />
 
         <h2>Artistic background</h2>
         <p>
@@ -314,9 +387,7 @@ function FacilitatorPage() {
           development processes across diverse organizational contexts. Clients
           included the Government of Ontario, World Vision Canada, SickKids
           Foundation, RBC, BMO, Scotiabank, Bell, Telus, AirMiles, Aeroplan,
-          and BlackBerry. He holds several professional certifications in 
-          cutting-edge leadership, organizational and team development 
-          methodologies and frameworks.
+          and BlackBerry.
         </p>
         <p>
           Since 2020, through Travis Birch & Associates Ltd, he has continued
@@ -401,65 +472,4 @@ function ProjectsPage() {
           ))}
         </div>
         <p className="closingLine">
-          The point is not to complete a project. It is to develop the capacity
-          to act together—and to discover what that makes possible.
-        </p>
-        <a href={calendarLink} className="primaryCta" target="_blank" rel="noopener noreferrer">
-          Schedule a conversation
-        </a>
-      </section>
-    </main>
-  );
-}
-
-function ApplyPage() {
-  return (
-    <main className="site simplePage">
-      <section className="pageHero">
-        <p className="eyebrow">Is this for me?</p>
-        <h1>A good fit begins with readiness.</h1>
-        <p className="pageLead">
-          The Stage Beyond is for dancers who are ready to engage actively with peers,
-          not simply receive advice.
-        </p>
-      </section>
-      <section className="contentSection">
-        <h2>This may be a fit if you are ready to:</h2>
-        <ul className="structureList">
-          <li>work with transition in a structured way</li>
-          <li>engage seriously with peers</li>
-          <li>participate in consultation, action, and reflection</li>
-          <li>contribute to something beyond your own individual next step</li>
-        </ul>
-        <h2>This may not be a fit if you are looking for:</h2>
-        <ul className="structureList">
-          <li>career coaching</li>
-          <li>therapy or emotional processing as the primary focus</li>
-          <li>a course with fixed answers</li>
-          <li>a purely individual process</li>
-        </ul>
-        <p className="closingLine">
-          The first step is a conversation. We'll explore whether the timing,
-          structure, and spirit of the work are right.
-        </p>
-        <a href={calendarLink} className="primaryCta" target="_blank" rel="noopener noreferrer">
-          Schedule a call to learn more
-        </a>
-        <p>
-          <a href="/" className="secondaryLink">Return to main page</a>
-        </p>
-      </section>
-    </main>
-  );
-}
-
-function CycleStep({ title, children }) {
-  return (
-    <div className="cycleStep">
-      <h3>{title}</h3>
-      <p>{children}</p>
-    </div>
-  );
-}
-
-createRoot(document.getElementById('root')).render(<App />);
+          The point is not to complete a proj
