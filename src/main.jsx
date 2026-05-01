@@ -254,13 +254,12 @@ function ApproachPage() {
         </p>
       </section>
       <section className="contentSection fadeIn">
-        <div className="pagePhoto">
-          <img
-            src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=600&auto=format&fit=crop"
-            alt="Dancer in rehearsal"
-          />
-        </div>
-
+<div className="pagePhoto">
+  <img
+    src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&auto=format&fit=crop"
+    alt="People working together"
+  />
+</div>
         <p>
           Transition is often approached as a personal problem to solve. Here, it is worked on collectively.
         </p>
@@ -521,12 +520,12 @@ function ProjectsPage() {
         </p>
       </section>
       <section className="contentSection fadeIn">
-        <div className="pagePhoto">
-          <img
-            src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&auto=format&fit=crop"
-            alt="Community work"
-          />
-        </div>
+       <div className="pagePhoto">
+  <img
+    src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=600&auto=format&fit=crop"
+    alt="Community volunteers working together"
+  />
+</div>
 
         <p>
           Action is not an add-on to the process—it is central to it. Each cohort consults
