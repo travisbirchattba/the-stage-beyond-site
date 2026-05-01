@@ -277,64 +277,71 @@ function FacilitatorPage() {
       </section>
 
       <section className="contentSection">
-        <p>
-          Travis leads group-based processes focused on how people engage real
-          questions, act, and learn together. The Stage Beyond brings together
-          a background in the performing arts with over a decade of facilitation
-          practice—returning these learnings to the context of dancer transition.
-        </p>
+        <div className="facilitatorLayout">
+          <div className="facilitatorPhoto">
+            <img src="/headshot.jpg" alt="Travis Birch" />
+          </div>
+          <div className="facilitatorBio">
+            <p>
+              Travis leads group-based processes focused on how people engage real
+              questions, act, and learn together. The Stage Beyond brings together
+              a background in the performing arts with over a decade of facilitation
+              practice—returning these learnings to the context of dancer transition.
+            </p>
 
-        <h2>Artistic background</h2>
-        <p>
-          Travis trained at the National Ballet School Professional Program
-          (1987–1994) and went on to a professional ballet career spanning
-          1994–2008, with an international career across Europe and North America.
-          He performed as a soloist, taking on leading roles in acclaimed
-          productions on major stages, and also worked as an instructor and
-          choreographer. He holds a teaching certificate from the National
-          Ballet School.
-        </p>
-        <p>
-          Questions of artistic identity and life beyond performance have been
-          a sustained thread throughout his work ever since.
-        </p>
+            <h2>Artistic background</h2>
+            <p>
+              Travis trained at the National Ballet School Professional Program
+              (1987–1994) and went on to a professional ballet career spanning
+              1994–2008, with an international career across Europe and North America.
+              He performed as a soloist, taking on leading roles in acclaimed
+              productions on major stages, and also worked as an instructor and
+              choreographer. He holds a teaching certificate from the National
+              Ballet School.
+            </p>
+            <p>
+              Questions of artistic identity and life beyond performance have been
+              a sustained thread throughout his work ever since.
+            </p>
 
-        <h2>Facilitation practice</h2>
-        <p>
-          Travis has spent over a decade designing and leading facilitation and
-          development processes with organizations navigating complex questions
-          and collective action. As a Senior Consultant and Partner at Berteig
-          (2008–2020), he designed and facilitated large-scale learning and
-          development processes across diverse organizational contexts. Clients
-          included the Government of Ontario, World Vision Canada, SickKids
-          Foundation, RBC, BMO, Scotiabank, Bell, Telus, AirMiles, Aeroplan,
-          and BlackBerry.
-        </p>
-        <p>
-          Since 2020, through Travis Birch & Associates Ltd, he has continued
-          to lead facilitation and development processes, supporting groups to
-          engage complex questions and act collectively—designing structured
-          approaches to learning grounded in cycles of reflection, consultation,
-          and action.
-        </p>
+            <h2>Facilitation practice</h2>
+            <p>
+              Travis has spent over a decade designing and leading facilitation and
+              development processes with organizations navigating complex questions
+              and collective action. As a Senior Consultant and Partner at Berteig
+              (2008–2020), he designed and facilitated large-scale learning and
+              development processes across diverse organizational contexts. Clients
+              included the Government of Ontario, World Vision Canada, SickKids
+              Foundation, RBC, BMO, Scotiabank, Bell, Telus, AirMiles, Aeroplan,
+              and BlackBerry.
+            </p>
+            <p>
+              Since 2020, through Travis Birch & Associates Ltd, he has continued
+              to lead facilitation and development processes, supporting groups to
+              engage complex questions and act collectively—designing structured
+              approaches to learning grounded in cycles of reflection, consultation,
+              and action.
+            </p>
 
-        <h2>The Stage Beyond</h2>
-        <p>
-          Founded in 2026, The Stage Beyond is a practice-based environment for
-          dancers navigating transition beyond performance. It works through
-          structured cycles of study, consultation, action, and reflection—
-          emphasizing collective learning and capacity-building, with participants
-          increasingly taking up the work themselves.
-        </p>
+            <h2>The Stage Beyond</h2>
+            <p>
+              Founded in 2026, The Stage Beyond is a practice-based environment for
+              dancers navigating transition beyond performance. It works through
+              structured cycles of study, consultation, action, and reflection—
+              emphasizing collective learning and capacity-building, with participants
+              increasingly taking up the work themselves.
+            </p>
 
-        <p className="closingLine">
-          The work is grounded in the belief that transition, worked on
-          collectively, becomes something more than a personal problem to solve.
-        </p>
+            <p className="closingLine">
+              The work is grounded in the belief that transition, worked on
+              collectively, becomes something more than a personal problem to solve.
+            </p>
 
-        <a href={calendarLink} className="primaryCta" target="_blank" rel="noopener noreferrer">
-          Schedule a conversation
-        </a>
+            <a href={calendarLink} className="primaryCta" target="_blank" rel="noopener noreferrer">
+              Schedule a conversation
+            </a>
+          </div>
+        </div>
       </section>
     </main>
   );
