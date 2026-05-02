@@ -778,3 +778,15 @@ body {
     margin: 0 0 40px 0;
   }
 }
+.facilitatorPhoto {
+  background: #1f1f1f;
+  border-radius: 16px;
+}
+
+.facilitatorPhoto img {
+  width: 100%;
+  border-radius: 16px;
+  display: block;
+  filter: grayscale(100%);
+  mix-blend-mode: multiply;
+}
