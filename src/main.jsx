@@ -425,7 +425,7 @@ function FacilitatorPage() {
         </div>
 
         <p>
-          Travis leads group-based processes focused on how people engage real
+          Travis leads group-based processes focused on how people engage challenging
           questions, act, and learn together. The Stage Beyond brings together
           a background in the performing arts with over a decade of facilitation
           practice—returning these learnings to the context of dancer transition.
