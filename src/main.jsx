@@ -5,6 +5,14 @@ import './styles.css';
 
 const calendarLink = 'https://calendar.app.google/X6KBMhZVmxGofHyF7';
 
+function ScrollToTop() {
+  const location = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+  return null;
+}
+
 function useFadeIn() {
   const location = useLocation();
   useEffect(() => {
@@ -125,6 +133,7 @@ function Footer() {
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Nav />
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -254,12 +263,13 @@ function ApproachPage() {
         </p>
       </section>
       <section className="contentSection fadeIn">
-<div className="pagePhoto">
-  <img
-    src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&auto=format&fit=crop"
-    alt="Group in conversation"
-  />
-</div>
+        <div className="pagePhoto">
+          <img
+            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&auto=format&fit=crop"
+            alt="People working together"
+          />
+        </div>
+
         <p>
           Transition is often approached as a personal problem to solve. Here, it is worked on collectively.
         </p>
@@ -332,12 +342,12 @@ function CohortPage() {
       </section>
 
       <section className="contentSection fadeIn">
-     <div className="pagePhoto">
-  <img
-    src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=600&auto=format&fit=crop"
-    alt="Group of people together"
-  />
-</div>
+        <div className="pagePhoto">
+          <img
+            src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=600&auto=format&fit=crop"
+            alt="Group of people together"
+          />
+        </div>
 
         <p>
           Each cohort is a small, committed group of dancers working together
@@ -520,12 +530,12 @@ function ProjectsPage() {
         </p>
       </section>
       <section className="contentSection fadeIn">
-       <div className="pagePhoto">
-  <img
-    src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=600&auto=format&fit=crop"
-    alt="Community volunteers working together"
-  />
-</div>
+        <div className="pagePhoto">
+          <img
+            src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=600&auto=format&fit=crop"
+            alt="Community volunteers working together"
+          />
+        </div>
 
         <p>
           Action is not an add-on to the process—it is central to it. Each cohort consults
