@@ -5,6 +5,20 @@ import './styles.css';
 
 const calendarLink = 'https://calendar.app.google/X6KBMhZVmxGofHyF7';
 
+const homeSteps = [
+  { title: "Study", body: "We engage material that opens new ways of seeing ourselves and the world." },
+  { title: "Consultation", body: "We read our reality together and decide what the group will act on." },
+  { title: "Action", body: "The cohort carries out a shared decision in practice." },
+  { title: "Reflection", body: "We return to what happened, learn from it, and refine the next step." },
+];
+
+const approachSteps = [
+  { title: "Study", body: "The group engages material that expands how reality is understood." },
+  { title: "Consultation", body: "Through structured dialogue, the group reads its situation and determines what is needed." },
+  { title: "Action", body: "Decisions are carried out as real, shared acts." },
+  { title: "Reflection", body: "The group learns from what unfolds and refines its next step." },
+];
+
 function ScrollToTop() {
   const location = useLocation();
   useEffect(() => {
@@ -142,6 +156,7 @@ function App() {
         <Route path="/projects" element={<ProjectsPage />} />
         <Route path="/facilitator" element={<FacilitatorPage />} />
         <Route path="/cohort" element={<CohortPage />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <Footer />
     </BrowserRouter>
@@ -204,18 +219,9 @@ function HomePage() {
         <p className="eyebrow">How we work</p>
         <h2>Study. Consultation. Action. Reflection.</h2>
         <div className="cycleGrid">
-          <CycleStep title="Study">
-            We engage material that opens new ways of seeing ourselves and the world.
-          </CycleStep>
-          <CycleStep title="Consultation">
-            We read our reality together and decide what the group will act on.
-          </CycleStep>
-          <CycleStep title="Action">
-            The cohort carries out a shared decision in practice.
-          </CycleStep>
-          <CycleStep title="Reflection">
-            We return to what happened, learn from it, and refine the next step.
-          </CycleStep>
+          {homeSteps.map((step) => (
+            <CycleStep key={step.title} title={step.title}>{step.body}</CycleStep>
+          ))}
         </div>
       </section>
 
@@ -280,18 +286,9 @@ function ApproachPage() {
         <div className="clearfix" />
         <h2>A consistent rhythm</h2>
         <div className="approachList">
-          <CycleStep title="Study">
-            The group engages material that expands how reality is understood.
-          </CycleStep>
-          <CycleStep title="Consultation">
-            Through structured dialogue, the group reads its situation and determines what is needed.
-          </CycleStep>
-          <CycleStep title="Action">
-            Decisions are carried out as real, shared acts.
-          </CycleStep>
-          <CycleStep title="Reflection">
-            The group learns from what unfolds and refines its next step.
-          </CycleStep>
+          {approachSteps.map((step) => (
+            <CycleStep key={step.title} title={step.title}>{step.body}</CycleStep>
+          ))}
         </div>
         <h2>What develops over time</h2>
         <p>
@@ -613,6 +610,30 @@ function ApplyPage() {
         <p>
           <Link to="/" className="secondaryLink">Return to main page</Link>
         </p>
+      </section>
+    </main>
+  );
+}
+
+function NotFoundPage() {
+  const visible = usePageTransition();
+
+  return (
+    <main className={`site simplePage pageTransition ${visible ? 'pageVisible' : ''}`}>
+      <section className="pageHero">
+        <p className="eyebrow">404</p>
+        <h1>Page not found.</h1>
+        <p className="pageLead">
+          The page you're looking for doesn't exist or has moved.
+        </p>
+      </section>
+      <section className="contentSection">
+        <p className="closingLine">
+          Head back to the homepage or use the navigation above.
+        </p>
+        <Link to="/" className="primaryCta">
+          Return to homepage
+        </Link>
       </section>
     </main>
   );
