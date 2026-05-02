@@ -459,13 +459,20 @@ function FacilitatorPage() {
           Foundation, RBC, BMO, Scotiabank, Bell, Telus, AirMiles, Aeroplan,
           and BlackBerry.
         </p>
-        <p>
-          Since 2020, through Travis Birch & Associates Ltd, he has continued
-          to lead facilitation and development processes, supporting groups to
-          engage complex questions and act collectively—designing structured
-          approaches to learning grounded in cycles of reflection, consultation,
-          and action.
-        </p>
+      <p>
+  Since 2020, through Travis Birch & Associates Ltd, he has continued
+  to lead facilitation and development processes, supporting groups to
+  engage complex questions and act collectively—designing structured
+  approaches to learning grounded in cycles of reflection, consultation,
+  and action.
+</p>
+
+<p>
+  Travis holds several professional certifications in Leadership,
+  Organizational and Team consulting, training and coaching.
+</p>
+
+<h2>The Stage Beyond</h2>
 
         <h2>The Stage Beyond</h2>
         <p>
