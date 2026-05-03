@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <rect width="1200" height="630" fill="#1f1f1f"/>
+  <line x1="400" y1="345" x2="800" y2="345" stroke="#b98b3f" stroke-width="1.5"/>
+  <text x="600" y="290" font-family="Georgia, serif" font-size="72" font-weight="500" fill="#f7f2ea" text-anchor="middle" letter-spacing="-2">The Stage Beyond</text>
+  <text x="600" y="400" font-family="Georgia, serif" font-size="28" fill="#7a736a" text-anchor="middle" letter-spacing="6">A WORKING COMMUNITY FOR DANCERS</text>
+</svg>
