@@ -552,9 +552,12 @@ const projects = [
         <div className="projectsGrid">
           {projects.map((project) => (
             <div className="projectCard" key={project.title}>
-              <h3>{project.title}</h3>
-              <p>{project.description}</p>
-            </div>
+  {project.image && (
+    <img src={project.image} alt={project.title} className="projectCardImage" />
+  )}
+  <h3>{project.title}</h3>
+  <p>{project.description}</p>
+</div>
           ))}
         </div>
         <p className="closingLine">
