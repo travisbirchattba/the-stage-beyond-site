@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 import { BrowserRouter, Routes, Route, Link, NavLink, useLocation } from 'react-router-dom';
 import './styles.css';
 
-const calendarLink = 'https://calendar.app.google/X6KBMhZVmxGofHyF7';
+const calendarLink = 'https://calendar.app.google/yzkx5MPNAcY7H2X29';
 
 const homeSteps = [
   { title: "Study", body: "We engage material that opens new ways of seeing ourselves and the world." },
