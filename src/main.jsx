@@ -533,12 +533,6 @@ const projects = [
         </p>
       </section>
       <section className="contentSection fadeIn">
-        <div className="pagePhoto">
-          <img
-            src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=600&auto=format&fit=crop"
-            alt="Community volunteers working together"
-          />
-        </div>
         <p>
           Action is not an add-on to the process—it is central to it. Each cohort consults
           together to decide what they will do, then carries it out, reflects on what happened,
