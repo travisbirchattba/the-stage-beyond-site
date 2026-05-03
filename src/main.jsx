@@ -517,7 +517,7 @@ image: "/project-tutoring.png",  },
   {
     title: "Contributing to Wider Society",
     description: "Cohorts may undertake projects that bring their collective capacity to bear on needs outside the dance world entirely—partnering with local organizations, responding to community-identified needs, or initiating something that reflects what the group has learned to do together.",
-    image: null,
+    image: "/project-society.png",
   },
 ];
 
