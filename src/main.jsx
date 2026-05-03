@@ -586,8 +586,6 @@ function ApplyPage() {
     alt="Group in discussion"
   />
 </div>
-          />
-        </div>
         <h2>This may be a fit if you are ready to:</h2>
         <ul className="structureList">
           <li>work with transition in a structured way</li>
