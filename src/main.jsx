@@ -499,28 +499,28 @@ function ProjectsPage() {
   useFadeIn();
   const visible = usePageTransition();
 
-  const projects = [
-    {
-      title: "Dance Programs for Children & Youth in Underserved Communities",
-      description:
-        "Cohort members design and deliver movement-based programs for children and youth in communities with limited access to the arts. This is not performance outreach—it is sustained, relational work that requires listening, adapting, and showing up consistently over time.",
-    },
-    {
-      title: "Tutoring & Mentoring Support",
-      description:
-        "Drawing on the discipline and focus developed through years of training, cohort members offer academic tutoring or personal mentoring to young people who benefit from patient, skilled adult presence. The work builds relationships as much as it builds skills.",
-    },
-    {
-      title: "Collaborative Outreach Within the Dance Community",
-      description:
-        "Projects that strengthen connection across the dance community—between studios, generations, disciplines, or institutions. This might take the form of shared workshops, open rehearsals, skill exchanges, or initiatives that address gaps the community itself has identified.",
-    },
-    {
-      title: "Contributing to Wider Society",
-      description:
-        "Cohorts may undertake projects that bring their collective capacity to bear on needs outside the dance world entirely—partnering with local organizations, responding to community-identified needs, or initiating something that reflects what the group has learned to do together.",
-    },
-  ];
+const projects = [
+  {
+    title: "Dance Programs for Children & Youth in Underserved Communities",
+    description: "Cohort members design and deliver movement-based programs for children and youth in communities with limited access to the arts. This is not performance outreach—it is sustained, relational work that requires listening, adapting, and showing up consistently over time.",
+    image: "/project-children.png",
+  },
+  {
+    title: "Tutoring & Mentoring Support",
+    description: "Drawing on the discipline and focus developed through years of training, cohort members offer academic tutoring or personal mentoring to young people who benefit from patient, skilled adult presence. The work builds relationships as much as it builds skills.",
+    image: null,
+  },
+  {
+    title: "Collaborative Outreach Within the Dance Community",
+    description: "Projects that strengthen connection across the dance community—between studios, generations, disciplines, or institutions. This might take the form of shared workshops, open rehearsals, skill exchanges, or initiatives that address gaps the community itself has identified.",
+    image: null,
+  },
+  {
+    title: "Contributing to Wider Society",
+    description: "Cohorts may undertake projects that bring their collective capacity to bear on needs outside the dance world entirely—partnering with local organizations, responding to community-identified needs, or initiating something that reflects what the group has learned to do together.",
+    image: null,
+  },
+];
 
   return (
     <main className={`site simplePage pageTransition ${visible ? 'pageVisible' : ''}`}>
