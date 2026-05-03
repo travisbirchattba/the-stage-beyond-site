@@ -508,8 +508,7 @@ const projects = [
   {
     title: "Tutoring & Mentoring Support",
     description: "Drawing on the discipline and focus developed through years of training, cohort members offer academic tutoring or personal mentoring to young people who benefit from patient, skilled adult presence. The work builds relationships as much as it builds skills.",
-    image: "/project-tutoring",
-  },
+image: "/project-tutoring.png",  },
   {
     title: "Collaborative Outreach Within the Dance Community",
     description: "Projects that strengthen connection across the dance community—between studios, generations, disciplines, or institutions. This might take the form of shared workshops, open rehearsals, skill exchanges, or initiatives that address gaps the community itself has identified.",
