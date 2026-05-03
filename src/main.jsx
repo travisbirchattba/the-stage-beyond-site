@@ -343,11 +343,11 @@ function CohortPage() {
 
       <section className="contentSection fadeIn">
         <div className="pagePhoto">
-          <img
-            src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=600&auto=format&fit=crop"
-            alt="Group of people together"
-          />
-        </div>
+  <img
+    src="/Cohort.png"
+    alt="Group in conversation"
+  />
+</div>
         <p>
           Each cohort is a small, committed group of dancers working together
           over a defined period. The structure is consistent; the work that
