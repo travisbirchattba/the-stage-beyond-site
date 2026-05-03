@@ -512,7 +512,7 @@ image: "/project-tutoring.png",  },
   {
     title: "Collaborative Outreach Within the Dance Community",
     description: "Projects that strengthen connection across the dance community—between studios, generations, disciplines, or institutions. This might take the form of shared workshops, open rehearsals, skill exchanges, or initiatives that address gaps the community itself has identified.",
-    image: null,
+    image: "/project-outreach.png",
   },
   {
     title: "Contributing to Wider Society",
