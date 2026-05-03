@@ -580,10 +580,12 @@ function ApplyPage() {
         </p>
       </section>
       <section className="contentSection fadeIn">
-        <div className="pagePhoto">
-          <img
-            src="https://images.unsplash.com/photo-1516307365426-bea591f05011?w=600&auto=format&fit=crop"
-            alt="Dancer in reflection"
+       <div className="pagePhoto">
+  <img
+    src="/Fit.png"
+    alt="Group in discussion"
+  />
+</div>
           />
         </div>
         <h2>This may be a fit if you are ready to:</h2>
