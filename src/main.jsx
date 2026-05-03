@@ -648,6 +648,12 @@ function WaitlistPage() {
       </section>
 
       <section className="contentSection fadeIn">
+        <div className="pagePhoto">
+  <img
+    src="/Registration_Page.png"
+    alt="A group standing together"
+  />
+</div>
         {status === 'success' ? (
           <div className="formSuccess">
             <p className="closingLine">Thank you — we'll be in touch.</p>
