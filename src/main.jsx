@@ -628,7 +628,7 @@ function WaitlistPage() {
     e.preventDefault();
     setStatus('sending');
     const data = new FormData(e.target);
-    const res = await fetch('https://formspree.io/f/xwvyvlzz', {
+    const res = await fetch('https://formspree.io/f/mjglgqar', {
       method: 'POST',
       body: data,
       headers: { Accept: 'application/json' },
