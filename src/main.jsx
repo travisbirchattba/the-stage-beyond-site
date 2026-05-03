@@ -423,8 +423,8 @@ function FacilitatorPage() {
 
       <section className="contentSection fadeIn">
         <div className="facilitatorPhoto">
-          <img src="/headshot.jpg" alt="Travis Birch" />
-        </div>
+  <img src="/Facilitator.jpg" alt="Travis Birch" />
+</div>
 
         <p>
           Travis leads group-based processes focused on how people engage real
