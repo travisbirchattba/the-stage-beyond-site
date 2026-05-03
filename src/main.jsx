@@ -274,11 +274,11 @@ function ApproachPage() {
       </section>
       <section className="contentSection fadeIn">
         <div className="pagePhoto">
-          <img
-            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&auto=format&fit=crop"
-            alt="People working together"
-          />
-        </div>
+  <img
+    src="/Approach.png"
+    alt="Group working together"
+  />
+</div>
         <p>
           Transition is often approached as a personal problem to solve. Here, it is worked on collectively.
         </p>
