@@ -83,7 +83,7 @@ function Nav() {
     <>
       <nav className={`siteNav ${scrolled || menuOpen ? 'navScrolled' : ''}`}>
         <div className="navInner">
-          <Link to="/" className="navWordmark">
+         <Link to="/" className="navWordmark">
   <svg viewBox="0 0 80 50" className="navIcon" xmlns="http://www.w3.org/2000/svg">
     <line x1="4" y1="38" x2="76" y2="38" stroke="currentColor" strokeWidth="1.5"/>
     <path d="M10 38 Q40 8 70 38" fill="none" stroke="currentColor" strokeWidth="1.5"/>
