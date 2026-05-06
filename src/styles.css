@@ -962,3 +962,10 @@ body {
   margin: 36px 0 44px;
   font-style: italic;
 }
+.heroPlain {
+  max-width: 560px;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: #6b645c;
+  margin: -10px 0 34px;
+}
