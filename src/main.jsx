@@ -766,10 +766,13 @@ function WaitlistPage() {
             </p>
           </div>
 
-          <div
-            className="heroImage"
-            style={{ backgroundImage: "url('/Registration_Page.png')" }}
-          />
+         <div
+  className="heroImage"
+  style={{
+    backgroundImage:
+      "linear-gradient(180deg, rgba(0,0,0,0.03), rgba(0,0,0,0.18)), url('/Registration_Page.png')"
+  }}
+/>
         </div>
       </section>
 
