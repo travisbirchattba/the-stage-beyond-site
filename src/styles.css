@@ -529,15 +529,10 @@ padding: 110px 6vw 92px;
 }
 
 .contentSection {
-  max-width: 1100px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 72px 6vw 110px;
   border-top: 1px solid rgba(31,31,31,0.12);
-
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: start; /* THIS fixes your alignment */
 }
 
 .contentSection p {
@@ -635,11 +630,9 @@ padding: 110px 6vw 92px;
 /* ── Page Photos ── */
 
 .pagePhoto {
-  width: 100%;
-  max-width: 420px;
-  margin: 0;
-  justify-self: end;
-  align-self: start;
+  float: right;
+  width: 280px;
+  margin: 0 0 32px 48px;
 }
 
 .pagePhoto img {
@@ -890,4 +883,12 @@ padding: 110px 6vw 92px;
   font-size: 1.02rem;
   line-height: 1.6;
   color: #6a6258;
+}
+.waitlistSection .pagePhoto {
+  width: 100%;
+  max-width: 420px;
+  margin: 0;
+  justify-self: end;
+  align-self: start;
+  float: none;
 }
