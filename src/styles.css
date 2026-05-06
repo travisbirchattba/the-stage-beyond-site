@@ -249,10 +249,10 @@ body {
 
 .heroSubhead {
   font-size: clamp(1.18rem, 1.7vw, 1.45rem);
-  line-height: 1.6;
-  max-width: 560px;
-  color: #3f3933;
-  margin-bottom: 34px;
+  line-height: 1.65;
+  max-width: 520px;
+  color: #5a534b;
+  margin-bottom: 38px;
 }
 
 .heroHint {
@@ -294,7 +294,7 @@ body {
 .splitSection {
   max-width: 1240px;
   margin: 0 auto;
-  padding: 92px 6vw;
+padding: 92px 6vw;
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
   gap: clamp(40px, 7vw, 100px);
@@ -789,8 +789,8 @@ body {
   }
 
   .hero {
-    padding-top: 120px;
-  }
+  padding: 148px 6vw 110px;
+}
 
   .pageHero {
     padding-top: 130px;
