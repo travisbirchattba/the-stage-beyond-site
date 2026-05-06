@@ -351,16 +351,14 @@ function ApproachPage() {
 
         <div className="cycleImageWrap">
           <img
-            src="/rhythm-cycle-v2.png"
+            src="/rhythm-cycle.png"
             alt="The Stage Beyond working cycle: Study, Dialogue, Social Action, Reflection"
           />
         </div>
 
         <p className="cycleClosing">
           The rhythm matters because transition becomes more workable when it is carried
-          collectively, revisited over time, and tested in practice. Dancers already understand
-          disciplined practice, collective work, and learning through repetition.
-          The Stage Beyond builds from those capacities rather than leaving them behind.
+          collectively, revisited over time, and tested in practice.
         </p>
 
         <div className="midPageCta">
