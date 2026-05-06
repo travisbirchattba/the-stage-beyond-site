@@ -250,17 +250,13 @@ function HomePage() {
             </p>
 
             <p className="heroHint">
-              Small cohorts. A shared rhythm of study, dialogue, action and reflection.
+              Small cohorts. A shared rhythm of study, consultation, social action, and reflection.
             </p>
 
-            <p className="heroPlain">
-  A small group of dancers meets regularly over several months to study,
-  reflect, take action together, and work through transition collectively.
-</p>
-
             <a href={calendarLink} className="primaryCta" target="_blank" rel="noopener noreferrer">
-  Join the inquiry
-</a>
+              Join the inquiry
+            </a>
+          </div>
 
           <div className="heroImage" />
         </div>
@@ -315,7 +311,7 @@ function HomePage() {
 
         <p className="rhythmIntro">
           Each cohort returns to the same cycle: study what opens new perspective,
-          consult together, take  in practice, and reflect on what is learned by doing.
+          consult together, take social action in practice, and reflect on what is learned by doing.
         </p>
 
         <div className="cycleGrid">
@@ -365,7 +361,6 @@ function HomePage() {
     </main>
   );
 }
-
 function ApproachPage() {
   useFadeIn();
   const visible = usePageTransition();
