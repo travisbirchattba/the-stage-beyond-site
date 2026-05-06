@@ -276,7 +276,7 @@ function HomePage() {
 
         <p className="rhythmIntro">
           Each cohort returns to the same cycle: study what opens new perspective,
-          consult together, take social action in practice, and reflect on what is learned by doing.
+          consult together, take  in practice, and reflect on what is learned by doing.
         </p>
 
         <div className="cycleGrid">
@@ -540,6 +540,11 @@ function FacilitatorPage() {
           to hold collective learning without turning it into advice-giving.
         </p>
 
+        <p className="facilitatorNote">
+  I am holding this space because I know how much can remain unnamed in the move
+  beyond performance — and because I believe dancers have more to contribute than
+  a private reinvention carried out alone.
+</p>
         <p>
           Travis leads group-based processes focused on how people engage real
           questions, act, and learn together. The Stage Beyond brings together
@@ -674,6 +679,12 @@ function SocialActionPage() {
           a community partnership, or another concrete contribution shaped by the group.
         </p>
 
+        <p>
+  A shared decision might be as simple as hosting a conversation with younger dancers,
+  designing a short workshop, interviewing people in the field, testing a mentoring
+  format, or partnering with a local organization on a small contribution.
+</p>
+        
         <p>
           These are examples of potential social action — not a fixed menu. What a cohort
           undertakes will emerge from its consultation, its capacity, and the reality it
@@ -832,9 +843,7 @@ function WaitlistPage() {
         <h2>What happens next</h2>
 
         <ul className="structureList">
-          <li>You’ll receive occasional updates as the first cohort takes shape.</li>
-          <li>You may receive short study prompts or reflections connected to the work.</li>
-          <li>When cohort planning begins, we’ll invite interested dancers into a conversation about fit.</li>
+<li>You’ll receive monthly reflections and occasional study prompts so the practice can begin before the cohort starts.</li>          <li>When cohort planning begins, we’ll invite interested dancers into a conversation about fit.</li>
         </ul>
 
         {status === 'success' ? (
