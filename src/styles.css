@@ -870,3 +870,10 @@ padding: 92px 6vw;
   margin-bottom: 20px;
   filter: grayscale(100%);
 }
+.rhythmIntro {
+  max-width: 660px;
+  margin: -32px auto 56px;
+  font-size: 1.12rem;
+  line-height: 1.7;
+  color: #5a534b;
+}
