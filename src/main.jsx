@@ -206,6 +206,10 @@ function Footer() {
     the rhythm of the work directly.
   </p>
 
+  <p>
+  Open Study is also a way for the wider community around the work to remain active between cohorts.
+</p>
+
   <div className="openStudyMeta">
     <span>Online</span>
     <span>60 minutes</span>
@@ -280,6 +284,11 @@ function HomePage() {
           </p>
 
           <p>
+  Some participants are still performing. Others are already beyond it.
+  What matters is a readiness to engage seriously with the questions that emerge.
+</p>
+          
+          <p>
             The Stage Beyond exists to make that process shared, visible, and something you can actively engage.
           </p>
 
@@ -353,6 +362,11 @@ function HomePage() {
             For dancers who want transition to become socially meaningful, not only personally manageable.
           </p>
         </div>
+
+        <p className="finalStatement">
+  Beyond performance, the question is not only what comes next —
+  but how we learn to participate meaningfully in life together.
+</p>
 
         <Link to="/apply" className="learnMore">
           Is this for me?
@@ -429,8 +443,12 @@ function ApproachPage() {
   The rhythm matters because transition becomes more workable when it is carried collectively, revisited over time, and tested in practice.
 </p>
 
-<h2>What develops over time</h2>
+<p>
+  Dancers already understand disciplined practice, collective work, and learning through repetition.
+  The Stage Beyond builds from those capacities rather than leaving them behind.
+</p>
 
+<h2>What develops over time</h2>
         <p>
           What develops is not only individual clarity, but the capacity to think,
           decide, and act together — in a way that holds under real conditions.
@@ -440,6 +458,10 @@ function ApproachPage() {
           Transition becomes less about finding an answer, and more about participating
           in something that is being worked out collectively.
         </p>
+
+        <p>
+  The questions explored here are not solved once. They become part of an ongoing inquiry carried out in practice over time.
+</p>
 
         <p>
   Real conditions might include financial pressure, injury, isolation,
@@ -537,9 +559,12 @@ function CohortPage() {
           </div>
         </div>
 
-        <h2>How sessions work</h2>
+        <p>
+  The cohort remains intentionally small so that trust, continuity,
+  and meaningful collective work can actually develop over time.
+</p>
 
-        <h2>How sessions work</h2>
+<h2>How sessions work</h2>
 
 <p>
   A typical week might include a shared reading or prompt, a 90-minute consultation session,
@@ -775,9 +800,8 @@ function SocialActionPage() {
         </div>
 
         <p className="closingLine">
-          The point is not to complete a project. It is to develop the capacity
-          to act together — and to discover what that makes possible.
-        </p>
+  Social action shifts transition from private adaptation toward meaningful participation in shared life.
+</p>
 
         <a href={calendarLink} className="primaryCta" target="_blank" rel="noopener noreferrer">
           Begin the conversation
