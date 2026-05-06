@@ -813,53 +813,6 @@ function WaitlistPage() {
   );
 }
 
-      <section className="contentSection fadeIn">
-        <div className="pagePhoto">
-          <img src="/Registration_Page.png" alt="A group standing together" />
-        </div>
-
-        {status === 'success' ? (
-          <div className="formSuccess">
-            <p className="closingLine">Thank you — we'll be in touch.</p>
-            <Link to="/" className="secondaryLink">Return to homepage</Link>
-          </div>
-        ) : (
-          <form className="waitlistForm" onSubmit={handleSubmit}>
-            <div className="formField">
-              <label htmlFor="name">Full name</label>
-              <input type="text" id="name" name="name" required placeholder="Your name" />
-            </div>
-
-            <div className="formField">
-              <label htmlFor="email">Email address</label>
-              <input type="email" id="email" name="email" required placeholder="your@email.com" />
-            </div>
-
-            <div className="formField">
-              <label htmlFor="transition">Where are you in your transition?</label>
-              <textarea
-                id="transition"
-                name="transition"
-                rows={5}
-                required
-                placeholder="Tell us a little about where you are and what's brought you here..."
-              />
-            </div>
-
-            {status === 'error' && (
-              <p className="formError">Something went wrong. Please try again or email us directly.</p>
-            )}
-
-            <button type="submit" className="formSubmit" disabled={status === 'sending'}>
-              {status === 'sending' ? 'Sending…' : 'Join the waitlist'}
-            </button>
-          </form>
-        )}
-      </section>
-    </main>
-  );
-}
-
 function NotFoundPage() {
   const visible = usePageTransition();
 
