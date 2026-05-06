@@ -434,6 +434,12 @@ function CohortPage() {
         </p>
 
         <p>
+  Expected time commitment: weekly group consultations of approximately 90 minutes,
+  with light reflection or action between sessions. Some cohorts may also include
+  longer working sessions depending on what the group decides to undertake.
+</p>
+
+        <p>
           In-person sessions are the ideal. Some online sessions may be needed
           depending on context and participant location.
         </p>
@@ -476,6 +482,13 @@ function FacilitatorPage() {
           Artist and facilitator working at the intersection of performance,
           learning, and collective development.
         </p>
+
+        <p>
+  Travis enters this work as both a former dancer who understands the identity
+  cost of transition, and as a facilitator with the structure to hold collective
+  learning without turning it into advice-giving.
+</p>
+        
       </section>
 
       <section className="contentSection fadeIn">
@@ -562,6 +575,11 @@ function ProjectsPage() {
   useFadeIn();
   const visible = usePageTransition();
 
+  <p>
+  These projects are the laboratory of the work — where the cohort tests what it
+  is learning through real contribution, not abstract discussion.
+</p>
+  
   const projects = [
     {
       title: "Dance Programs for Children & Youth in Underserved Communities",
@@ -654,6 +672,12 @@ function ApplyPage() {
         <div className="pagePhoto">
           <img src="/Fit.png" alt="Group in discussion" />
         </div>
+
+        <p>
+  You may still be performing and feel burnt out. You may have already stopped
+  and feel unmoored. You may be teaching, freelancing, injured, questioning,
+  or sensing that the identity that carried you this far is beginning to change.
+</p>
        
         <h2>Who this is for</h2>
 
@@ -728,10 +752,10 @@ function WaitlistPage() {
       <section className="pageHero fadeIn">
         <p className="eyebrow">Join the waitlist</p>
         <h1>Express your interest.</h1>
-        <p className="pageLead">
-          The first cohort begins in October 2026. If you'd like to be
-          considered, share a little about where you are and we'll be in touch.
-        </p>
+        <p className="waitlistNote">
+  Join the waitlist to receive updates, study prompts, and occasional
+  dispatches as the first cohort takes shape.
+</p>
       </section>
 
       <section className="contentSection fadeIn">
