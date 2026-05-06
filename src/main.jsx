@@ -254,6 +254,21 @@ function HomePage() {
         </div>
       </section>
 
+      <section className="fitPreview fadeIn">
+        <p className="eyebrow">Is this familiar?</p>
+        <h2>You may be in the right place if...</h2>
+
+        <div className="fitPreviewGrid">
+          <p>You are still performing, but something feels strained or unsustainable.</p>
+          <p>You have stopped performing and feel unmoored.</p>
+          <p>You are teaching, freelancing, injured, questioning, or sensing that your identity is changing.</p>
+        </div>
+
+        <Link to="/apply" className="secondaryLink">
+          See if this is a fit
+        </Link>
+      </section>
+
       <section className="rhythmSection fadeIn">
         <p className="eyebrow">How the work takes shape</p>
 
@@ -649,6 +664,12 @@ function SocialActionPage() {
         </p>
 
         <p>
+          In this context, social action does not mean activism or charity by default.
+          It means taking what the cohort is learning and testing it through a concrete
+          contribution in relationship with others.
+        </p>
+
+        <p>
           It may begin modestly: a mentoring experiment, a conversation series, a workshop,
           a community partnership, or another concrete contribution shaped by the group.
         </p>
@@ -808,6 +829,14 @@ function WaitlistPage() {
       </section>
 
       <section className="contentSection fadeIn">
+        <h2>What happens next</h2>
+
+        <ul className="structureList">
+          <li>You’ll receive occasional updates as the first cohort takes shape.</li>
+          <li>You may receive short study prompts or reflections connected to the work.</li>
+          <li>When cohort planning begins, we’ll invite interested dancers into a conversation about fit.</li>
+        </ul>
+
         {status === 'success' ? (
           <div className="formSuccess">
             <p className="closingLine">Thank you — we'll be in touch.</p>
