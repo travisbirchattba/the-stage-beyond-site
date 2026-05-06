@@ -764,7 +764,7 @@ function WaitlistPage() {
         </p>
       </section>
 
-      <section className="contentSection fadeIn">
+      <section className="contentSection waitlistSection fadeIn">
         <div className="pagePhoto">
           <img src="/Registration_Page.png" alt="A group standing together" />
         </div>
