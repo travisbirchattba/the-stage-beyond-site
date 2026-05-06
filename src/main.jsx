@@ -233,8 +233,14 @@ function HomePage() {
       </section>
 
       <section className="rhythmSection fadeIn">
-        <p className="eyebrow">How we work</p>
-        <h2>Study. Consultation. Action. Reflection.</h2>
+        <p className="eyebrow">How the work takes shape</p>
+
+<h2>We move in a rhythm.</h2>
+
+<p className="rhythmIntro">
+  Each cohort returns to the same cycle: study what opens new perspective,
+  consult together, act in practice, and reflect on what is learned by doing.
+</p>
         <div className="cycleGrid">
           {homeSteps.map((step) => (
             <CycleStep key={step.title} title={step.title}>{step.body}</CycleStep>
