@@ -7,23 +7,22 @@ const calendarLink = 'https://calendar.app.google/yzkx5MPNAcY7H2X29';
 
 const homeSteps = [
   {
-    title: 'Study',
-    body: 'We work with material that helps us see ourselves and our situation differently.',
+    title: "Study",
+    body: "We work with material that helps us see ourselves and our situation differently."
   },
   {
-    title: '',
-    body: 'Together, we make sense of what we are seeing and decide what to act on.',
+    title: "Dialogue",
+    body: "Together, we make sense of what we are seeing and decide what to act on."
   },
   {
-    title: 'Social Action',
-    body: 'We carry out a shared decision in ways that contribute beyond the group.',
+    title: "Social Action",
+    body: "We carry out a shared decision in ways that contribute beyond the group."
   },
   {
-    title: 'Reflection',
-    body: 'We return to what happened and learn from what doing made visible.',
-  },
+    title: "Reflection",
+    body: "We return to what happened and learn from what doing made visible."
+  }
 ];
-
 function ScrollToTop() {
   const location = useLocation();
 
