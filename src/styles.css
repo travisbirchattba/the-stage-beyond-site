@@ -294,7 +294,7 @@ body {
 .splitSection {
   max-width: 1240px;
   margin: 0 auto;
-padding: 92px 6vw;
+padding: 110px 6vw 92px;
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
   gap: clamp(40px, 7vw, 100px);
@@ -335,7 +335,7 @@ padding: 92px 6vw;
 /* ── Rhythm Section ── */
 
 .rhythmSection {
-  padding: 96px 6vw 106px;
+  padding: 110px 6vw 110px;
   text-align: center;
   background: #efe6d8;
 }
@@ -788,7 +788,7 @@ padding: 92px 6vw;
     grid-template-columns: 1fr;
   }
 
-  .hero {
+.hero {
   padding: 148px 6vw 110px;
 }
 
