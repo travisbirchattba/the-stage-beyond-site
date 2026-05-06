@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-}
+}xf
 
 body {
   margin: 0;
@@ -551,10 +551,56 @@ padding: 110px 6vw 92px;
 }
 
 .approachList {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 22px;
-  margin: 34px 0 60px;
+  gap: 56px 72px;
+  margin: 44px 0 72px;
+}
+
+.approachList .cycleStep {
+  position: relative;
+  min-height: 180px;
+}
+
+/* Study → Consultation */
+.approachList .cycleStep:nth-child(1)::after {
+  content: "→";
+  position: absolute;
+  top: 18px;
+  right: -48px;
+  font-size: 2rem;
+  color: #b98b3f;
+}
+
+/* Consultation → Reflection */
+.approachList .cycleStep:nth-child(2)::after {
+  content: "↓";
+  position: absolute;
+  bottom: -48px;
+  right: 50%;
+  font-size: 2rem;
+  color: #b98b3f;
+}
+
+/* Reflection → Action */
+.approachList .cycleStep:nth-child(4)::after {
+  content: "←";
+  position: absolute;
+  top: 18px;
+  left: -48px;
+  font-size: 2rem;
+  color: #b98b3f;
+}
+
+/* Action → Study */
+.approachList .cycleStep:nth-child(3)::after {
+  content: "↑";
+  position: absolute;
+  top: -48px;
+  left: 50%;
+  font-size: 2rem;
+  color: #b98b3f;
 }
 
 .structureList {
