@@ -884,14 +884,6 @@ padding: 110px 6vw 92px;
   line-height: 1.6;
   color: #6a6258;
 }
-.waitlistSection .pagePhoto {
-  width: 100%;
-  max-width: 420px;
-  margin: 0;
-  justify-self: end;
-  align-self: start;
-  float: none;
-}
 .waitlistSection .waitlistForm,
 .waitlistSection .formSuccess {
   grid-column: 1;
