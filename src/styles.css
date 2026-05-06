@@ -892,3 +892,13 @@ padding: 110px 6vw 92px;
   align-self: start;
   float: none;
 }
+.waitlistSection .waitlistForm,
+.waitlistSection .formSuccess {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.waitlistSection .pagePhoto {
+  grid-column: 2;
+  grid-row: 1;
+}
