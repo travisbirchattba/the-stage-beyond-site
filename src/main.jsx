@@ -5,41 +5,17 @@ import './styles.css';
 
 const calendarLink = 'https://calendar.app.google/yzkx5MPNAcY7H2X29';
 
-const homeSteps = [
-  {
-    title: "Study",
-    body: "We work with material that helps us see ourselves and our situation differently."
-  },
-  {
-    title: "Dialogue",
-    body: "Together, we make sense of what we are seeing and decide what to act on."
-  },
-  {
-    title: "Social Action",
-    body: "We carry out a shared decision in ways that contribute beyond the group."
-  },
-  {
-    title: "Reflection",
-    body: "We return to what happened and learn from what doing made visible."
-  }
-];
 function ScrollToTop() {
   const location = useLocation();
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [location]);
-
+  useEffect(() => { window.scrollTo(0, 0); }, [location]);
   return null;
 }
 
 function useFadeIn() {
   const location = useLocation();
-
   useEffect(() => {
     const els = document.querySelectorAll('.fadeIn');
     els.forEach((el) => el.classList.remove('visible'));
-
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -49,9 +25,8 @@ function useFadeIn() {
           }
         });
       },
-      { threshold: 0.12 }
+      { threshold: 0.1 }
     );
-
     els.forEach((el) => observer.observe(el));
     return () => observer.disconnect();
   }, [location]);
@@ -60,13 +35,11 @@ function useFadeIn() {
 function usePageTransition() {
   const [visible, setVisible] = useState(false);
   const location = useLocation();
-
   useEffect(() => {
     setVisible(false);
     const timer = setTimeout(() => setVisible(true), 10);
     return () => clearTimeout(timer);
   }, [location]);
-
   return visible;
 }
 
@@ -81,15 +54,11 @@ function Nav() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  useEffect(() => {
-    setMenuOpen(false);
-  }, [location]);
+  useEffect(() => { setMenuOpen(false); }, [location]);
 
   useEffect(() => {
     document.body.style.overflow = menuOpen ? 'hidden' : '';
-    return () => {
-      document.body.style.overflow = '';
-    };
+    return () => { document.body.style.overflow = ''; };
   }, [menuOpen]);
 
   return (
@@ -106,35 +75,21 @@ function Nav() {
           </Link>
 
           <div className="navLinks">
-            <NavLink to="/approach" className={({ isActive }) => `navLink ${isActive ? 'navLinkActive' : ''}`}>
-              Approach
-            </NavLink>
-            <NavLink to="/cohort" className={({ isActive }) => `navLink ${isActive ? 'navLinkActive' : ''}`}>
-              Cohorts
-            </NavLink>
-            <NavLink to="/action-examples" className={({ isActive }) => `navLink ${isActive ? 'navLinkActive' : ''}`}>
-              Social Action
-            </NavLink>
-            <NavLink to="/facilitator" className={({ isActive }) => `navLink ${isActive ? 'navLinkActive' : ''}`}>
-              Facilitator
-            </NavLink>
-            <NavLink to="/waitlist" className={({ isActive }) => `navLink ${isActive ? 'navLinkActive' : ''}`}>
-              Join waitlist
-            </NavLink>
+            <NavLink to="/approach" className={({ isActive }) => `navLink ${isActive ? 'navLinkActive' : ''}`}>Approach</NavLink>
+            <NavLink to="/cohort" className={({ isActive }) => `navLink ${isActive ? 'navLinkActive' : ''}`}>Cohorts</NavLink>
+            <NavLink to="/action-examples" className={({ isActive }) => `navLink ${isActive ? 'navLinkActive' : ''}`}>Social Action</NavLink>
+            <NavLink to="/facilitator" className={({ isActive }) => `navLink ${isActive ? 'navLinkActive' : ''}`}>Facilitator</NavLink>
+            <NavLink to="/waitlist" className={({ isActive }) => `navLink ${isActive ? 'navLinkActive' : ''}`}>Join waitlist</NavLink>
           </div>
 
-          <Link to="/apply" className="navCta">
-            Begin the conversation
-          </Link>
+          <Link to="/apply" className="navCta">Begin the conversation</Link>
 
           <button
             className={`hamburger ${menuOpen ? 'hamburgerOpen' : ''}`}
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
           >
-            <span />
-            <span />
-            <span />
+            <span /><span /><span />
           </button>
         </div>
       </nav>
@@ -142,28 +97,13 @@ function Nav() {
       <div className={`mobileMenu ${menuOpen ? 'mobileMenuOpen' : ''}`}>
         <div className="mobileMenuInner">
           <Link to="/" className="mobileNavLink">Home</Link>
-          <NavLink to="/approach" className={({ isActive }) => `mobileNavLink ${isActive ? 'mobileNavLinkActive' : ''}`}>
-            Approach
-          </NavLink>
-          <NavLink to="/cohort" className={({ isActive }) => `mobileNavLink ${isActive ? 'mobileNavLinkActive' : ''}`}>
-            Cohorts
-          </NavLink>
-          <NavLink to="/action-examples" className={({ isActive }) => `mobileNavLink ${isActive ? 'mobileNavLinkActive' : ''}`}>
-            Social Action
-          </NavLink>
-          <NavLink to="/facilitator" className={({ isActive }) => `mobileNavLink ${isActive ? 'mobileNavLinkActive' : ''}`}>
-            Facilitator
-          </NavLink>
-          <NavLink to="/apply" className={({ isActive }) => `mobileNavLink ${isActive ? 'mobileNavLinkActive' : ''}`}>
-            Is this for me?
-          </NavLink>
-          <NavLink to="/waitlist" className={({ isActive }) => `mobileNavLink ${isActive ? 'mobileNavLinkActive' : ''}`}>
-            Join waitlist
-          </NavLink>
-
-          <Link to="/apply" className="mobileNavCta">
-            Begin the conversation
-          </Link>
+          <NavLink to="/approach" className={({ isActive }) => `mobileNavLink ${isActive ? 'mobileNavLinkActive' : ''}`}>Approach</NavLink>
+          <NavLink to="/cohort" className={({ isActive }) => `mobileNavLink ${isActive ? 'mobileNavLinkActive' : ''}`}>Cohorts</NavLink>
+          <NavLink to="/action-examples" className={({ isActive }) => `mobileNavLink ${isActive ? 'mobileNavLinkActive' : ''}`}>Social Action</NavLink>
+          <NavLink to="/facilitator" className={({ isActive }) => `mobileNavLink ${isActive ? 'mobileNavLinkActive' : ''}`}>Facilitator</NavLink>
+          <NavLink to="/apply" className={({ isActive }) => `mobileNavLink ${isActive ? 'mobileNavLinkActive' : ''}`}>Is this for me?</NavLink>
+          <NavLink to="/waitlist" className={({ isActive }) => `mobileNavLink ${isActive ? 'mobileNavLinkActive' : ''}`}>Join waitlist</NavLink>
+          <Link to="/apply" className="mobileNavCta">Begin the conversation</Link>
         </div>
       </div>
     </>
@@ -186,49 +126,33 @@ function Footer() {
           <Link to="/waitlist" className="footerLink">Join waitlist</Link>
         </nav>
 
-<section className="openStudy fadeIn">
-  <p className="eyebrow">Open Study</p>
+        <section className="openStudy fadeIn">
+          <p className="eyebrow">Open Study</p>
+          <h2>A place to begin the practice.</h2>
+          <p className="openStudyLead">
+            A monthly online gathering for dancers thinking seriously about transition.
+          </p>
+          <p>
+            Each session includes a short study prompt, guided reflection,
+            and shared discussion around questions that emerge beyond performance.
+            Not an information session. Not coaching. A chance to experience
+            the rhythm of the work directly.
+          </p>
+          <p>
+            Open Study is also a way for the wider community around the work
+            to remain active between cohorts.
+          </p>
+          <div className="openStudyMeta">
+            <span>Online</span>
+            <span>60 minutes</span>
+            <span>Free</span>
+          </div>
+          <a href={calendarLink} className="primaryCta" target="_blank" rel="noopener noreferrer">
+            Join the next Open Study
+          </a>
+        </section>
 
-  <h2>A place to begin the practice.</h2>
-
-  <p className="openStudyLead">
-    A monthly online gathering for dancers thinking seriously about transition.
-  </p>
-
-  <p>
-    Each session includes a short study prompt, guided reflection,
-    and shared discussion around questions that emerge beyond performance.
-  </p>
-
-  <p>
-    Not an information session. Not coaching. A chance to experience
-    the rhythm of the work directly.
-  </p>
-
-  <p>
-  Open Study is also a way for the wider community around the work to remain active between cohorts.
-</p>
-
-  <div className="openStudyMeta">
-    <span>Online</span>
-    <span>60 minutes</span>
-    <span>Free</span>
-  </div>
-
-  <a
-    href="YOUR_LINK_HERE"
-    className="primaryCta"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    Join the next Open Study
-  </a>
-</section>
-        
-        <Link to="/apply" className="footerCta">
-          Begin the conversation
-        </Link>
-
+        <Link to="/apply" className="footerCta">Begin the conversation</Link>
         <p className="footerCopy">© {new Date().getFullYear()} The Stage Beyond</p>
       </div>
     </footer>
@@ -241,174 +165,134 @@ function HomePage() {
 
   return (
     <main className={`site pageTransition ${visible ? 'pageVisible' : ''}`}>
+
+      {/* ── Hero ── */}
       <section className="hero fadeIn">
         <div className="heroInner">
           <div className="heroText">
             <p className="eyebrow">A working community for dancers</p>
-
-            <h1>Your life is opening beyond performance.</h1>
-
+            <h1>Life beyond performance is already beginning.</h1>
             <p className="heroSubhead">
-              A working community for dancers navigating what comes next.
+              A structured peer process for dancers navigating what comes next.
             </p>
-
             <p className="heroHint">
-              Small cohorts. A shared rhythm of study, consultation, social action, and reflection.
+              Small cohorts. A shared rhythm of study, dialogue, social action, and reflection.
             </p>
-
             <a href={calendarLink} className="primaryCta" target="_blank" rel="noopener noreferrer">
               Join the inquiry
             </a>
           </div>
-
           <div className="heroImage" />
         </div>
       </section>
 
+      {/* ── What this is ── */}
       <section className="splitSection fadeIn">
         <div>
           <p className="eyebrow">What this is</p>
           <h2>Something is already shifting.</h2>
         </div>
-
         <div className="textStack">
           <p>
-            You can feel it in how you relate to your work. In the questions that don’t go away.
+            You can feel it in how you relate to your work. In the questions that don't go away.
             In the sense that what brought you here may not carry you forward.
           </p>
-
           <p>
-  The work does not approach transition as a personal failure to overcome,
-  but as a real developmental and social question worthy of serious engagement.
-</p>
-
-          <p>
-  Transition affects not only work and identity, but relationships, rhythms of life,
-  and the ways people experience belonging and participation with others.
-</p>
-          <p>
-            Most dancers navigate this quietly — on their own, or in fragments. Piecing together
-            a next step without a place to really work it through.
+            Most dancers navigate this quietly — on their own, or in fragments. The Stage Beyond
+            exists to make that process shared, visible, and something you can actively engage.
           </p>
-
           <p>
-  One aim of the work is to resist the isolation that so often accompanies transition,
-  replacing it with forms of shared attention, responsibility, and participation.
-</p>
-
-          <p>
-  Some participants are still performing. Others are already beyond it.
-  What matters is a readiness to engage seriously with the questions that emerge.
-</p>
-          
-          <p>
-            The Stage Beyond exists to make that process shared, visible, and something you can actively engage.
+            The work does not treat transition as a personal failure to overcome,
+            but as a real developmental and social question worthy of serious engagement.
           </p>
-
           <p>
-  The work is not only about understanding yourself differently, but about learning
-  how to participate differently with others beyond the structures of performance life.
-</p>
-
-          <p>
-  The emphasis is less on creating a new identity and more on developing
-  a real relationship to life beyond the structures of performance.
-</p>
-
-          <Link to="/approach" className="secondaryLink">
-            Learn how the work is structured
-          </Link>
+            Some participants are still performing. Others are already beyond it.
+            What matters is a readiness to engage seriously with the questions that emerge.
+          </p>
+          <Link to="/approach" className="secondaryLink">Learn how the work is structured</Link>
         </div>
       </section>
 
+      {/* ── Is this familiar ── */}
       <section className="fitPreview fadeIn">
         <p className="eyebrow">Is this familiar?</p>
         <h2>You may be in the right place if...</h2>
-
         <div className="fitPreviewGrid">
-          <p>You are still performing, but something feels strained or unsustainable.</p>
-          <p>You have stopped performing and feel unmoored.</p>
-          <p>You are teaching, freelancing, injured, questioning, or sensing that your identity is changing.</p>
+          <div className="fitPreviewItem">
+            <p>You are still performing, but something feels strained or unsustainable.</p>
+          </div>
+          <div className="fitPreviewItem">
+            <p>You have stopped and feel unmoored — like the structures that held you are gone.</p>
+          </div>
+          <div className="fitPreviewItem">
+            <p>You are teaching, freelancing, injured, or sensing that your identity is changing.</p>
+          </div>
         </div>
-
-        <Link to="/apply" className="secondaryLink">
-          See if this is a fit
-        </Link>
+        <Link to="/apply" className="secondaryLink">See if this is a fit</Link>
       </section>
 
+      {/* ── Rhythm ── */}
       <section className="rhythmSection fadeIn">
         <p className="eyebrow">How the work takes shape</p>
-
         <h2>We move in a rhythm.</h2>
-
         <p className="rhythmIntro">
           Each cohort returns to the same cycle: study what opens new perspective,
           consult together, take social action in practice, and reflect on what is learned by doing.
         </p>
-
         <div className="cycleGrid">
-          {homeSteps.map((step) => (
-            <CycleStep key={step.title} title={step.title}>
-              {step.body}
-            </CycleStep>
-          ))}
+          <div className="cycleStep">
+            <h3>Study</h3>
+            <p>We work with material that helps us see ourselves and our situation differently.</p>
+          </div>
+          <div className="cycleStep">
+            <h3>Dialogue</h3>
+            <p>Together, we make sense of what we are seeing and decide what to act on.</p>
+          </div>
+          <div className="cycleStep">
+            <h3>Social Action</h3>
+            <p>We carry out a shared decision in ways that contribute beyond the group.</p>
+          </div>
+          <div className="cycleStep">
+            <h3>Reflection</h3>
+            <p>We return to what happened and learn from what doing made visible.</p>
+          </div>
         </div>
       </section>
 
+      {/* ── Purpose ── */}
       <section className="purpose fadeIn">
         <p className="purposeLabel">What the work develops</p>
-
         <div className="purposeGrid">
           <div className="purposeBlock">
             <h3>Personal Capacity</h3>
             <p>Developing clarity, resilience, and the ability to engage transition deliberately.</p>
           </div>
-
           <div className="plus">+</div>
-
           <div className="purposeBlock">
             <h3>Social Action</h3>
             <p>Building the capacity to act together in ways that contribute beyond the self.</p>
           </div>
         </div>
 
-        <div className="fitBlock">
-          <p className="fitLine">
-            For dancers who feel that something is shifting — and don’t want to navigate it alone.
-          </p>
-
-          <p className="fitLine">
-            For dancers who are ready to work with that shift, alongside others, in a more deliberate way.
-          </p>
-
-          <p className="fitLine">
-  The work depends on participants becoming active protagonists in a shared process,
-  rather than isolated individuals searching for private solutions.
-</p>
-
-          <p className="fitLine">
-            For dancers who want transition to become socially meaningful, not only personally manageable.
-          </p>
-        </div>
-
         <p className="finalStatement">
-  Beyond performance, the question is not only what comes next —
-  but how we learn to participate meaningfully in life together.
-</p>
+          Beyond performance, the question is not only what comes next —
+          but how we learn to participate meaningfully in life together.
+        </p>
 
-        <Link to="/apply" className="learnMore">
-          Is this for me?
-        </Link>
+        <Link to="/apply" className="learnMore">Is this for me?</Link>
       </section>
+
     </main>
   );
 }
+
 function ApproachPage() {
   useFadeIn();
   const visible = usePageTransition();
 
   return (
     <main className={`site simplePage pageTransition ${visible ? 'pageVisible' : ''}`}>
+
       <section className="pageHero fadeIn">
         <p className="eyebrow">The approach</p>
         <h1>The work, in practice.</h1>
@@ -419,245 +303,136 @@ function ApproachPage() {
       </section>
 
       <section className="contentSection fadeIn">
+
         <div className="pagePhoto">
           <img src="/Approach.png" alt="Group working together" />
         </div>
 
         <p>
-          Transition is often approached as a personal problem to solve. Here, it is worked on collectively.
+          Transition is often approached as a personal problem to solve. Here, it is worked on
+          collectively. The group becomes a working unit — reading its own reality, making decisions
+          together, and carrying them out in practice.
+        </p>
+        <p>
+          Participants are not passive recipients of guidance. Each person becomes a protagonist
+          in the work — helping shape the inquiry, the action, and what the group becomes
+          capable of together. The emphasis is not on self-expression for its own sake, but on
+          developing the capacity to participate meaningfully with others in shared reality.
         </p>
 
-        <p>
-          The group becomes a working unit — reading its own reality, making decisions together,
-          and carrying them out in practice.
-        </p>
-
-<p>
-  Participants are not passive recipients of guidance. Each person becomes
-  a protagonist in the work itself — helping shape the inquiry, the action,
-  and what the group becomes capable of together.
-</p>
-
-        <p>
-  The collective dimension of the work is not only about mutual support. It is also just as much about developing the capacity to think,
-  act, and learn together under real conditions.
-</p>
-
-        <p>
-  The emphasis is not on self-expression for its own sake, but on developing
-  the capacity to participate meaningfully with others in shared reality.
-</p>
-        
         <div className="clearfix" />
 
+        {/* ── Rhythm ── */}
         <h2>The work moves in a rhythm.</h2>
 
-<p className="rhythmIntro">
-  Not a sequence to follow once, but a cycle the group returns to.
-</p>
+        <p className="rhythmIntro">
+          Not a sequence to follow once, but a cycle the group returns to — each pass
+          deepening what the cohort understands and becomes capable of together.
+        </p>
 
-<p>
-  Study may include readings, artistic works, questions, observations from practice,
-  or other material that helps the cohort encounter transition differently.
-</p>
+        <div className="approachStages">
+          <div className="approachStage">
+            <span className="approachStageLabel">Study</span>
+            <p>Readings, artistic works, questions, or observations that help the cohort encounter transition differently.</p>
+          </div>
+          <div className="approachStage">
+            <span className="approachStageLabel">Dialogue</span>
+            <p>The group reads its own reality together — understanding what is happening, what matters, and what action makes sense.</p>
+          </div>
+          <div className="approachStage">
+            <span className="approachStageLabel">Social action</span>
+            <p>A shared act the cohort carries out in the world — small at first, but real enough to learn from.</p>
+          </div>
+          <div className="approachStage">
+            <span className="approachStageLabel">Reflection</span>
+            <p>A disciplined effort to understand what becomes visible through study, action, and collective experience.</p>
+          </div>
+        </div>
 
-<p>
-  Dialogue is the group’s effort to read its own reality together —
-  to understand what is happening, what matters, and what action makes sense.
-</p>
+        <div className="cycleImageWrap">
+          <img
+            src="/rhythm-cycle-v2.png"
+            alt="The Stage Beyond working cycle: Study, Dialogue, Social Action, Reflection"
+          />
+        </div>
 
-        <p>
-  Over time, the cohort develops shared language, insight, and practical understanding
-  that none of the participants could have produced alone.
-</p>
+        <p className="cycleClosing">
+          The rhythm matters because transition becomes more workable when it is carried
+          collectively, revisited over time, and tested in practice. Dancers already understand
+          disciplined practice, collective work, and learning through repetition.
+          The Stage Beyond builds from those capacities rather than leaving them behind.
+        </p>
 
-        <p>
-  The aim is not only increased confidence, but the gradual development of judgment —
-  the ability to perceive situations more clearly and respond more responsibly over time.
-</p>
+        <div className="midPageCta">
+          <Link to="/apply" className="secondaryLink">See if this is a fit →</Link>
+        </div>
 
-<p>
-  Social action may be small at first: a conversation, a shared inquiry, a workshop,
-  a mentoring experiment, or a contribution the cohort decides is worth testing.
-</p>
+        {/* ── What develops ── */}
+        <h2>What develops over time.</h2>
 
-<p>
-  Reflection here is not simply personal processing. It is a disciplined effort
-  to understand what becomes visible through study, action, and collective experience.
-</p>
-
-<div className="cycleImageWrap">
-  <img
-    src="/rhythm-cycle.png"
-    alt="The Stage Beyond working cycle: Study, Dialogue, Social Action, Reflection"
-  />
-</div>
-
-<p className="cycleClosing">
-  The rhythm matters because transition becomes more workable when it is carried collectively, revisited over time, and tested in practice.
-</p>
-
-<p>
-  Dancers already understand disciplined practice, collective work, and learning through repetition.
-  The Stage Beyond builds from those capacities rather than leaving them behind.
-</p>
-
-        <p>
-  The work asks how those capacities might continue to matter —
-  not only professionally, but socially and collectively beyond the stage.
-</p>
-
-        <p>
-  The process is not oriented toward leaving a former identity behind entirely,
-  but toward discovering how past experience can continue to participate meaningfully in new conditions.
-</p>
-
-<h2>What develops over time</h2>
         <p>
           What develops is not only individual clarity, but the capacity to think,
           decide, and act together — in a way that holds under real conditions.
+          Over time, the cohort itself changes: developing greater coherence,
+          trust, responsibility, and capacity for meaningful collective action.
+        </p>
+        <p>
+          The process is intentionally experimental. The cohort learns by testing ideas,
+          taking action, reflecting on outcomes, and adapting together. Moments of
+          uncertainty or tension are not interruptions — they are part of what the
+          work learns to engage constructively.
+        </p>
+        <p>
+          As people participate differently, they often begin to understand themselves
+          differently as well — not through abstraction alone, but through lived practice
+          with others over time. Transition becomes less about finding an answer, and more
+          about participating in something that is being worked out collectively.
         </p>
 
-        <p>
-  Over time, the cohort itself changes — developing greater coherence,
-  trust, responsibility, and capacity for meaningful collective action.
-</p>
+        {/* ── Structure ── */}
+        <h2>Structure.</h2>
+
+        <div className="structureGrid">
+          <div className="structureCard">
+            <span className="structureCardLabel">Size</span>
+            <p>Small cohort — large enough for real dialogue, small enough for real trust.</p>
+          </div>
+          <div className="structureCard">
+            <span className="structureCardLabel">Duration</span>
+            <p>A defined time period with regular sessions and shared responsibility for follow-through.</p>
+          </div>
+          <div className="structureCard">
+            <span className="structureCardLabel">Participation</span>
+            <p>Active, not passive. The work depends on each member contributing attention, thought, and presence.</p>
+          </div>
+          <div className="structureCard">
+            <span className="structureCardLabel">Direction</span>
+            <p>Not fully predetermined — participants help shape the questions, actions, and what the process becomes capable of.</p>
+          </div>
+        </div>
+
+        {/* ── Facilitation ── */}
+        <h2>The role of facilitation.</h2>
 
         <p>
-  The direction of the work is not fully predetermined. Participants help shape
-  what questions are pursued, what actions are taken, and what the process becomes capable of holding.
-</p>
-
-        <p>
-  The process is intentionally experimental: the cohort learns by testing ideas,
-  taking action, reflecting on outcomes, and adapting together over time.
-</p>
-
-        <p>
-  The work is not only reflective. Over time, it becomes formative —
-  shaping habits of attention, participation, responsibility, and collective action.
-</p>
-
-        <p>
-  The emphasis is not on ideal solutions or perfect clarity, but on developing
-  the ability to engage real conditions thoughtfully, responsibly, and together.
-</p>
-
-        <p>
-  As people participate differently, they often begin to understand themselves differently as well —
-  not through abstraction alone, but through lived practice with others over time.
-</p>
-
-        <p>
-          Transition becomes less about finding an answer, and more about participating
-          in something that is being worked out collectively.
+          The facilitator does not provide answers or direction. Their role is to maintain
+          the structure, support the process, and help the group develop its own capacity
+          to work together — not dependence, but the gradual development of the group's
+          own capacity for inquiry, action, responsibility, and learning.
         </p>
-
         <p>
-  At its core, the work is concerned with how people remain in meaningful relationship
-  to the world as conditions, identities, and forms of participation change over time.
-</p>
-
-        <p>
-  The emphasis is less on achievement or personal advancement than on developing
-  the capacities needed to participate thoughtfully, responsibly, and collaboratively over time.
-</p>
-
-        <p>
-  Although the work begins with dancers, the questions it engages are not limited to the arts:
-  how people respond to change, remain connected to others, and participate meaningfully in shared life over time.
-</p>
-
-        <p>
-  The questions explored here are not solved once. They become part of an ongoing inquiry carried out in practice over time.
-</p>
-
-        <p>
-  The work is intentionally slow enough for real learning, responsibility,
-  and collective capacity to develop under lived conditions.
-</p>
-
-        <p>
-  Moments of uncertainty, tension, or difficulty are not treated as interruptions
-  to the process, but as part of what the work must learn to engage constructively.
-</p>
-
-        <p>
-  The relationships, responsibilities, and differences that emerge within the cohort
-  are themselves part of what the work learns to engage thoughtfully over time.
-</p>
-
-        <p>
-  The emphasis is not on optimizing the self for a new market or identity,
-  but on developing the capacity to participate meaningfully under changing conditions.
-</p>
-
-        <p>
-  Real conditions might include financial pressure, injury, isolation,
-  uncertainty about identity, or the practical realities of building a life
-  beyond performance.
-</p>
-
-        <p>
-          Acting together in the world changes how transition itself is experienced.
-          People begin to encounter themselves less as isolated individuals trying to
-          solve a problem, and more as participants in shared life.
+          This is not networking, peer accountability, or professional development in the
+          usual sense. The emphasis is on collective learning, shared practice, and
+          sustained engagement with real questions.
         </p>
-
-        <h2>Structure</h2>
-
-        <ul className="structureList">
-          <li>Small cohort</li>
-          <li>Defined time period</li>
-          <li>Regular sessions</li>
-          <li>Shared responsibility for participation and follow-through</li>
-        </ul>
-
-        <p>
-  Participation is not passive. The work depends on members contributing attention,
-  thought, presence, and follow-through to the collective process over time.
-</p>
-
-<p>
-  The cohort works best when each member experiences themselves not as an observer,
-  but as an active contributor to the development of the group.
-</p>
-
-<p>
-  Meaningful development depends less on intensity than on sustained attention,
-  continued participation, and the willingness to remain engaged over time.
-</p>
-        
-        <h2>The role of facilitation</h2>
-
-        <p>
-          The facilitator does not provide answers or direction. Their role is to maintain the structure,
-          support the process, and help the group develop its own capacity to work together.
-        </p>
-
-        <p>
-  The aim is not dependence on the facilitator, but the gradual development
-  of the group’s own capacity for inquiry, action, responsibility, and learning.
-</p>
-
-        <p>
-  This is not networking, peer accountability, or professional development in the usual sense.
-  The emphasis is on collective learning, shared practice, and sustained engagement with real questions.
-</p>
 
         <p className="closingLine">
-  The aim is not only to support transition, but to help people become protagonists
-  in shaping what life beyond performance can make possible.
-</p>
+          The aim is not only to support transition, but to help people become protagonists
+          in shaping what life beyond performance can make possible.
+        </p>
 
-        <p className="closingLine">
-  Ultimately, the work is concerned less with leaving dance behind than with
-  learning how to participate meaningfully in life as conditions continue to change.
-</p>
+        <Link to="/apply" className="primaryCta">See if this is a fit</Link>
 
-        <Link to="/apply" className="primaryCta">
-          See if this is a fit
-        </Link>
       </section>
     </main>
   );
@@ -669,16 +444,18 @@ function CohortPage() {
 
   return (
     <main className={`site simplePage pageTransition ${visible ? 'pageVisible' : ''}`}>
+
       <section className="pageHero fadeIn">
         <p className="eyebrow">Cohorts</p>
         <h1>The next cohort.</h1>
         <p className="pageLead">
-          The first cohort is scheduled to begin in October 2026.
-          Spaces are limited. The process begins with a conversation.
+          The first cohort begins October 2026. Spaces are limited.
+          The process starts with a conversation.
         </p>
       </section>
 
       <section className="contentSection fadeIn">
+
         <div className="pagePhoto">
           <img src="/Cohort.png" alt="Group in conversation" />
         </div>
@@ -696,64 +473,51 @@ function CohortPage() {
             <p className="cohortLabel">Start date</p>
             <p className="cohortValue">October 2026</p>
           </div>
-
           <div className="cohortDetail">
             <p className="cohortLabel">Duration</p>
             <p className="cohortValue">3 months</p>
           </div>
-
           <div className="cohortDetail">
             <p className="cohortLabel">Cohort size</p>
             <p className="cohortValue">5–12 participants</p>
           </div>
-
           <div className="cohortDetail">
             <p className="cohortLabel">Format</p>
             <p className="cohortValue">In-person preferred</p>
           </div>
         </div>
 
-        <p>
-  The cohort remains intentionally small so that trust, continuity,
-  and meaningful collective work can actually develop over time.
-</p>
-
-<h2>How sessions work</h2>
-
-<p>
-  A typical week might include a shared reading or prompt, a 90-minute consultation session,
-  individual reflection between meetings, and a small piece of social action the cohort is testing together.
-</p>
-
-<p>
-  In practical terms, the cohort meets regularly over three months,
-  with a mix of group sessions, reflection between sessions, and shared
-  social action decided by the group.
-</p>
+        <h2>How sessions work.</h2>
 
         <p>
-          Expected time commitment: weekly group dialogues of approximately
-          90 minutes, with light reflection or action between sessions. Some
-          cohorts may also include longer working sessions depending on what
-          the group decides to undertake.
+          A typical week includes a shared reading or prompt, a 90-minute consultation session,
+          individual reflection between meetings, and a small piece of social action the cohort
+          is testing together. The cohort remains intentionally small so that trust, continuity,
+          and meaningful collective work can actually develop over time.
         </p>
-
         <p>
           In-person sessions are the ideal. Some online sessions may be needed
-          depending on context and participant location.
+          depending on context and participant location. Expected time commitment:
+          weekly group dialogues of approximately 90 minutes, with light reflection
+          or action between sessions.
+        </p>
+        <p>
+          The end of a cohort is not treated as the end of the work, but as one phase
+          in a longer process of development, participation, and inquiry.
         </p>
 
-        <p>
-  The end of a cohort is not treated as the end of the work, but as one phase
-  in a longer process of development, participation, and inquiry.
-</p>
+        <h2>Investment.</h2>
 
-        <h2>Investment</h2>
-
-        <p>
-          The market value of participation is $5,000 CAD per participant. Cost varies
-          depending on context. Reach out to discuss what is possible.
-        </p>
+        <div className="investmentBlock">
+          <div className="investmentAmount">
+            <span className="investmentFigure">$5,000</span>
+            <span className="investmentCurrency">CAD per participant</span>
+          </div>
+          <p>
+            This is the market value of participation. Cost varies depending on context —
+            reach out to discuss what is possible.
+          </p>
+        </div>
 
         <p className="closingLine">
           The first step is a conversation to explore whether the timing,
@@ -774,17 +538,18 @@ function FacilitatorPage() {
 
   return (
     <main className={`site simplePage pageTransition ${visible ? 'pageVisible' : ''}`}>
+
       <section className="pageHero fadeIn">
         <p className="eyebrow">The facilitator</p>
         <h1>Travis Birch</h1>
         <p className="pageLead">
-          Founder & Lead Facilitator, The Stage Beyond.
-          Artist and facilitator working at the intersection of performance,
-          learning, and collective development.
+          Founder & Lead Facilitator. Artist and facilitator working at the intersection
+          of performance, learning, and collective development.
         </p>
       </section>
 
       <section className="contentSection fadeIn">
+
         <div className="facilitatorPhoto">
           <img src="/Facilitator.jpg" alt="Travis Birch" />
         </div>
@@ -795,64 +560,46 @@ function FacilitatorPage() {
           to hold collective learning without turning it into advice-giving.
         </p>
 
-        <p className="facilitatorNote">
-  I am holding this space because I know how much can remain unnamed in the move
-  beyond performance — and because I believe dancers have more to contribute than
-  a private reinvention carried out alone.
-</p>
-        <p>
-          Travis leads group-based processes focused on how people engage real
-          questions, act, and learn together. The Stage Beyond brings together
-          a background in the performing arts with over a decade of facilitation
-          practice — returning these learnings to the context of dancer transition.
-        </p>
-
         <div className="clearfix" />
 
-        <h2>Artistic background</h2>
+        <blockquote className="facilitatorQuote">
+          I am holding this space because I know how much can remain unnamed in the move
+          beyond performance — and because I believe dancers have more to contribute than
+          a private reinvention carried out alone.
+        </blockquote>
 
-        <p>
-          Travis trained at the National Ballet School Professional Program
-          (1987–1994) and went on to a professional ballet career spanning
-          1994–2008, with an international career across Europe and North America.
-          He performed as a soloist, taking on leading roles in acclaimed
-          productions on major stages, and also worked as an instructor and
-          choreographer. He holds a teaching certificate from the National
-          Ballet School.
-        </p>
+        <h2>Artistic background.</h2>
 
-        <p>
-          Questions of artistic identity and life beyond performance have been
-          a sustained thread throughout his work ever since.
-        </p>
+        <div className="timelineBlock">
+          <div className="timelineItem">
+            <span className="timelineYear">1987–1994</span>
+            <p>Trained at the National Ballet School Professional Program.</p>
+          </div>
+          <div className="timelineItem">
+            <span className="timelineYear">1994–2008</span>
+            <p>Professional ballet career spanning Europe and North America. Performed as a soloist in leading roles on major stages. Also worked as an instructor and choreographer. Holds a teaching certificate from the National Ballet School.</p>
+          </div>
+        </div>
 
-        <h2>Facilitation practice</h2>
+        <h2>Facilitation practice.</h2>
 
-        <p>
-          Travis has spent over a decade designing and leading facilitation and
-          development processes with organizations navigating complex questions
-          and collective action. As a Senior Consultant and Partner at Berteig
-          (2008–2020), he designed and facilitated large-scale learning and
-          development processes across diverse organizational contexts. Clients
-          included the Government of Ontario, World Vision Canada, SickKids
-          Foundation, RBC, BMO, Scotiabank, Bell, Telus, AirMiles, Aeroplan,
-          and BlackBerry.
-        </p>
-
-        <p>
-          Since 2020, through Travis Birch & Associates Ltd, he has continued
-          to lead facilitation and development processes, supporting groups to
-          engage complex questions and act collectively — designing structured
-          approaches to learning grounded in cycles of reflection, dialogue,
-          and social action.
-        </p>
+        <div className="timelineBlock">
+          <div className="timelineItem">
+            <span className="timelineYear">2008–2020</span>
+            <p>Senior Consultant and Partner at Berteig. Designed and led large-scale learning and development processes across diverse organizational contexts — Government of Ontario, World Vision Canada, SickKids Foundation, RBC, BMO, Scotiabank, Bell, Telus, and others.</p>
+          </div>
+          <div className="timelineItem">
+            <span className="timelineYear">2020–present</span>
+            <p>Travis Birch & Associates Ltd. Continues to lead facilitation and development processes, supporting groups to engage complex questions and act collectively through cycles of reflection, dialogue, and social action.</p>
+          </div>
+        </div>
 
         <p>
           Travis holds several professional certifications in leadership,
           organizational and team consulting, training, and coaching.
         </p>
 
-        <h2>The Stage Beyond</h2>
+        <h2>The Stage Beyond.</h2>
 
         <p>
           Founded in 2026, The Stage Beyond is a practice-based environment for
@@ -881,33 +628,30 @@ function SocialActionPage() {
 
   const socialActions = [
     {
-      title: 'Dance Programs for Children & Youth in Underserved Communities',
+      title: 'Dance Programs for Children & Youth',
       description:
-        'Cohort members design and deliver movement-based programs for children and youth in communities with limited access to the arts. This is not performance outreach — it is sustained, relational work that requires listening, adapting, and showing up consistently over time.',
-      image: '/project-children.png',
+        'Cohort members design and deliver movement-based programs for children and youth in communities with limited access to the arts. Sustained, relational work that requires listening, adapting, and showing up consistently over time.',
     },
     {
       title: 'Tutoring & Mentoring Support',
       description:
-        'Drawing on the discipline and focus developed through years of training, cohort members offer academic tutoring or personal mentoring to young people who benefit from patient, skilled adult presence. The work builds relationships as much as it builds skills.',
-      image: '/project-tutoring.png',
+        'Drawing on the discipline developed through years of training, cohort members offer academic tutoring or personal mentoring to young people who benefit from patient, skilled adult presence.',
     },
     {
-      title: 'Collaborative Outreach Within the Dance Community',
+      title: 'Collaborative Outreach Within Dance',
       description:
-        'Projects that strengthen connection across the dance community — between studios, generations, disciplines, or institutions. This might take the form of shared workshops, open rehearsals, skill exchanges, or initiatives that address gaps the community itself has identified.',
-      image: '/project-outreach.png',
+        'Projects that strengthen connection across the dance community — between studios, generations, disciplines, or institutions. Shared workshops, open rehearsals, skill exchanges, or initiatives that address gaps the community has identified.',
     },
     {
       title: 'Contributing to Wider Society',
       description:
         'Cohorts may undertake projects that bring their collective capacity to bear on needs outside the dance world entirely — partnering with local organizations, responding to community-identified needs, or initiating something that reflects what the group has learned to do together.',
-      image: '/project-society.png',
     },
   ];
 
   return (
     <main className={`site simplePage pageTransition ${visible ? 'pageVisible' : ''}`}>
+
       <section className="pageHero fadeIn">
         <p className="eyebrow">Social Action</p>
         <h1>What social action can look like.</h1>
@@ -918,50 +662,21 @@ function SocialActionPage() {
       </section>
 
       <section className="contentSection fadeIn">
+
         <p>
-          Social action is not an assignment, a performance outcome, or a volunteer requirement.
-          It is a shared act the cohort chooses and carries out in response to what it is learning.
+          Social action is not an assignment or a volunteer requirement.
+          It is a shared act the cohort chooses and carries out in response to what it is learning —
+          something real enough to learn from, small enough to carry, and meaningful enough to matter.
         </p>
 
-        <p>
-          In this context, social action does not mean activism or charity by default.
-          It means taking what the cohort is learning and testing it through a concrete
-          contribution in relationship with others.
-        </p>
-
-        <p>
-  The premise is not that dancers need to be “fixed” after performance,
-  but that they continue to hold capacities, discipline, and insight that matter socially.
-</p>
-
-        <p>
-          It may begin modestly: a mentoring experiment, a conversation series, a workshop,
-          a community partnership, or another concrete contribution shaped by the group.
-        </p>
-
-        <p>
-  The scale matters less than the seriousness of the act: something real enough
-  to learn from, small enough to carry, and meaningful enough to matter.
-</p>
-
-        <p>
-  A shared decision might be as simple as hosting a conversation with younger dancers,
-  designing a short workshop, interviewing people in the field, testing a mentoring
-  format, or partnering with a local organization on a small contribution.
-</p>
-        
         <p>
           These are examples of potential social action — not a fixed menu. What a cohort
-          undertakes will emerge from its dialogue, its capacity, and the reality it
-          finds itself in.
+          undertakes will emerge from its dialogue, its capacity, and the reality it finds itself in.
         </p>
 
         <div className="projectsGrid">
           {socialActions.map((project) => (
             <div className="projectCard" key={project.title}>
-              {project.image && (
-                <img src={project.image} alt={project.title} className="projectCardImage" />
-              )}
               <h3>{project.title}</h3>
               <p>{project.description}</p>
             </div>
@@ -969,8 +684,8 @@ function SocialActionPage() {
         </div>
 
         <p className="closingLine">
-  Social action shifts transition from private adaptation toward meaningful participation in shared life.
-</p>
+          Social action shifts transition from private adaptation toward meaningful participation in shared life.
+        </p>
 
         <a href={calendarLink} className="primaryCta" target="_blank" rel="noopener noreferrer">
           Begin the conversation
@@ -986,88 +701,64 @@ function ApplyPage() {
 
   return (
     <main className={`site simplePage pageTransition ${visible ? 'pageVisible' : ''}`}>
+
       <section className="pageHero fadeIn">
         <p className="eyebrow">Is this for me?</p>
         <h1>A good fit begins with readiness.</h1>
         <p className="pageLead">
-          The Stage Beyond is for dancers who are ready to engage actively with peers,
+          The Stage Beyond is for dancers who are ready to engage actively with peers —
           not simply receive advice.
         </p>
       </section>
 
       <section className="contentSection fadeIn">
+
+        {/* ── Fit lists upfront ── */}
+        <div className="fitColumns">
+          <div className="fitColumn fitColumnYes">
+            <p className="fitColumnHead">This may be a fit if you are ready to:</p>
+            <ul className="fitList">
+              <li>Work with transition in a structured, collective way</li>
+              <li>Engage seriously with peers over a defined period</li>
+              <li>Participate in dialogue, social action, and reflection</li>
+              <li>Contribute to something beyond your own individual next step</li>
+            </ul>
+          </div>
+          <div className="fitColumn fitColumnNo">
+            <p className="fitColumnHead">This may not be a fit if you are looking for:</p>
+            <ul className="fitList">
+              <li>Job placement or recruitment services</li>
+              <li>Resume writing or career counselling</li>
+              <li>Therapy or emotional processing as the primary focus</li>
+              <li>A course with fixed answers or guaranteed outcomes</li>
+            </ul>
+          </div>
+        </div>
+
         <div className="pagePhoto">
           <img src="/Fit.png" alt="Group in discussion" />
         </div>
 
-        <h2>Who this is for</h2>
+        <h2>Who this is for.</h2>
 
         <p>
-          This is for dancers from a range of backgrounds — ballet, contemporary,
-          commercial, freelance, company, independent, teaching, choreographic,
-          or interdisciplinary practice.
+          Dancers from a range of backgrounds — ballet, contemporary, commercial, freelance,
+          company, independent, teaching, choreographic, or interdisciplinary practice.
+          What matters most is not a particular career path, but a readiness to work
+          seriously with transition alongside others.
         </p>
-
-        <p>
-          What matters most is not a particular career path, but a readiness to
-          work seriously with transition alongside others.
-        </p>
-
-<p>
-  You do not need to have a clear plan or answer before entering the work.
-  The capacity to work with uncertainty is part of what the process develops.
-</p>
-
-        <p>
-  The work places greater emphasis on meaningful participation and contribution
-  than on arriving quickly at certainty about the future.
-</p>
-
-        <p>
-  Meaning is not treated as something that must be fully discovered in advance,
-  but as something that gradually emerges through participation, practice, and shared life.
-</p>
-
-        <p>
-  The aim is not to eliminate uncertainty entirely, but to develop the capacity
-  to remain thoughtful, engaged, and socially connected within it.
-</p>
-
-        <p>
-  The process values attentiveness, continuity, and responsiveness more than rapid resolution or quick reinvention.
-</p>
-        
         <p>
           You may still be performing and feel burnt out. You may have already stopped
           and feel unmoored. You may be teaching, freelancing, injured, questioning,
           or sensing that the identity that carried you this far is beginning to change.
         </p>
+        <p>
+          You do not need a clear plan before entering the work. The capacity to work
+          with uncertainty is part of what the process develops.
+        </p>
 
-        <h2>This may be a fit if you are ready to:</h2>
+        <div className="clearfix" />
 
-        <ul className="structureList">
-          <li>work with transition in a structured way</li>
-          <li>engage seriously with peers</li>
-          <li>participate in dialogue, social action, and reflection</li>
-          <li>contribute to something beyond your own individual next step</li>
-        </ul>
-
-        <h2>This may not be a fit if you are looking for:</h2>
-
-        <ul className="structureList">
-  <li>immediate job placement or recruitment services</li>
-  <li>resume writing or career counselling in the conventional sense</li>
-  <li>therapy or emotional processing as the primary focus</li>
-  <li>a course with fixed answers or guaranteed outcomes</li>
-  <li>a purely individual process disconnected from collective work</li>
-</ul>
-
-<p>
-  The Stage Beyond is a capacity-building community. Its emphasis is on
-  collective learning, shared practice, and developing the ability to engage
-  transition deliberately over time.
-</p>
-        
         <p className="closingLine">
           The first step is a conversation. We'll explore whether the timing,
           structure, and spirit of the work are right.
@@ -1077,7 +768,7 @@ function ApplyPage() {
           Begin the conversation
         </a>
 
-        <p>
+        <p style={{ marginTop: '28px' }}>
           <Link to="/" className="secondaryLink">Return to main page</Link>
         </p>
       </section>
@@ -1093,37 +784,32 @@ function WaitlistPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus('sending');
-
     const data = new FormData(e.target);
-
     const res = await fetch('https://formspree.io/f/mjglgqar', {
       method: 'POST',
       body: data,
       headers: { Accept: 'application/json' },
     });
-
     setStatus(res.ok ? 'success' : 'error');
   };
 
   return (
     <main className={`site simplePage pageTransition ${visible ? 'pageVisible' : ''}`}>
+
       <section className="pageHero waitlistHero fadeIn">
         <div className="heroInner">
           <div className="heroText">
             <p className="eyebrow">Join the waitlist</p>
             <h1>Express your interest.</h1>
-
             <p className="pageLead">
-              The first cohort begins in October 2026. If you'd like to be
-              considered, share a little about where you are and we'll be in touch.
+              The first cohort begins in October 2026. Share a little about where
+              you are and we'll be in touch.
             </p>
-
             <p className="waitlistNote">
-              Join the waitlist to receive updates, study prompts, and occasional
-              dispatches as the first cohort takes shape.
+              Waitlist members receive monthly study prompts and occasional dispatches
+              as the first cohort takes shape — so the practice can begin before the cohort starts.
             </p>
           </div>
-
           <div
             className="heroImage"
             style={{
@@ -1135,16 +821,6 @@ function WaitlistPage() {
       </section>
 
       <section className="contentSection fadeIn">
-        <h2>What happens next</h2>
-
-        <p>
-  The waitlist is not simply a notification list. It is the beginning of a wider
-  conversation and community forming around the work.
-</p>
-
-        <ul className="structureList">
-<li>You’ll receive monthly reflections and occasional study prompts so the practice can begin before the cohort starts.</li>          <li>When cohort planning begins, we’ll invite interested dancers into a conversation about fit.</li>
-        </ul>
 
         {status === 'success' ? (
           <div className="formSuccess">
@@ -1157,12 +833,10 @@ function WaitlistPage() {
               <label htmlFor="name">Full name</label>
               <input type="text" id="name" name="name" required placeholder="Your name" />
             </div>
-
             <div className="formField">
               <label htmlFor="email">Email address</label>
               <input type="email" id="email" name="email" required placeholder="your@email.com" />
             </div>
-
             <div className="formField">
               <label htmlFor="transition">Where are you in your transition?</label>
               <textarea
@@ -1173,13 +847,9 @@ function WaitlistPage() {
                 placeholder="Tell us a little about where you are and what's brought you here..."
               />
             </div>
-
             {status === 'error' && (
-              <p className="formError">
-                Something went wrong. Please try again or email us directly.
-              </p>
+              <p className="formError">Something went wrong. Please try again or email us directly.</p>
             )}
-
             <button type="submit" className="formSubmit" disabled={status === 'sending'}>
               {status === 'sending' ? 'Sending…' : 'Join the waitlist'}
             </button>
@@ -1195,33 +865,20 @@ function NotFoundPage() {
 
   return (
     <main className={`site simplePage pageTransition ${visible ? 'pageVisible' : ''}`}>
-      <section className="pageHero">
+      <section className="pageHero notFoundHero">
         <p className="eyebrow">404</p>
         <h1>Page not found.</h1>
         <p className="pageLead">
           The page you're looking for doesn't exist or has moved.
         </p>
       </section>
-
       <section className="contentSection">
         <p className="closingLine">
           Head back to the homepage or use the navigation above.
         </p>
-
-        <Link to="/" className="primaryCta">
-          Return to homepage
-        </Link>
+        <Link to="/" className="primaryCta">Return to homepage</Link>
       </section>
     </main>
-  );
-}
-
-function CycleStep({ title, children }) {
-  return (
-    <div className="cycleStep">
-      <h3>{title}</h3>
-      <p>{children}</p>
-    </div>
   );
 }
 
@@ -1230,7 +887,6 @@ function App() {
     <BrowserRouter>
       <ScrollToTop />
       <Nav />
-
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/approach" element={<ApproachPage />} />
@@ -1241,7 +897,6 @@ function App() {
         <Route path="/waitlist" element={<WaitlistPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
-
       <Footer />
     </BrowserRouter>
   );
