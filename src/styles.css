@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&display=swap');
 * {
   box-sizing: border-box;
 }
@@ -950,4 +951,14 @@ body {
   .cycleGrid {
     grid-template-columns: 1fr;
   }
+}
+.facilitatorNote {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.5rem !important;
+  line-height: 1.6 !important;
+  letter-spacing: 0.01em;
+  color: #2f2a25 !important;
+  max-width: 760px;
+  margin: 36px 0 44px;
+  font-style: italic;
 }
