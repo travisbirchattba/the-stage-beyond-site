@@ -550,59 +550,6 @@ padding: 110px 6vw 92px;
   letter-spacing: -0.04em;
 }
 
-.approachList {
-  position: relative;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 56px 72px;
-  margin: 44px 0 72px;
-}
-
-.approachList .cycleStep {
-  position: relative;
-  min-height: 180px;
-}
-
-/* Study → Consultation */
-.approachList .cycleStep:nth-child(1)::after {
-  content: "→";
-  position: absolute;
-  top: 18px;
-  right: -48px;
-  font-size: 2rem;
-  color: #b98b3f;
-}
-
-/* Consultation → Reflection */
-.approachList .cycleStep:nth-child(2)::after {
-  content: "↓";
-  position: absolute;
-  bottom: -48px;
-  right: 50%;
-  font-size: 2rem;
-  color: #b98b3f;
-}
-
-/* Reflection → Action */
-.approachList .cycleStep:nth-child(4)::after {
-  content: "←";
-  position: absolute;
-  top: 18px;
-  left: -48px;
-  font-size: 2rem;
-  color: #b98b3f;
-}
-
-/* Action → Study */
-.approachList .cycleStep:nth-child(3)::after {
-  content: "↑";
-  position: absolute;
-  top: -48px;
-  left: 50%;
-  font-size: 2rem;
-  color: #b98b3f;
-}
-
 .structureList {
   padding-left: 1.2rem;
   margin: 0 0 48px;
@@ -943,4 +890,14 @@ padding: 110px 6vw 92px;
   background-size: cover;
   background-position: center;
   box-shadow: 0 20px 54px rgba(31,31,31,0.13);
+}
+.cycleImageWrap {
+  max-width: 820px;
+  margin: 36px auto 56px;
+}
+
+.cycleImageWrap img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
 }
