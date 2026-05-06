@@ -279,9 +279,23 @@ function HomePage() {
           </p>
 
           <p>
+  The work does not approach transition as a personal failure to overcome,
+  but as a real developmental and social question worthy of serious engagement.
+</p>
+
+          <p>
+  Transition affects not only work and identity, but relationships, rhythms of life,
+  and the ways people experience belonging and participation with others.
+</p>
+          <p>
             Most dancers navigate this quietly — on their own, or in fragments. Piecing together
             a next step without a place to really work it through.
           </p>
+
+          <p>
+  One aim of the work is to resist the isolation that so often accompanies transition,
+  replacing it with forms of shared attention, responsibility, and participation.
+</p>
 
           <p>
   Some participants are still performing. Others are already beyond it.
@@ -291,6 +305,16 @@ function HomePage() {
           <p>
             The Stage Beyond exists to make that process shared, visible, and something you can actively engage.
           </p>
+
+          <p>
+  The work is not only about understanding yourself differently, but about learning
+  how to participate differently with others beyond the structures of performance life.
+</p>
+
+          <p>
+  The emphasis is less on creating a new identity and more on developing
+  a real relationship to life beyond the structures of performance.
+</p>
 
           <Link to="/approach" className="secondaryLink">
             Learn how the work is structured
@@ -359,6 +383,11 @@ function HomePage() {
           </p>
 
           <p className="fitLine">
+  The work depends on participants becoming active protagonists in a shared process,
+  rather than isolated individuals searching for private solutions.
+</p>
+
+          <p className="fitLine">
             For dancers who want transition to become socially meaningful, not only personally manageable.
           </p>
         </div>
@@ -404,6 +433,22 @@ function ApproachPage() {
           and carrying them out in practice.
         </p>
 
+<p>
+  Participants are not passive recipients of guidance. Each person becomes
+  a protagonist in the work itself — helping shape the inquiry, the action,
+  and what the group becomes capable of together.
+</p>
+
+        <p>
+  The collective dimension of the work is not only about mutual support. It is also just as much about developing the capacity to think,
+  act, and learn together under real conditions.
+</p>
+
+        <p>
+  The emphasis is not on self-expression for its own sake, but on developing
+  the capacity to participate meaningfully with others in shared reality.
+</p>
+        
         <div className="clearfix" />
 
         <h2>The work moves in a rhythm.</h2>
@@ -420,6 +465,16 @@ function ApproachPage() {
 <p>
   Dialogue is the group’s effort to read its own reality together —
   to understand what is happening, what matters, and what action makes sense.
+</p>
+
+        <p>
+  Over time, the cohort develops shared language, insight, and practical understanding
+  that none of the participants could have produced alone.
+</p>
+
+        <p>
+  The aim is not only increased confidence, but the gradual development of judgment —
+  the ability to perceive situations more clearly and respond more responsibly over time.
 </p>
 
 <p>
@@ -448,6 +503,16 @@ function ApproachPage() {
   The Stage Beyond builds from those capacities rather than leaving them behind.
 </p>
 
+        <p>
+  The work asks how those capacities might continue to matter —
+  not only professionally, but socially and collectively beyond the stage.
+</p>
+
+        <p>
+  The process is not oriented toward leaving a former identity behind entirely,
+  but toward discovering how past experience can continue to participate meaningfully in new conditions.
+</p>
+
 <h2>What develops over time</h2>
         <p>
           What develops is not only individual clarity, but the capacity to think,
@@ -455,12 +520,77 @@ function ApproachPage() {
         </p>
 
         <p>
+  Over time, the cohort itself changes — developing greater coherence,
+  trust, responsibility, and capacity for meaningful collective action.
+</p>
+
+        <p>
+  The direction of the work is not fully predetermined. Participants help shape
+  what questions are pursued, what actions are taken, and what the process becomes capable of holding.
+</p>
+
+        <p>
+  The process is intentionally experimental: the cohort learns by testing ideas,
+  taking action, reflecting on outcomes, and adapting together over time.
+</p>
+
+        <p>
+  The work is not only reflective. Over time, it becomes formative —
+  shaping habits of attention, participation, responsibility, and collective action.
+</p>
+
+        <p>
+  The emphasis is not on ideal solutions or perfect clarity, but on developing
+  the ability to engage real conditions thoughtfully, responsibly, and together.
+</p>
+
+        <p>
+  As people participate differently, they often begin to understand themselves differently as well —
+  not through abstraction alone, but through lived practice with others over time.
+</p>
+
+        <p>
           Transition becomes less about finding an answer, and more about participating
           in something that is being worked out collectively.
         </p>
 
         <p>
+  At its core, the work is concerned with how people remain in meaningful relationship
+  to the world as conditions, identities, and forms of participation change over time.
+</p>
+
+        <p>
+  The emphasis is less on achievement or personal advancement than on developing
+  the capacities needed to participate thoughtfully, responsibly, and collaboratively over time.
+</p>
+
+        <p>
+  Although the work begins with dancers, the questions it engages are not limited to the arts:
+  how people respond to change, remain connected to others, and participate meaningfully in shared life over time.
+</p>
+
+        <p>
   The questions explored here are not solved once. They become part of an ongoing inquiry carried out in practice over time.
+</p>
+
+        <p>
+  The work is intentionally slow enough for real learning, responsibility,
+  and collective capacity to develop under lived conditions.
+</p>
+
+        <p>
+  Moments of uncertainty, tension, or difficulty are not treated as interruptions
+  to the process, but as part of what the work must learn to engage constructively.
+</p>
+
+        <p>
+  The relationships, responsibilities, and differences that emerge within the cohort
+  are themselves part of what the work learns to engage thoughtfully over time.
+</p>
+
+        <p>
+  The emphasis is not on optimizing the self for a new market or identity,
+  but on developing the capacity to participate meaningfully under changing conditions.
 </p>
 
         <p>
@@ -484,6 +614,21 @@ function ApproachPage() {
           <li>Shared responsibility for participation and follow-through</li>
         </ul>
 
+        <p>
+  Participation is not passive. The work depends on members contributing attention,
+  thought, presence, and follow-through to the collective process over time.
+</p>
+
+<p>
+  The cohort works best when each member experiences themselves not as an observer,
+  but as an active contributor to the development of the group.
+</p>
+
+<p>
+  Meaningful development depends less on intensity than on sustained attention,
+  continued participation, and the willingness to remain engaged over time.
+</p>
+        
         <h2>The role of facilitation</h2>
 
         <p>
@@ -492,14 +637,24 @@ function ApproachPage() {
         </p>
 
         <p>
+  The aim is not dependence on the facilitator, but the gradual development
+  of the group’s own capacity for inquiry, action, responsibility, and learning.
+</p>
+
+        <p>
   This is not networking, peer accountability, or professional development in the usual sense.
   The emphasis is on collective learning, shared practice, and sustained engagement with real questions.
 </p>
 
         <p className="closingLine">
-          This is not a place to arrive at answers. It is a place to develop the capacity
-          to work with real questions — in practice, with others, over time.
-        </p>
+  The aim is not only to support transition, but to help people become protagonists
+  in shaping what life beyond performance can make possible.
+</p>
+
+        <p className="closingLine">
+  Ultimately, the work is concerned less with leaving dance behind than with
+  learning how to participate meaningfully in life as conditions continue to change.
+</p>
 
         <Link to="/apply" className="primaryCta">
           See if this is a fit
@@ -588,6 +743,11 @@ function CohortPage() {
           In-person sessions are the ideal. Some online sessions may be needed
           depending on context and participant location.
         </p>
+
+        <p>
+  The end of a cohort is not treated as the end of the work, but as one phase
+  in a longer process of development, participation, and inquiry.
+</p>
 
         <h2>Investment</h2>
 
@@ -771,9 +931,19 @@ function SocialActionPage() {
         </p>
 
         <p>
+  The premise is not that dancers need to be “fixed” after performance,
+  but that they continue to hold capacities, discipline, and insight that matter socially.
+</p>
+
+        <p>
           It may begin modestly: a mentoring experiment, a conversation series, a workshop,
           a community partnership, or another concrete contribution shaped by the group.
         </p>
+
+        <p>
+  The scale matters less than the seriousness of the act: something real enough
+  to learn from, small enough to carry, and meaningful enough to matter.
+</p>
 
         <p>
   A shared decision might be as simple as hosting a conversation with younger dancers,
@@ -844,6 +1014,30 @@ function ApplyPage() {
           work seriously with transition alongside others.
         </p>
 
+<p>
+  You do not need to have a clear plan or answer before entering the work.
+  The capacity to work with uncertainty is part of what the process develops.
+</p>
+
+        <p>
+  The work places greater emphasis on meaningful participation and contribution
+  than on arriving quickly at certainty about the future.
+</p>
+
+        <p>
+  Meaning is not treated as something that must be fully discovered in advance,
+  but as something that gradually emerges through participation, practice, and shared life.
+</p>
+
+        <p>
+  The aim is not to eliminate uncertainty entirely, but to develop the capacity
+  to remain thoughtful, engaged, and socially connected within it.
+</p>
+
+        <p>
+  The process values attentiveness, continuity, and responsiveness more than rapid resolution or quick reinvention.
+</p>
+        
         <p>
           You may still be performing and feel burnt out. You may have already stopped
           and feel unmoored. You may be teaching, freelancing, injured, questioning,
@@ -943,6 +1137,11 @@ function WaitlistPage() {
 
       <section className="contentSection fadeIn">
         <h2>What happens next</h2>
+
+        <p>
+  The waitlist is not simply a notification list. It is the beginning of a wider
+  conversation and community forming around the work.
+</p>
 
         <ul className="structureList">
 <li>You’ll receive monthly reflections and occasional study prompts so the practice can begin before the cohort starts.</li>          <li>When cohort planning begins, we’ll invite interested dancers into a conversation about fit.</li>
