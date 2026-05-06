@@ -438,6 +438,10 @@ function CohortPage() {
           depending on context and participant location.
         </p>
 
+        <p>
+  In practical terms, the cohort meets regularly over three months, with a mix of group sessions, reflection between sessions, and shared action decided by the group.
+</p>
+
         <h2>Investment</h2>
 
         <p>
@@ -650,7 +654,20 @@ function ApplyPage() {
         <div className="pagePhoto">
           <img src="/Fit.png" alt="Group in discussion" />
         </div>
+       
+        <h2>Who this is for</h2>
 
+        <p>
+          This is for dancers from a range of backgrounds — ballet, contemporary,
+          commercial, freelance, company, independent, teaching, choreographic,
+          or interdisciplinary practice.
+        </p>
+
+        <p>
+          What matters most is not a particular career path, but a readiness to
+          work seriously with transition alongside others.
+        </p>
+      
         <h2>This may be a fit if you are ready to:</h2>
 
         <ul className="structureList">
