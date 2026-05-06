@@ -748,74 +748,75 @@ function WaitlistPage() {
   };
 
   return (
-    <section className="pageHero fadeIn">
-  <div className="heroInner">
-    <div className="heroText">
-      <p className="eyebrow">Join the waitlist</p>
-      <h1>Express your interest.</h1>
+    <main className={`site simplePage pageTransition ${visible ? 'pageVisible' : ''}`}>
+      <section className="pageHero fadeIn">
+        <div className="heroInner">
+          <div className="heroText">
+            <p className="eyebrow">Join the waitlist</p>
+            <h1>Express your interest.</h1>
 
-      <p className="pageLead">
-        The first cohort begins in October 2026. If you'd like to be
-        considered, share a little about where you are and we'll be in touch.
-      </p>
+            <p className="pageLead">
+              The first cohort begins in October 2026. If you'd like to be
+              considered, share a little about where you are and we'll be in touch.
+            </p>
 
-      <p className="waitlistNote">
-        Join the waitlist to receive updates, study prompts, and occasional
-        dispatches as the first cohort takes shape.
-      </p>
-    </div>
+            <p className="waitlistNote">
+              Join the waitlist to receive updates, study prompts, and occasional
+              dispatches as the first cohort takes shape.
+            </p>
+          </div>
 
-    <div className="heroImage" style={{
-      backgroundImage: "url('/Registration_Page.png')"
-    }} />
-  </div>
-</section>
-<section className="contentSection fadeIn">
-  {status === 'success' ? (
-    <div className="formSuccess">
-      <p className="closingLine">Thank you — we'll be in touch.</p>
-      <Link to="/" className="secondaryLink">Return to homepage</Link>
-    </div>
-  ) : (
-    <form className="waitlistForm" onSubmit={handleSubmit}>
-      <div className="formField">
-        <label htmlFor="name">Full name</label>
-        <input type="text" id="name" name="name" required placeholder="Your name" />
-      </div>
+          <div
+            className="heroImage"
+            style={{ backgroundImage: "url('/Registration_Page.png')" }}
+          />
+        </div>
+      </section>
 
-      <div className="formField">
-        <label htmlFor="email">Email address</label>
-        <input type="email" id="email" name="email" required placeholder="your@email.com" />
-      </div>
+      <section className="contentSection fadeIn">
+        {status === 'success' ? (
+          <div className="formSuccess">
+            <p className="closingLine">Thank you — we'll be in touch.</p>
+            <Link to="/" className="secondaryLink">Return to homepage</Link>
+          </div>
+        ) : (
+          <form className="waitlistForm" onSubmit={handleSubmit}>
+            <div className="formField">
+              <label htmlFor="name">Full name</label>
+              <input type="text" id="name" name="name" required placeholder="Your name" />
+            </div>
 
-      <div className="formField">
-        <label htmlFor="transition">Where are you in your transition?</label>
-        <textarea
-          id="transition"
-          name="transition"
-          rows={5}
-          required
-          placeholder="Tell us a little about where you are and what's brought you here..."
-        />
-      </div>
+            <div className="formField">
+              <label htmlFor="email">Email address</label>
+              <input type="email" id="email" name="email" required placeholder="your@email.com" />
+            </div>
 
-      {status === 'error' && (
-        <p className="formError">
-          Something went wrong. Please try again or email us directly.
-        </p>
-      )}
+            <div className="formField">
+              <label htmlFor="transition">Where are you in your transition?</label>
+              <textarea
+                id="transition"
+                name="transition"
+                rows={5}
+                required
+                placeholder="Tell us a little about where you are and what's brought you here..."
+              />
+            </div>
 
-      <button type="submit" className="formSubmit" disabled={status === 'sending'}>
-        {status === 'sending' ? 'Sending…' : 'Join the waitlist'}
-      </button>
-    </form>
-  )}
+            {status === 'error' && (
+              <p className="formError">
+                Something went wrong. Please try again or email us directly.
+              </p>
+            )}
 
-</section>
+            <button type="submit" className="formSubmit" disabled={status === 'sending'}>
+              {status === 'sending' ? 'Sending…' : 'Join the waitlist'}
+            </button>
+          </form>
+        )}
+      </section>
     </main>
   );
 }
-
 function NotFoundPage() {
   const visible = usePageTransition();
 
