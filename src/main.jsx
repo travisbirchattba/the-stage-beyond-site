@@ -564,8 +564,8 @@ function FacilitatorPage() {
 
         <blockquote className="facilitatorQuote">
           I am holding this space because I know how much can remain unnamed in the move
-          beyond performance — and because I believe dancers have more to contribute than
-          a private reinvention carried out alone.
+beyond performance — and because I believe dancers navigate that transition
+better together than apart.
         </blockquote>
 
         <h2>Artistic background.</h2>
