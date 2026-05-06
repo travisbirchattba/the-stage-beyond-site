@@ -749,35 +749,19 @@ function WaitlistPage() {
 
   return (
     <main className={`site simplePage pageTransition ${visible ? 'pageVisible' : ''}`}>
-      function WaitlistPage() {
-  useFadeIn();
-  const visible = usePageTransition();
-  const [status, setStatus] = useState('idle');
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setStatus('sending');
-
-    const data = new FormData(e.target);
-
-    const res = await fetch('https://formspree.io/f/mjglgqar', {
-      method: 'POST',
-      body: data,
-      headers: { Accept: 'application/json' },
-    });
-
-    setStatus(res.ok ? 'success' : 'error');
-  };
-
-  return (
-    <main className={`site simplePage pageTransition ${visible ? 'pageVisible' : ''}`}>
       <section className="pageHero fadeIn">
         <p className="eyebrow">Join the waitlist</p>
         <h1>Express your interest.</h1>
+
+        <p className="pageLead">
+          The first cohort begins in October 2026. If you'd like to be
+          considered, share a little about where you are and we'll be in touch.
+        </p>
+
         <p className="waitlistNote">
-  Join the waitlist to receive updates, study prompts, and occasional
-  dispatches as the first cohort takes shape.
-</p>
+          Join the waitlist to receive updates, study prompts, and occasional
+          dispatches as the first cohort takes shape.
+        </p>
       </section>
 
       <section className="contentSection fadeIn">
@@ -814,7 +798,9 @@ function WaitlistPage() {
             </div>
 
             {status === 'error' && (
-              <p className="formError">Something went wrong. Please try again or email us directly.</p>
+              <p className="formError">
+                Something went wrong. Please try again or email us directly.
+              </p>
             )}
 
             <button type="submit" className="formSubmit" disabled={status === 'sending'}>
@@ -826,7 +812,6 @@ function WaitlistPage() {
     </main>
   );
 }
-
 
       <section className="contentSection fadeIn">
         <div className="pagePhoto">
