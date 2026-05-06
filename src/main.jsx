@@ -749,6 +749,28 @@ function WaitlistPage() {
 
   return (
     <main className={`site simplePage pageTransition ${visible ? 'pageVisible' : ''}`}>
+      function WaitlistPage() {
+  useFadeIn();
+  const visible = usePageTransition();
+  const [status, setStatus] = useState('idle');
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus('sending');
+
+    const data = new FormData(e.target);
+
+    const res = await fetch('https://formspree.io/f/mjglgqar', {
+      method: 'POST',
+      body: data,
+      headers: { Accept: 'application/json' },
+    });
+
+    setStatus(res.ok ? 'success' : 'error');
+  };
+
+  return (
+    <main className={`site simplePage pageTransition ${visible ? 'pageVisible' : ''}`}>
       <section className="pageHero fadeIn">
         <p className="eyebrow">Join the waitlist</p>
         <h1>Express your interest.</h1>
@@ -757,6 +779,54 @@ function WaitlistPage() {
   dispatches as the first cohort takes shape.
 </p>
       </section>
+
+      <section className="contentSection fadeIn">
+        <div className="pagePhoto">
+          <img src="/Registration_Page.png" alt="A group standing together" />
+        </div>
+
+        {status === 'success' ? (
+          <div className="formSuccess">
+            <p className="closingLine">Thank you — we'll be in touch.</p>
+            <Link to="/" className="secondaryLink">Return to homepage</Link>
+          </div>
+        ) : (
+          <form className="waitlistForm" onSubmit={handleSubmit}>
+            <div className="formField">
+              <label htmlFor="name">Full name</label>
+              <input type="text" id="name" name="name" required placeholder="Your name" />
+            </div>
+
+            <div className="formField">
+              <label htmlFor="email">Email address</label>
+              <input type="email" id="email" name="email" required placeholder="your@email.com" />
+            </div>
+
+            <div className="formField">
+              <label htmlFor="transition">Where are you in your transition?</label>
+              <textarea
+                id="transition"
+                name="transition"
+                rows={5}
+                required
+                placeholder="Tell us a little about where you are and what's brought you here..."
+              />
+            </div>
+
+            {status === 'error' && (
+              <p className="formError">Something went wrong. Please try again or email us directly.</p>
+            )}
+
+            <button type="submit" className="formSubmit" disabled={status === 'sending'}>
+              {status === 'sending' ? 'Sending…' : 'Join the waitlist'}
+            </button>
+          </form>
+        )}
+      </section>
+    </main>
+  );
+}
+
 
       <section className="contentSection fadeIn">
         <div className="pagePhoto">
