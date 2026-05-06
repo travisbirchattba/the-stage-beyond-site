@@ -11,7 +11,7 @@ const homeSteps = [
     body: 'We work with material that helps us see ourselves and our situation differently.',
   },
   {
-    title: 'Consultation',
+    title: '',
     body: 'Together, we make sense of what we are seeing and decide what to act on.',
   },
   {
@@ -215,8 +215,13 @@ function HomePage() {
             </p>
 
             <p className="heroHint">
-              Small cohorts. A shared rhythm of study, consultation, social action, and reflection.
+              Small cohorts. A shared rhythm of study, dialogue, action and reflection.
             </p>
+
+            <p className="heroPlain">
+  A small group of dancers meets regularly over several months to study,
+  reflect, take action together, and work through transition collectively.
+</p>
 
             <a href={calendarLink} className="primaryCta" target="_blank" rel="noopener noreferrer">
               Begin the conversation
@@ -372,7 +377,7 @@ function ApproachPage() {
         <div className="cycleImageWrap">
           <img
             src="/rhythm-cycle.png"
-            alt="The Stage Beyond working cycle: Study, Consultation, Social Action, Reflection"
+            alt="The Stage Beyond working cycle: Study, , Social Action, Reflection"
           />
         </div>
 
@@ -387,6 +392,12 @@ function ApproachPage() {
           Transition becomes less about finding an answer, and more about participating
           in something that is being worked out collectively.
         </p>
+
+        <p>
+  Real conditions might include financial pressure, injury, isolation,
+  uncertainty about identity, or the practical realities of building a life
+  beyond performance.
+</p>
 
         <p>
           Acting together in the world changes how transition itself is experienced.
@@ -409,6 +420,11 @@ function ApproachPage() {
           The facilitator does not provide answers or direction. Their role is to maintain the structure,
           support the process, and help the group develop its own capacity to work together.
         </p>
+
+        <p>
+  This is not networking, peer accountability, or professional development in the usual sense.
+  The emphasis is on collective learning, shared practice, and sustained engagement with real questions.
+</p>
 
         <p className="closingLine">
           This is not a place to arrive at answers. It is a place to develop the capacity
@@ -482,7 +498,7 @@ function CohortPage() {
         </p>
 
         <p>
-          Expected time commitment: weekly group consultations of approximately
+          Expected time commitment: weekly group dialogues of approximately
           90 minutes, with light reflection or action between sessions. Some
           cohorts may also include longer working sessions depending on what
           the group decides to undertake.
@@ -588,7 +604,7 @@ function FacilitatorPage() {
           Since 2020, through Travis Birch & Associates Ltd, he has continued
           to lead facilitation and development processes, supporting groups to
           engage complex questions and act collectively — designing structured
-          approaches to learning grounded in cycles of reflection, consultation,
+          approaches to learning grounded in cycles of reflection, dialogue,
           and social action.
         </p>
 
@@ -602,7 +618,7 @@ function FacilitatorPage() {
         <p>
           Founded in 2026, The Stage Beyond is a practice-based environment for
           dancers navigating transition beyond performance. It works through
-          structured cycles of study, consultation, social action, and reflection —
+          structured cycles of study, dialogue, action and reflection —
           emphasizing collective learning and capacity-building, with participants
           increasingly taking up the work themselves.
         </p>
@@ -687,7 +703,7 @@ function SocialActionPage() {
         
         <p>
           These are examples of potential social action — not a fixed menu. What a cohort
-          undertakes will emerge from its consultation, its capacity, and the reality it
+          undertakes will emerge from its dialogue, its capacity, and the reality it
           finds itself in.
         </p>
 
@@ -760,7 +776,7 @@ function ApplyPage() {
         <ul className="structureList">
           <li>work with transition in a structured way</li>
           <li>engage seriously with peers</li>
-          <li>participate in consultation, social action, and reflection</li>
+          <li>participate in dialogue, social action, and reflection</li>
           <li>contribute to something beyond your own individual next step</li>
         </ul>
 
