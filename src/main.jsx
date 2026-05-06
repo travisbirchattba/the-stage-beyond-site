@@ -187,6 +187,41 @@ function Footer() {
           <Link to="/waitlist" className="footerLink">Join waitlist</Link>
         </nav>
 
+<section className="openStudy fadeIn">
+  <p className="eyebrow">Open Study</p>
+
+  <h2>A place to begin the practice.</h2>
+
+  <p className="openStudyLead">
+    A monthly online gathering for dancers thinking seriously about transition.
+  </p>
+
+  <p>
+    Each session includes a short study prompt, guided reflection,
+    and shared discussion around questions that emerge beyond performance.
+  </p>
+
+  <p>
+    Not an information session. Not coaching. A chance to experience
+    the rhythm of the work directly.
+  </p>
+
+  <div className="openStudyMeta">
+    <span>Online</span>
+    <span>60 minutes</span>
+    <span>Free</span>
+  </div>
+
+  <a
+    href="YOUR_LINK_HERE"
+    className="primaryCta"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Join the next Open Study
+  </a>
+</section>
+        
         <Link to="/apply" className="footerCta">
           Begin the conversation
         </Link>
