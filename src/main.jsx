@@ -325,13 +325,12 @@ function ApproachPage() {
 
         <h2>A consistent rhythm</h2>
 
-        <div className="approachList">
-          {approachSteps.map((step) => (
-            <CycleStep key={step.title} title={step.title}>
-              {step.body}
-            </CycleStep>
-          ))}
-        </div>
+       <div className="cycleImageWrap">
+  <img
+    src="/rhythm-cycle.png"
+    alt="The Stage Beyond working cycle: Study, Consultation, Action, Reflection"
+  />
+</div>
 
         <h2>What develops over time</h2>
 
