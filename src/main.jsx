@@ -15,8 +15,8 @@ const homeSteps = [
     body: 'Together, we make sense of what we are seeing and decide what to act on.',
   },
   {
-    title: 'Action',
-    body: 'We carry out a shared decision in practice.',
+    title: 'Social Action',
+    body: 'We carry out a shared decision in ways that contribute beyond the group.',
   },
   {
     title: 'Reflection',
@@ -215,7 +215,7 @@ function HomePage() {
             </p>
 
             <p className="heroHint">
-              Small cohorts. A shared rhythm of study, consultation, action, and reflection.
+              Small cohorts. A shared rhythm of study, consultation, social action, and reflection.
             </p>
 
             <a href={calendarLink} className="primaryCta" target="_blank" rel="noopener noreferrer">
@@ -261,7 +261,7 @@ function HomePage() {
 
         <p className="rhythmIntro">
           Each cohort returns to the same cycle: study what opens new perspective,
-          consult together, act in practice, and reflect on what is learned by doing.
+          consult together, take social action in practice, and reflect on what is learned by doing.
         </p>
 
         <div className="cycleGrid">
@@ -274,19 +274,19 @@ function HomePage() {
       </section>
 
       <section className="purpose fadeIn">
-        <p className="purposeLabel">The twofold purpose</p>
+        <p className="purposeLabel">What the work develops</p>
 
         <div className="purposeGrid">
           <div className="purposeBlock">
-            <h3>Individual</h3>
-            <p>Developing clarity and capacity through shared work.</p>
+            <h3>Personal Capacity</h3>
+            <p>Developing clarity, resilience, and the ability to engage transition deliberately.</p>
           </div>
 
           <div className="plus">+</div>
 
           <div className="purposeBlock">
-            <h3>Community</h3>
-            <p>Building a community that acts together in meaningful ways.</p>
+            <h3>Social Action</h3>
+            <p>Building the capacity to act together in ways that contribute beyond the self.</p>
           </div>
         </div>
 
@@ -297,6 +297,10 @@ function HomePage() {
 
           <p className="fitLine">
             For dancers who are ready to work with that shift, alongside others, in a more deliberate way.
+          </p>
+
+          <p className="fitLine">
+            For dancers who want transition to become socially meaningful, not only personally manageable.
           </p>
         </div>
 
@@ -346,14 +350,14 @@ function ApproachPage() {
         </p>
 
         <p>
-          Action may be small at first: a conversation, a shared inquiry, a workshop,
+          Social action may be small at first: a conversation, a shared inquiry, a workshop,
           a mentoring experiment, or a contribution the cohort decides is worth testing.
         </p>
 
         <div className="cycleImageWrap">
           <img
             src="/rhythm-cycle.png"
-            alt="The Stage Beyond working cycle: Study, Consultation, Action, Reflection"
+            alt="The Stage Beyond working cycle: Study, Consultation, Social Action, Reflection"
           />
         </div>
 
@@ -367,6 +371,12 @@ function ApproachPage() {
         <p>
           Transition becomes less about finding an answer, and more about participating
           in something that is being worked out collectively.
+        </p>
+
+        <p>
+          Acting together in the world changes how transition itself is experienced.
+          People begin to encounter themselves less as isolated individuals trying to
+          solve a problem, and more as participants in shared life.
         </p>
 
         <h2>Structure</h2>
@@ -453,7 +463,7 @@ function CohortPage() {
         <p>
           In practical terms, the cohort meets regularly over three months,
           with a mix of group sessions, reflection between sessions, and shared
-          action decided by the group.
+          social action decided by the group.
         </p>
 
         <p>
@@ -559,7 +569,7 @@ function FacilitatorPage() {
           to lead facilitation and development processes, supporting groups to
           engage complex questions and act collectively — designing structured
           approaches to learning grounded in cycles of reflection, consultation,
-          and action.
+          and social action.
         </p>
 
         <p>
@@ -572,7 +582,7 @@ function FacilitatorPage() {
         <p>
           Founded in 2026, The Stage Beyond is a practice-based environment for
           dancers navigating transition beyond performance. It works through
-          structured cycles of study, consultation, action, and reflection —
+          structured cycles of study, consultation, social action, and reflection —
           emphasizing collective learning and capacity-building, with participants
           increasingly taking up the work themselves.
         </p>
@@ -590,11 +600,11 @@ function FacilitatorPage() {
   );
 }
 
-function ActionExamplesPage() {
+function SocialActionPage() {
   useFadeIn();
   const visible = usePageTransition();
 
-  const projects = [
+  const socialActions = [
     {
       title: 'Dance Programs for Children & Youth in Underserved Communities',
       description:
@@ -625,33 +635,32 @@ function ActionExamplesPage() {
     <main className={`site simplePage pageTransition ${visible ? 'pageVisible' : ''}`}>
       <section className="pageHero fadeIn">
         <p className="eyebrow">Social Action</p>
-        <h1>What action can look like.</h1>
+        <h1>What social action can look like.</h1>
         <p className="pageLead">
-          In the cycle, action means testing what the cohort is learning through real,
-          shared contribution. These are examples of what that action might become.
+          Social action is where the cohort tests what it is learning through real,
+          shared contribution beyond the group.
         </p>
       </section>
 
       <section className="contentSection fadeIn">
         <p>
-          Action is not an assignment or a performance outcome. It is a shared act the
-          cohort chooses and carries out in response to what it is learning.
+          Social action is not an assignment, a performance outcome, or a volunteer requirement.
+          It is a shared act the cohort chooses and carries out in response to what it is learning.
         </p>
 
         <p>
-          It might be a small community project, a mentoring initiative, an outreach
-          experiment, a workshop, a conversation series, or another concrete contribution
-          shaped by the group.
+          It may begin modestly: a mentoring experiment, a conversation series, a workshop,
+          a community partnership, or another concrete contribution shaped by the group.
         </p>
 
         <p>
-          These projects are examples of potential action — not a fixed menu. What a
-          cohort undertakes will emerge from its own consultation and the reality it
+          These are examples of potential social action — not a fixed menu. What a cohort
+          undertakes will emerge from its consultation, its capacity, and the reality it
           finds itself in.
         </p>
 
         <div className="projectsGrid">
-          {projects.map((project) => (
+          {socialActions.map((project) => (
             <div className="projectCard" key={project.title}>
               {project.image && (
                 <img src={project.image} alt={project.title} className="projectCardImage" />
@@ -719,7 +728,7 @@ function ApplyPage() {
         <ul className="structureList">
           <li>work with transition in a structured way</li>
           <li>engage seriously with peers</li>
-          <li>participate in consultation, action, and reflection</li>
+          <li>participate in consultation, social action, and reflection</li>
           <li>contribute to something beyond your own individual next step</li>
         </ul>
 
@@ -888,7 +897,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/approach" element={<ApproachPage />} />
         <Route path="/cohort" element={<CohortPage />} />
-        <Route path="/action-examples" element={<ActionExamplesPage />} />
+        <Route path="/action-examples" element={<SocialActionPage />} />
         <Route path="/facilitator" element={<FacilitatorPage />} />
         <Route path="/apply" element={<ApplyPage />} />
         <Route path="/waitlist" element={<WaitlistPage />} />
