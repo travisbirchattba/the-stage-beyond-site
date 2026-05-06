@@ -488,7 +488,7 @@ function ApproachPage() {
 
 <div className="cycleImageWrap">
   <img
-    src="/rhythm-cycle.png"
+    src="/rhythm-cycle-v2.png"
     alt="The Stage Beyond working cycle: Study, Dialogue, Social Action, Reflection"
   />
 </div>
