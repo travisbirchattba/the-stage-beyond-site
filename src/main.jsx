@@ -12,10 +12,22 @@ import './styles.css';
 const calendarLink = 'https://calendar.app.google/yzkx5MPNAcY7H2X29';
 
 const homeSteps = [
-  { title: "Study", body: "We engage material that opens new ways of seeing ourselves and the world." },
-  { title: "Consultation", body: "We read our reality together and decide what the group will act on." },
-  { title: "Action", body: "The cohort carries out a shared decision in practice." },
-  { title: "Reflection", body: "We return to what happened, learn from it, and refine the next step." },
+  {
+    title: "Study",
+    body: "We work with material that helps us see ourselves and our situation differently."
+  },
+  {
+    title: "Consultation",
+    body: "Together, we make sense of what we are seeing and decide what to act on."
+  },
+  {
+    title: "Action",
+    body: "We carry out a shared decision in practice."
+  },
+  {
+    title: "Reflection",
+    body: "We return to what happened and learn from what doing made visible."
+  },
 ];
 
 const approachSteps = [
