@@ -259,9 +259,8 @@ function HomePage() {
 </p>
 
             <a href={calendarLink} className="primaryCta" target="_blank" rel="noopener noreferrer">
-              Begin the conversation
-            </a>
-          </div>
+  Join the inquiry
+</a>
 
           <div className="heroImage" />
         </div>
