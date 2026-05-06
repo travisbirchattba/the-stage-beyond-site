@@ -114,7 +114,7 @@ function Nav() {
               Cohorts
             </NavLink>
             <NavLink to="/action-examples" className={({ isActive }) => `navLink ${isActive ? 'navLinkActive' : ''}`}>
-              Action examples
+              Social Action
             </NavLink>
             <NavLink to="/facilitator" className={({ isActive }) => `navLink ${isActive ? 'navLinkActive' : ''}`}>
               Facilitator
@@ -150,7 +150,7 @@ function Nav() {
             Cohorts
           </NavLink>
           <NavLink to="/action-examples" className={({ isActive }) => `mobileNavLink ${isActive ? 'mobileNavLinkActive' : ''}`}>
-            Action examples
+            Social Action
           </NavLink>
           <NavLink to="/facilitator" className={({ isActive }) => `mobileNavLink ${isActive ? 'mobileNavLinkActive' : ''}`}>
             Facilitator
@@ -181,7 +181,7 @@ function Footer() {
           <Link to="/" className="footerLink">Home</Link>
           <Link to="/approach" className="footerLink">Approach</Link>
           <Link to="/cohort" className="footerLink">Cohorts</Link>
-          <Link to="/action-examples" className="footerLink">Action examples</Link>
+          <Link to="/action-examples" className="footerLink">Social Action</Link>
           <Link to="/facilitator" className="footerLink">Facilitator</Link>
           <Link to="/apply" className="footerLink">Is this for me?</Link>
           <Link to="/waitlist" className="footerLink">Join waitlist</Link>
@@ -624,7 +624,7 @@ function ActionExamplesPage() {
   return (
     <main className={`site simplePage pageTransition ${visible ? 'pageVisible' : ''}`}>
       <section className="pageHero fadeIn">
-        <p className="eyebrow">Action examples</p>
+        <p className="eyebrow">Social Action</p>
         <h1>What action can look like.</h1>
         <p className="pageLead">
           In the cycle, action means testing what the cohort is learning through real,
