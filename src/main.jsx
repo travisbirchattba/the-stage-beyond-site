@@ -275,13 +275,13 @@ function HomePage() {
         </div>
 
         <div className="fitBlock">
-          <p className="fitLine">
-            For dancers who feel that something is shifting — and want to work with it in a more deliberate way.
-          </p>
+         <p className="fitLine">
+  For dancers who feel that something is shifting — and don’t want to navigate it alone.
+</p>
 
-          <p className="fitLine">
-            For dancers who want their next chapter to include contribution, community, and shared action.
-          </p>
+<p className="fitLine">
+  For dancers who are ready to work with that shift, alongside others, in a more deliberate way.
+</p>
         </div>
 
         <Link to="/apply" className="learnMore">
