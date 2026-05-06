@@ -748,24 +748,29 @@ function WaitlistPage() {
   };
 
   return (
-    <main className={`site simplePage pageTransition ${visible ? 'pageVisible' : ''}`}>
-      <section className="pageHero fadeIn">
-        <p className="eyebrow">Join the waitlist</p>
-        <h1>Express your interest.</h1>
+    <section className="pageHero fadeIn">
+  <div className="heroInner">
+    <div className="heroText">
+      <p className="eyebrow">Join the waitlist</p>
+      <h1>Express your interest.</h1>
 
-        <p className="pageLead">
-          The first cohort begins in October 2026. If you'd like to be
-          considered, share a little about where you are and we'll be in touch.
-        </p>
+      <p className="pageLead">
+        The first cohort begins in October 2026. If you'd like to be
+        considered, share a little about where you are and we'll be in touch.
+      </p>
 
-        <p className="waitlistNote">
-          Join the waitlist to receive updates, study prompts, and occasional
-          dispatches as the first cohort takes shape.
-        </p>
-      </section>
+      <p className="waitlistNote">
+        Join the waitlist to receive updates, study prompts, and occasional
+        dispatches as the first cohort takes shape.
+      </p>
+    </div>
 
-     <section className="contentSection waitlistSection fadeIn">
-
+    <div className="heroImage" style={{
+      backgroundImage: "url('/Registration_Page.png')"
+    }} />
+  </div>
+</section>
+<section className="contentSection fadeIn">
   {status === 'success' ? (
     <div className="formSuccess">
       <p className="closingLine">Thank you — we'll be in touch.</p>
@@ -805,11 +810,6 @@ function WaitlistPage() {
       </button>
     </form>
   )}
-
-  {/* PHOTO MOVED TO BOTTOM */}
-  <div className="pagePhoto">
-    <img src="/Registration_Page.png" alt="A group standing together" />
-  </div>
 
 </section>
     </main>
