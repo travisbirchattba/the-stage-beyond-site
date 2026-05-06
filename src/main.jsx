@@ -4,12 +4,6 @@ import { BrowserRouter, Routes, Route, Link, NavLink, useLocation } from 'react-
 import './styles.css';
 
 const calendarLink = 'https://calendar.app.google/yzkx5MPNAcY7H2X29';
-import React, { useState, useEffect } from 'react';
-import { createRoot } from 'react-dom/client';
-import { BrowserRouter, Routes, Route, Link, NavLink, useLocation } from 'react-router-dom';
-import './styles.css';
-
-const calendarLink = 'https://calendar.app.google/yzkx5MPNAcY7H2X29';
 
 const homeSteps = [
   {
