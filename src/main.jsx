@@ -394,23 +394,42 @@ function ApproachPage() {
 
         <h2>The work moves in a rhythm.</h2>
 
-        <p className="rhythmIntro">
-          Not a sequence to follow once, but a cycle the group returns to.
-        </p>
+<p className="rhythmIntro">
+  Not a sequence to follow once, but a cycle the group returns to.
+</p>
 
-        <p>
-          Social action may be small at first: a conversation, a shared inquiry, a workshop,
-          a mentoring experiment, or a contribution the cohort decides is worth testing.
-        </p>
+<p>
+  Study may include readings, artistic works, questions, observations from practice,
+  or other material that helps the cohort encounter transition differently.
+</p>
 
-        <div className="cycleImageWrap">
-          <img
-            src="/rhythm-cycle.png"
-            alt="The Stage Beyond working cycle: Study, , Social Action, Reflection"
-          />
-        </div>
+<p>
+  Dialogue is the group’s effort to read its own reality together —
+  to understand what is happening, what matters, and what action makes sense.
+</p>
 
-        <h2>What develops over time</h2>
+<p>
+  Social action may be small at first: a conversation, a shared inquiry, a workshop,
+  a mentoring experiment, or a contribution the cohort decides is worth testing.
+</p>
+
+<p>
+  Reflection here is not simply personal processing. It is a disciplined effort
+  to understand what becomes visible through study, action, and collective experience.
+</p>
+
+<div className="cycleImageWrap">
+  <img
+    src="/rhythm-cycle.png"
+    alt="The Stage Beyond working cycle: Study, Dialogue, Social Action, Reflection"
+  />
+</div>
+
+<p className="cycleClosing">
+  The rhythm matters because transition becomes more workable when it is carried collectively, revisited over time, and tested in practice.
+</p>
+
+<h2>What develops over time</h2>
 
         <p>
           What develops is not only individual clarity, but the capacity to think,
@@ -520,11 +539,18 @@ function CohortPage() {
 
         <h2>How sessions work</h2>
 
-        <p>
-          In practical terms, the cohort meets regularly over three months,
-          with a mix of group sessions, reflection between sessions, and shared
-          social action decided by the group.
-        </p>
+        <h2>How sessions work</h2>
+
+<p>
+  A typical week might include a shared reading or prompt, a 90-minute consultation session,
+  individual reflection between meetings, and a small piece of social action the cohort is testing together.
+</p>
+
+<p>
+  In practical terms, the cohort meets regularly over three months,
+  with a mix of group sessions, reflection between sessions, and shared
+  social action decided by the group.
+</p>
 
         <p>
           Expected time commitment: weekly group dialogues of approximately
@@ -812,12 +838,19 @@ function ApplyPage() {
         <h2>This may not be a fit if you are looking for:</h2>
 
         <ul className="structureList">
-          <li>career coaching</li>
-          <li>therapy or emotional processing as the primary focus</li>
-          <li>a course with fixed answers</li>
-          <li>a purely individual process</li>
-        </ul>
+  <li>immediate job placement or recruitment services</li>
+  <li>resume writing or career counselling in the conventional sense</li>
+  <li>therapy or emotional processing as the primary focus</li>
+  <li>a course with fixed answers or guaranteed outcomes</li>
+  <li>a purely individual process disconnected from collective work</li>
+</ul>
 
+<p>
+  The Stage Beyond is a capacity-building community. Its emphasis is on
+  collective learning, shared practice, and developing the ability to engage
+  transition deliberately over time.
+</p>
+        
         <p className="closingLine">
           The first step is a conversation. We'll explore whether the timing,
           structure, and spirit of the work are right.
