@@ -202,11 +202,11 @@ function HomePage() {
             exists to make that process shared, visible, and something you can actively engage.
           </p>
           <p>
-            The work does not treat transition as a personal failure to overcome,
+            The work does not treat transition as a problem to solve,
             but as a real developmental and social question worthy of serious engagement.
           </p>
           <p>
-            Some participants are still performing. Others are already beyond it.
+            Some participants are in the early stages of their dance careers. Many are still performing. Others are already beyond it.
             What matters is a readiness to engage seriously with the questions that emerge.
           </p>
           <Link to="/approach" className="secondaryLink">Learn how the work is structured</Link>
@@ -219,7 +219,7 @@ function HomePage() {
         <h2>You may be in the right place if...</h2>
         <div className="fitPreviewGrid">
           <div className="fitPreviewItem">
-            <p>You are still performing, but something feels strained or unsustainable.</p>
+            <p>You are curious about what other paths may be open to you.</p>
           </div>
           <div className="fitPreviewItem">
             <p>You have stopped and feel unmoored — like the structures that held you are gone.</p>
