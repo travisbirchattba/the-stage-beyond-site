@@ -602,8 +602,8 @@ better together than apart.
         </p>
 
         <p className="closingLine">
-          The work is grounded in the belief that transition, worked on
-          collectively, becomes something more than a personal problem to solve.
+          The work is grounded in the belief that transition is a process of
+  integration - a path to be walked in the company of others.
         </p>
 
         <a href={calendarLink} className="primaryCta" target="_blank" rel="noopener noreferrer">
