@@ -488,7 +488,7 @@ function CohortPage() {
         <h2>How sessions work.</h2>
 
         <p>
-          A typical week includes a shared reading or prompt, a 90-minute dialogue session,
+          A typical week includes a shared reading or prompt, a 90-minute study and dialogue session,
           individual reflection between meetings, and a small piece of action the cohort
           is testing together. The cohort remains intentionally small so that trust, continuity,
           and meaningful collective work can actually develop over time.
@@ -496,8 +496,11 @@ function CohortPage() {
         <p>
           In-person sessions are the ideal. Some online sessions may be needed
           depending on context and participant location. Expected time commitment:
-          weekly group dialogues of approximately 90 minutes, with light reflection
-          or action between sessions.
+          weekly group sessions of approximately 90 minutes, with light reflection
+          and / or action between sessions.
+        </p>
+        <p>
+          Cohorts may decide to alter or vary the cadence of sessions. For example, some cohorts may find it more practical to hold longer, monthly sessions.
         </p>
         <p>
           The end of a cohort is not treated as the end of the work, but as one phase
