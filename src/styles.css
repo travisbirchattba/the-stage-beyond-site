@@ -592,7 +592,8 @@ body {
 
 .cycleImageWrap {
   max-width: 980px;
-  margin: 24px auto 32px;
+  width: calc(100% + 120px);
+  margin: 24px -60px 32px;
 }
 
 .cycleImageWrap img {
