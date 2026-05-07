@@ -473,7 +473,7 @@ function CohortPage() {
           </div>
           <div className="cohortDetail">
             <p className="cohortLabel">Duration</p>
-            <p className="cohortValue">3 months</p>
+            <p className="cohortValue">Approximately 3 months</p>
           </div>
           <div className="cohortDetail">
             <p className="cohortLabel">Cohort size</p>
