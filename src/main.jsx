@@ -510,7 +510,6 @@ function CohortPage() {
   The work is offered on a sliding scale. Grants and funding support 
   may be available. Reach out — we'll find a way to make it work.
 </p>
-        </div>
 
         <p className="closingLine">
           The first step is a conversation to explore whether the timing,
