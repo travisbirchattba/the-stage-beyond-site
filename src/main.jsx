@@ -176,7 +176,7 @@ function HomePage() {
               A structured peer process for dancers navigating what comes next.
             </p>
             <p className="heroHint">
-              Small cohorts. A shared rhythm of study, dialogue, social action, and reflection.
+              Small cohorts. A shared rhythm of study, dialogue, action, and reflection.
             </p>
             <a href={calendarLink} className="primaryCta" target="_blank" rel="noopener noreferrer">
               Join the inquiry
@@ -237,7 +237,7 @@ function HomePage() {
         <h2>We move in a rhythm.</h2>
         <p className="rhythmIntro">
           Each cohort returns to the same cycle: study what opens new perspective,
-          consult together, take social action in practice, and reflect on what is learned by doing.
+          consult together, take action in practice, and reflect on what is learned by doing.
         </p>
         <div className="cycleGrid">
           <div className="cycleStep">
@@ -488,8 +488,8 @@ function CohortPage() {
         <h2>How sessions work.</h2>
 
         <p>
-          A typical week includes a shared reading or prompt, a 90-minute consultation session,
-          individual reflection between meetings, and a small piece of social action the cohort
+          A typical week includes a shared reading or prompt, a 90-minute dialogue session,
+          individual reflection between meetings, and a small piece of action the cohort
           is testing together. The cohort remains intentionally small so that trust, continuity,
           and meaningful collective work can actually develop over time.
         </p>
@@ -582,7 +582,7 @@ better together than apart.
           </div>
           <div className="timelineItem">
             <span className="timelineYear">2020–present</span>
-            <p>Travis Birch & Associates Ltd. Continues to lead facilitation and development processes, supporting groups to engage complex questions and act collectively through cycles of reflection, dialogue, and social action.</p>
+            <p>Travis Birch & Associates Ltd. Continues to lead facilitation and development processes, supporting groups to engage complex questions and act collectively through cycles of reflection, dialogue, and action.</p>
           </div>
         </div>
 
@@ -653,7 +653,7 @@ function SocialActionPage() {
 
       <section className="pageHero fadeIn">
         <p className="eyebrow">Social Action</p>
-        <h1>What social action can look like.</h1>
+        <h1>What action can look like.</h1>
         <p className="pageLead">
           Social action is where the cohort tests what it is learning through real,
           shared contribution beyond the group.
@@ -669,7 +669,7 @@ function SocialActionPage() {
         </p>
 
         <p>
-          These are examples of potential social action — not a fixed menu. What a cohort
+          These are examples of potential action — not a fixed menu. What a cohort
           undertakes will emerge from its dialogue, its capacity, and the reality it finds itself in.
         </p>
 
@@ -719,7 +719,7 @@ function ApplyPage() {
             <ul className="fitList">
               <li>Work with transition in a structured, collective way</li>
               <li>Engage seriously with peers over a defined period</li>
-              <li>Participate in dialogue, social action, and reflection</li>
+              <li>Participate in dialogue, action, and reflection</li>
               <li>Contribute to something beyond your own individual next step</li>
             </ul>
           </div>
