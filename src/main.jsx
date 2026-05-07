@@ -378,13 +378,13 @@ function ApproachPage() {
           The process is intentionally experimental. The cohort learns by testing ideas,
           taking action, reflecting on outcomes, and adapting together. Moments of
           uncertainty or tension are not interruptions — they are part of what the
-          work learns to engage constructively.
+          group learns to engage constructively.
         </p>
         <p>
           As people participate differently, they often begin to understand themselves
           differently as well — not through abstraction alone, but through lived practice
           with others over time. Transition becomes less about finding an answer, and more
-          about participating in something that is being worked out collectively.
+          about participating in something that is being worked out collectively and mutual support and encouragement translate into evidence-based learning.
         </p>
 
         {/* ── Structure ── */}
