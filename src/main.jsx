@@ -674,7 +674,7 @@ function ActionPage() {
         </p>
 
         <div className="projectsGrid">
-          {socialActions.map((project) => (
+          {Actions.map((project) => (
             <div className="projectCard" key={project.title}>
               <h3>{project.title}</h3>
               <p>{project.description}</p>
@@ -890,7 +890,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/approach" element={<ApproachPage />} />
         <Route path="/cohort" element={<CohortPage />} />
-        <Route path="/action-examples" element={<SocialActionPage />} />
+        <Route path="/action-examples" element={<ActionPage />} />
         <Route path="/facilitator" element={<FacilitatorPage />} />
         <Route path="/apply" element={<ApplyPage />} />
         <Route path="/waitlist" element={<WaitlistPage />} />
