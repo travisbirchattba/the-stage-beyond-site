@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter, Routes, Route, Link, NavLink, useLocation } from 'react-router-dom';
 import './styles.css';
-
 const calendarLink = 'https://calendar.app.google/yzkx5MPNAcY7H2X29';
 
 function ScrollToTop() {
@@ -753,6 +752,9 @@ function ApplyPage() {
           You may still be performing and feel burnt out. You may have already stopped
           and feel unmoored. You may be teaching, freelancing, injured, questioning,
           or sensing that the identity that carried you this far is beginning to change.
+        </p>
+        <p>
+          You may simply be curious to explore possibilities for expanding your horizons, building capabilities and contributing to the world.
         </p>
         <p>
           You do not need a clear plan before entering the work. The capacity to work
