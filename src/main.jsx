@@ -621,11 +621,11 @@ better together than apart.
   );
 }
 
-function SocialActionPage() {
+function ActionPage() {
   useFadeIn();
   const visible = usePageTransition();
 
-  const socialActions = [
+  const Actions = [
     {
       title: 'Dance Programs for Children & Youth',
       description:
@@ -663,7 +663,7 @@ function SocialActionPage() {
       <section className="contentSection fadeIn">
 
         <p>
-          Social action is not an assignment or a volunteer requirement.
+          Action is not an assignment or a volunteer requirement.
           It is a shared act the cohort chooses and carries out in response to what it is learning —
           something real enough to learn from, small enough to carry, and meaningful enough to matter.
         </p>
@@ -683,7 +683,7 @@ function SocialActionPage() {
         </div>
 
         <p className="closingLine">
-          Social action shifts transition from private adaptation toward meaningful participation in shared life.
+          Action shifts transition from private adaptation toward meaningful participation in shared life.
         </p>
 
         <a href={calendarLink} className="primaryCta" target="_blank" rel="noopener noreferrer">
