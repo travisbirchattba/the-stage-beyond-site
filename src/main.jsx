@@ -601,10 +601,17 @@ better together than apart.
           increasingly taking up the work themselves.
         </p>
 
-        <p className="closingLine">
-          The work is grounded in the belief that transition is a process of
-  integration - a path to be walked in the company of others.
-        </p>
+        <p>
+  Transition, at its core, is a process of integration — not the shedding
+  of a former self, but the gradual process of bringing who you are into
+  a new relationship with the world.
+</p>
+
+<p className="closingLine">
+  The work is grounded in the belief that integration is not private work.
+  It requires accompaniment — people who share your identity and can help
+  you carry it into what comes next.
+</p>
 
         <a href={calendarLink} className="primaryCta" target="_blank" rel="noopener noreferrer">
           Begin the conversation
