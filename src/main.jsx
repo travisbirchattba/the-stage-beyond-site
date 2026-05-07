@@ -504,17 +504,12 @@ function CohortPage() {
           in a longer process of development, participation, and inquiry.
         </p>
 
-        <h2>Investment.</h2>
+        <h2>Cost.</h2>
 
-        <div className="investmentBlock">
-          <div className="investmentAmount">
-            <span className="investmentFigure">$5,000</span>
-            <span className="investmentCurrency">CAD per participant</span>
-          </div>
-          <p>
-            This is the market value of participation. Cost varies depending on context —
-            reach out to discuss what is possible.
-          </p>
+<p>
+  The work is offered on a sliding scale. Grants and funding support 
+  may be available. Reach out — we'll find a way to make it work.
+</p>
         </div>
 
         <p className="closingLine">
