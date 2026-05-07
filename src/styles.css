@@ -591,9 +591,12 @@ body {
 /* ── Cycle image ── */
 
 .cycleImageWrap {
-  max-width: 980px;
-  width: calc(100% + 120px);
-  margin: 24px -60px 32px;
+  width: 70vw;
+  max-width: 900px;
+  margin: 24px auto 32px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .cycleImageWrap img {
