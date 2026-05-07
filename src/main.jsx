@@ -77,7 +77,7 @@ function Nav() {
           <div className="navLinks">
             <NavLink to="/approach" className={({ isActive }) => `navLink ${isActive ? 'navLinkActive' : ''}`}>Approach</NavLink>
             <NavLink to="/cohort" className={({ isActive }) => `navLink ${isActive ? 'navLinkActive' : ''}`}>Cohorts</NavLink>
-            <NavLink to="/action-examples" className={({ isActive }) => `navLink ${isActive ? 'navLinkActive' : ''}`}>Social Action</NavLink>
+            <NavLink to="/action-examples" className={({ isActive }) => `navLink ${isActive ? 'navLinkActive' : ''}`}>Action</NavLink>
             <NavLink to="/facilitator" className={({ isActive }) => `navLink ${isActive ? 'navLinkActive' : ''}`}>Facilitator</NavLink>
             <NavLink to="/waitlist" className={({ isActive }) => `navLink ${isActive ? 'navLinkActive' : ''}`}>Join waitlist</NavLink>
           </div>
@@ -99,7 +99,7 @@ function Nav() {
           <Link to="/" className="mobileNavLink">Home</Link>
           <NavLink to="/approach" className={({ isActive }) => `mobileNavLink ${isActive ? 'mobileNavLinkActive' : ''}`}>Approach</NavLink>
           <NavLink to="/cohort" className={({ isActive }) => `mobileNavLink ${isActive ? 'mobileNavLinkActive' : ''}`}>Cohorts</NavLink>
-          <NavLink to="/action-examples" className={({ isActive }) => `mobileNavLink ${isActive ? 'mobileNavLinkActive' : ''}`}>Social Action</NavLink>
+          <NavLink to="/action-examples" className={({ isActive }) => `mobileNavLink ${isActive ? 'mobileNavLinkActive' : ''}`}>Action</NavLink>
           <NavLink to="/facilitator" className={({ isActive }) => `mobileNavLink ${isActive ? 'mobileNavLinkActive' : ''}`}>Facilitator</NavLink>
           <NavLink to="/apply" className={({ isActive }) => `mobileNavLink ${isActive ? 'mobileNavLinkActive' : ''}`}>Is this for me?</NavLink>
           <NavLink to="/waitlist" className={({ isActive }) => `mobileNavLink ${isActive ? 'mobileNavLinkActive' : ''}`}>Join waitlist</NavLink>
@@ -120,7 +120,7 @@ function Footer() {
           <Link to="/" className="footerLink">Home</Link>
           <Link to="/approach" className="footerLink">Approach</Link>
           <Link to="/cohort" className="footerLink">Cohorts</Link>
-          <Link to="/action-examples" className="footerLink">Social Action</Link>
+          <Link to="/action-examples" className="footerLink">Action</Link>
           <Link to="/facilitator" className="footerLink">Facilitator</Link>
           <Link to="/apply" className="footerLink">Is this for me?</Link>
           <Link to="/waitlist" className="footerLink">Join waitlist</Link>
@@ -249,7 +249,7 @@ function HomePage() {
             <p>Together, we make sense of what we are seeing and decide what to act on.</p>
           </div>
           <div className="cycleStep">
-            <h3>Social Action</h3>
+            <h3>Action</h3>
             <p>We carry out a shared decision in ways that contribute beyond the group.</p>
           </div>
           <div className="cycleStep">
@@ -269,7 +269,7 @@ function HomePage() {
           </div>
           <div className="plus">+</div>
           <div className="purposeBlock">
-            <h3>Social Action</h3>
+            <h3>Action</h3>
             <p>Building the capacity to act together in ways that contribute beyond the self.</p>
           </div>
         </div>
@@ -340,7 +340,7 @@ function ApproachPage() {
             <p>The group reads its own reality together — understanding what is happening, what matters, and what action makes sense.</p>
           </div>
           <div className="approachStage">
-            <span className="approachStageLabel">Social action</span>
+            <span className="approachStageLabel">Action</span>
             <p>A shared act the cohort carries out in the world — small at first, but real enough to learn from.</p>
           </div>
           <div className="approachStage">
@@ -352,7 +352,7 @@ function ApproachPage() {
         <div className="cycleImageWrap">
           <img
             src="/rhythm-cycle.png"
-            alt="The Stage Beyond working cycle: Study, Dialogue, Social Action, Reflection"
+            alt="The Stage Beyond working cycle: Study, Dialogue, Action, Reflection"
           />
         </div>
 
@@ -652,10 +652,10 @@ function ActionPage() {
     <main className={`site simplePage pageTransition ${visible ? 'pageVisible' : ''}`}>
 
       <section className="pageHero fadeIn">
-        <p className="eyebrow">Social Action</p>
+        <p className="eyebrow">Action</p>
         <h1>What action can look like.</h1>
         <p className="pageLead">
-          Social action is where the cohort tests what it is learning through real,
+          Action is where the cohort tests what it is learning through real,
           shared contribution beyond the group.
         </p>
       </section>
